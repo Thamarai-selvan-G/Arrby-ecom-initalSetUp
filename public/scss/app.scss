@@ -1,0 +1,52 @@
+/* ---------------------------------------------------------
+    * Name: Ecomus Multipurpose eCommerce HTML Template
+    * Version: 1.0.3
+    * Author: Themesflat
+    * Author URI: http://themesflat.com 
+
+	* Abstracts variable
+    
+    * Reset css styles
+
+    * Components
+        * header
+        * footer
+        * tabs
+        * slider banner
+        * button
+        * range slider
+        * form
+        * nice select
+        * carousel
+        * avatar
+        * pop up
+        * box icon
+        * hover
+        * collection
+        * product
+        * blog
+        * testimonial
+        * lookbook
+        * featured
+        * accordion
+        * zoom
+        
+    * section
+
+    * Responsive
+ ------------------------------------------------------------------------------ */
+
+/*--------- Abstracts variable ---------- */
+@import "./abstracts/index";
+
+/*---------- Reset css styles ----------- */
+@import "reset";
+
+/*------------ Components ---------------- */
+@import "./component/index";
+
+/*------------ sections ---------------- */
+@import "./sections";
+
+/*-------------- Responsive ----------------- */
+@import "./responsive";

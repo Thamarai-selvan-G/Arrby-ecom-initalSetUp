@@ -1,0 +1,126 @@
+.flat-accordion2,
+.flat-accordion1,
+.flat-accordion {
+    .flat-toggle2,
+    .flat-toggle1,
+    .flat-toggle {
+        :not(:last-child) {
+            // margin-bottom: 18px;
+        }
+        .toggle-title {
+            background-color: #F5F5F5;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 30px;
+            color: var(--main);
+            padding: 14px 20px;
+            
+            cursor: pointer;
+            position: relative;
+            @include transition3;
+            &:hover {
+                color: var(--primary);
+            }
+        }
+        .toggle-content {
+            display: none;
+            padding: 35px;
+            border: 1px solid var(--line);
+            // margin-top: 18px;
+            // margin-bottom: 10px;
+        }
+      
+    }
+    &.has-btns {
+        .flat-toggle {
+            .toggle-title {
+                &::after {
+                    position: absolute;
+                    content: '';
+                    width: 12px;
+                    height: 2px;
+                    background-color: #545454;
+                    right: 0px;
+                    border-radius: 2px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    @include transition3;
+                }
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: 2px;
+                    height: 12px;
+                    background-color: #545454;
+                    right: 5px;
+                    border-radius: 2px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    @include transition3;
+                    opacity: 1;
+                }
+                &.active {
+                    &::before {
+                        transform: translateY(-50%) rotate(45deg);
+                        opacity: 0;
+                    }
+                }
+            }
+            &.style-2{
+                &:not(:last-child){
+                    margin-bottom: 15px;
+                }
+                .toggle-title{
+                    &::after{
+                        right: 15px;
+                    }
+                    &::before{
+                        right: 20px;
+                    }
+                }
+                
+            }
+        }
+    }
+    &.has-btns-arrow {
+        .flat-toggle {
+            .toggle-title {
+                &::after {
+                    display: none;
+                }
+                &::before {
+                    position: absolute;
+                    content: '\e904';
+                    font-family: $fontIcon;
+                    font-size: 8px;
+                    color: var(--main);
+                    right: 0;
+                    @include transition3;
+                }
+                &.active {
+                    &::before {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+    &.style-default {
+        .toggle-title {
+            background-color: transparent;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19.2px;
+            color: var(--main);
+            padding: 15px 0px;
+            padding-right: 15px;
+            border-bottom: 1px solid var(--line);
+        }
+        .toggle-content {
+            padding: 24px 0 22px;
+            border: 0;
+        }
+    }
+    
+}
+

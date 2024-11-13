@@ -1,0 +1,186 @@
+.tf-featured {
+    position: relative;
+    .content {
+        .sub-title {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 17px;
+            color: var(--main);
+            margin-bottom: 15px;
+        }
+        h3 {
+            margin-bottom: 24px;
+        }
+        p {
+            margin-bottom: 40px;
+        }
+    }
+    &.full-width {
+        padding-top: 265px;
+        padding-bottom: 290px;
+    }
+    &.style-1 {
+        display: flex;
+        .image {
+            width: 50%;
+        }
+        .content {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #f9f3ea;
+            a {
+                width: max-content;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+.tf-hero-image-liquid {
+    position: relative;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .box-content {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        .heading{
+            font-size: 52px;
+            line-height: 62.4px;
+        }
+        p {
+            margin-top: 16px;
+            margin-bottom: 20px;
+            font-size: 20px;
+            line-height: 32px;
+        }
+        .tf-btn {
+            margin-top: 20px;
+        }
+    }   
+}
+.banner-countdown-v2{
+    .box-content{
+        left: 3%;
+        right: 3%;
+    }
+}
+
+.tf-countdown {
+    .countdown__timer {
+        display: flex;
+        gap: 16px;
+        .countdown__item {
+            width: 90px;
+            height: 90px;
+            background-color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .countdown__value {
+                font-size: 32px;
+                font-weight: 500;
+                line-height: 38.4px;
+                color: var(--main);
+            }
+            .countdown__label {
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 14.4px;
+                letter-spacing: 0.5px;
+                color: var(--main);
+                text-transform: uppercase;
+            }
+        }
+    }
+    &.style-rectangle {
+        .countdown__item {
+            width: 61px;
+            height: 72px;
+            border-radius: 3px;
+        }
+    }
+    &.style-1 {
+        .countdown__timer {
+            gap: 5px;
+            justify-content: center;
+            .countdown__item {
+                width: unset;
+                height: unset;
+                display: block;
+                background-color: unset;
+                .countdown__value,
+                .countdown__label {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 30px;
+                    color: #db1215;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+}
+.tf-countdown-v2 {
+    .countdown__timer {
+        @include flex(center, center);
+        gap: 8px;
+    }
+    .countdown__item {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-width: 60px;
+        min-height: 60px;
+        padding: 6px 10px;
+        border: 1px solid var(--main);
+        background-color: transparent;
+        border-radius: 3px;
+    }
+    .countdown__value {
+        font-size: 16px;
+        line-height: 19.2px;
+        font-weight: 500;
+    }
+    .countdown__label {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 25.6px;
+    }
+}
+.tf-countdown-v3{
+    display: inline-flex;
+    align-items: center;
+    color: #ff0b0b;
+    gap: 13px;
+    background-color: rgba(255, 11, 11,0.1);
+    border-radius: 22px;
+    padding: 4px 10px;
+    .countdown__timer{
+        display: inline-flex;
+    }
+    .countdown__item{
+        font-size: 18px;
+        line-height: 28.8px;
+        font-weight: 600;
+        &:not(:last-child){
+            &::after{
+                content: ":";
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+    }
+    
+}

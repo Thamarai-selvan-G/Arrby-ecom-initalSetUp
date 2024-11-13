@@ -1,0 +1,81 @@
+//settings
+$font-main: "Albert Sans", sans-serif;
+$font-Young-Serif:"Young Serif", serif;
+$font-gloock:"Gloock", serif;
+$font-caprasimo:"Caprasimo", serif;
+$font-poppins:"Poppins", serif;
+$fontIcon: "icomoon";
+
+:root{
+    // color
+    --main: #000000;
+    --white: #ffffff;
+    --primary: #db1215;
+    --red_1: #db1215;
+    --backdrop: rgba(0, 0, 0, 0.5);
+
+    // rgba color
+    --main-rgba-1: rgba(0, 0, 0, 0.16);
+    --main-rgba-2: rgba(0, 0, 0, 0.15);
+
+    // text color
+    --text: #545454;
+    --text-2:#909090;
+    --text-3:#868686;
+    --line: #ebebeb;
+    --line-2: #ececec;
+    // background color
+    --bg-1: #fcfbf9;
+    --bg-2: #f6f6f6;
+    --bg-3: #fcffb2;
+    --bg-4: #c9f4aa;
+    --bg-5: #ff7b54;
+    --bg-6: #8054ff;
+    --bg-7: #f1f0ed;
+    --bg-8: #f0edf1;
+    --bg-9: #edeef1;
+    --bg-10: #fcfbf9;
+    --bg-11: #f2f2f2;
+
+    --success: #31A56D;
+
+    --bg-load: #d9d9d9;
+
+    --bg-scrollbar-track: #f1f1f1;
+    --bg-scrollbar-thumb: #c1c1c1;
+}
+
+.color-primary-2{
+    --primary:#814037;
+}
+
+.color-primary-3{
+    --primary:#93f859;
+}
+
+.color-primary-4{
+    --primary:#000;
+}
+
+.color-primary-5 {
+    --primary : #67c08f;
+}
+.color-primary-6 {
+    --primary: #a45f3b;
+}
+.color-primary-7{
+    --primary: #a6e57c;
+}
+.color-primary-8{
+    --primary: #61b482;
+}
+.color-primary-9{
+    --primary: #ff0b0b;
+}
+.color-primary-10{
+    --primary: #fd8484;
+}
+// text color main
+.color-main-text-2{
+    --main:#253d4e;
+}
