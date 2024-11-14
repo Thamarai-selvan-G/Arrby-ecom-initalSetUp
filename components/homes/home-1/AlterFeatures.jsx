@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function AlterFeatures() {
   return (
-    <section>
+    <section style={{ marginBottom: "100px" }}> {/* Added margin-bottom here */}
       <div className="container-full">
         <div className="bg_green-1  radius-10 rounded-bottom-0 flat-spacing-21">
           <div className="flat-title wow fadeInUp" data-wow-delay="0s">
