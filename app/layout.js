@@ -29,7 +29,7 @@ import { usePathname } from "next/navigation";
 import NewsletterModal from "@/components/modals/NewsletterModal";
 import ShareModal from "@/components/modals/ShareModal";
 import ScrollTop from "@/components/common/ScrollTop";
-import RtlToggle from "@/components/common/RtlToggle";
+// import RtlToggle from "@/components/common/RtlToggle";
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
@@ -163,7 +163,7 @@ export default function RootLayout({ children }) {
           {showChild ? (
             <>
               <div id="wrapper">{children}</div>
-              <RtlToggle />
+              {/* <RtlToggle />                      // Remove RTL tag ... */}
               <HomesModal /> <QuickView />
               <QuickAdd />
               <ProductSidebar />

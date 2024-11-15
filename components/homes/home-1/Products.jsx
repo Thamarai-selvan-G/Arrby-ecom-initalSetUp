@@ -22,7 +22,7 @@ export default function Products() {
       <div className="container">
         <div className="flat-title">
           <span className="title wow fadeInUp" data-wow-delay="0s">
-            Best Seller
+            Popular Products
           </span>
           <p className="sub-title wow fadeInUp" data-wow-delay="0s">
             Shop the Latest Styles: Stay ahead of the curve with our newest
@@ -36,7 +36,7 @@ export default function Products() {
         >
           {allproducts.map((product, i) => (
             <ProductCard product={product} key={i} />
-          ))}
+          ))}x
         </div>
         {!loaded && (
           <div className="tf-pagination-wrap view-more-button text-center">

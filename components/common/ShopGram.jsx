@@ -13,7 +13,7 @@ export default function ShopGram() {
     <section className="flat-spacing-7">
       <div className="container">
         <div className="flat-title wow fadeInUp" data-wow-delay="0s">
-          <span className="title">Shop Gram</span>
+          <span className="title">Feature</span>
           <p className="sub-title">
             Inspire and let yourself be inspired, from one unique fashion to
             another.

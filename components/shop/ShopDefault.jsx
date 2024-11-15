@@ -23,7 +23,7 @@ export default function ShopDefault() {
                 className="tf-btn-filter"
               >
                 <span className="icon icon-filter" />
-                <span className="text">Filter</span>
+                <span className="text">Filter </span>
               </a>
             </div>
             <ul className="tf-control-layout d-flex justify-content-center">

@@ -38,9 +38,9 @@ export default function ShopCollections() {
           ))}
         </div>
         {/* pagination */}
-        <ul className="tf-pagination-wrap tf-pagination-list">
+        {/* <ul className="tf-pagination-wrap tf-pagination-list">    // Totally 5 categorys 
           <Pagination />
-        </ul>
+        </ul> */}
       </div>
     </section>
   );

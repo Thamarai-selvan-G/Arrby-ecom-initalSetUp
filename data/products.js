@@ -1,8 +1,8 @@
 export const products1 = [
   {
     id: 1,
-    imgSrc: "/images/products/orange-1.jpg",
-    imgHoverSrc: "/images/products/white-1.jpg",
+    imgSrc: "/images/products/fashion-1.svg",
+    imgHoverSrc: "/images/products/fashion-2.svg",
     title: "Ribbed Tank Top",
     price: 16.95,
     colors: [
@@ -29,8 +29,8 @@ export const products1 = [
   },
   {
     id: 2,
-    imgSrc: "/images/products/brown.jpg",
-    imgHoverSrc: "/images/products/purple.jpg",
+    imgSrc: "/images/products/foot-3.svg",
+    imgHoverSrc: "/images/products/foot-1.svg",
     title: "Ribbed Modal T-shirt",
     price: 18.95,
     colors: [
@@ -58,8 +58,8 @@ export const products1 = [
   },
   {
     id: 3,
-    imgSrc: "/images/products/white-3.jpg",
-    imgHoverSrc: "/images/products/white-4.jpg",
+    imgSrc: "/images/products/parfume-1.svg",
+    imgHoverSrc: "/images/products/parfume-2.svg",
     title: "Oversized Printed T-shirt",
     price: 10.0,
     sizes: ["S", "M", "L", "XL"],
@@ -69,8 +69,8 @@ export const products1 = [
   },
   {
     id: 4,
-    imgSrc: "/images/products/white-2.jpg",
-    imgHoverSrc: "/images/products/pink-1.jpg",
+    imgSrc: "/images/products/cos-1.svg",
+    imgHoverSrc: "/images/products/cos-2.svg",
     title: "Oversized Printed T-shirt",
     price: 16.95,
     colors: [
@@ -97,8 +97,8 @@ export const products1 = [
   },
   {
     id: 5,
-    imgSrc: "/images/products/brown-2.jpg",
-    imgHoverSrc: "/images/products/brown-3.jpg",
+    imgSrc: "/images/products/foot-5.svg",
+    imgHoverSrc: "/images/products/foot-2.svg",
     title: "V-neck Linen T-shirt",
     price: 14.95,
     colors: [
@@ -120,8 +120,8 @@ export const products1 = [
   },
   {
     id: 6,
-    imgSrc: "/images/products/light-green-1.jpg",
-    imgHoverSrc: "/images/products/light-green-2.jpg",
+    imgSrc: "/images/products/fashion-3.svg",
+    imgHoverSrc: "/images/products/fashion-4.svg",
     title: "Loose Fit Sweatshirt",
     price: 10.0,
     colors: [
@@ -162,8 +162,8 @@ export const products1 = [
   },
   {
     id: 7,
-    imgSrc: "/images/products/black-4.jpg",
-    imgHoverSrc: "/images/products/black-5.jpg",
+    imgSrc: "/images/products/cos-3.svg",
+    imgHoverSrc: "/images/products/cos-4.svg",
     title: "Regular Fit Oxford Shirt",
     price: 10.0,
     colors: [
@@ -200,8 +200,8 @@ export const products1 = [
   },
   {
     id: 8,
-    imgSrc: "/images/products/white-8.jpg",
-    imgHoverSrc: "/images/products/black-6.jpg",
+    imgSrc: "/images/products/fashion-2.svg",
+    imgHoverSrc: "/images/products/fashion-1.svg",
     title: "Stylish T-shirt",
     price: 12.0,
 
@@ -212,96 +212,109 @@ export const products1 = [
   },
   {
     id: 9,
-    price: 14.95,
-    sizes: ["M", "L", "XL"],
+    imgSrc: "/images/products/foot-3.svg",
+    imgHoverSrc: "/images/products/foot-1.svg",
+    title: "Ribbed Modal T-shirt",
+    price: 18.95,
     colors: [
       {
         name: "Brown",
         colorClass: "bg_brown",
-        imgSrc: "/images/products/brown-4.jpg",
+        imgSrc: "/images/products/brown.jpg",
       },
       {
-        name: "Black",
-        colorClass: "bg_dark",
-        imgSrc: "/images/products/black-8.jpg",
+        name: "Light Purple",
+        colorClass: "bg_purple",
+        imgSrc: "/images/products/purple.jpg",
+      },
+      {
+        name: "Light Green",
+        colorClass: "bg_light-green",
+        imgSrc: "/images/products/green.jpg",
       },
     ],
-
-    imgSrc: "/images/products/brown-4.jpg",
-    imgHoverSrc: "/images/products/black-8.jpg",
-
-    title: "Patterned scarf",
-    filterCategories: ["Best seller", "New arrivals", "On Sale"],
-    brand: "Ecomus",
-    isAvailable: true,
+    sizes: ["M", "L", "XL"],
+    countdown: { time: 1007500, labels: "d :,h :,m :,s" },
+    filterCategories: ["Best seller", "New arrivals"],
+    brand: "M&H",
+    isAvailable: false,
   },
   {
     id: 10,
-    price: 18.95,
-    sizes: ["S", "M", "L"],
-    colors: [
-      {
-        name: "Black",
-        colorClass: "bg_dark",
-        imgSrc: "/images/products/black-9.jpg",
-      },
-      {
-        name: "White",
-        colorClass: "bg_white",
-        imgSrc: "/images/products/white-9.jpg",
-      },
-    ],
-
-    imgSrc: "/images/products/black-9.jpg",
-    imgHoverSrc: "/images/products/black-10.jpg",
-
-    title: "Slim Fit Fine-knit Turtleneck Sweater",
-    filterCategories: ["Best seller", "New arrivals", "On Sale"],
-    brand: "Ecomus",
+    imgSrc: "/images/products/parfume-1.svg",
+    imgHoverSrc: "/images/products/parfume-2.svg",
+    title: "Oversized Printed T-shirt",
+    price: 10.0,
+    sizes: ["S", "M", "L", "XL"],
+    filterCategories: ["Best seller", "On Sale"],
+    brand: "M&H",
     isAvailable: true,
   },
   {
     id: 11,
-    price: 18.95,
-    sizes: ["S", "M", "L"],
+    imgSrc: "/images/products/cos-1.svg",
+    imgHoverSrc: "/images/products/cos-2.svg",
+    title: "Oversized Printed T-shirt",
+    price: 16.95,
     colors: [
       {
-        name: "Grey",
-        colorClass: "bg_grey",
-        imgSrc: "/images/products/grey-2.jpg",
+        name: "White",
+        colorClass: "bg_white",
+        imgSrc: "/images/products/white-2.jpg",
       },
       {
         name: "Pink",
-        colorClass: "bg_pink",
-        imgSrc: "/images/products/pink-2.jpg",
+        colorClass: "bg_purple",
+        imgSrc: "/images/products/pink-1.jpg",
       },
       {
-        name: "Light Pink",
-        colorClass: "bg_light-pink",
-        imgSrc: "/images/products/light-pink.jpg",
+        name: "Black",
+        colorClass: "bg_dark",
+        imgSrc: "/images/products/black-2.jpg",
       },
     ],
-
-    imgSrc: "/images/products/grey-2.jpg",
-    imgHoverSrc: "/images/products/grey.jpg",
-
-    title: "Slim Fit Fine-knit Turtleneck Sweater",
-    filterCategories: ["Best seller", "New arrivals"],
-    brand: "Ecomus",
+    sizes: ["S", "M", "L", "XL"],
+    filterCategories: ["Best seller", "On Sale"],
+    brand: "M&H",
     isAvailable: true,
   },
   {
-    id: 12,
-    price: 18.95,
+    id: 7,
+    imgSrc: "/images/products/cos-3.svg",
+    imgHoverSrc: "/images/products/cos-4.svg",
+    title: "Regular Fit Oxford Shirt",
+    price: 10.0,
+    colors: [
+      {
+        name: "Black",
+        colorClass: "bg_dark",
+        imgSrc: "/images/products/black-4.jpg",
+      },
+      {
+        name: "Dark Blue",
+        colorClass: "bg_dark-blue",
+        imgSrc: "/images/products/dark-blue-2.jpg",
+      },
+      {
+        name: "Beige",
+        colorClass: "bg_beige",
+        imgSrc: "/images/products/beige.jpg",
+      },
+      {
+        name: "Light Blue",
+        colorClass: "bg_light-blue",
+        imgSrc: "/images/products/light-blue.jpg",
+      },
+      {
+        name: "White",
+        colorClass: "bg_white",
+        imgSrc: "/images/products/white-7.jpg",
+      },
+    ],
     sizes: ["S", "M", "L"],
-
-    imgSrc: "/images/products/black-11.jpg",
-    imgHoverSrc: "/images/products/black-12.jpg",
-
-    title: "Slim Fit Fine-knit Turtleneck Sweater",
-    filterCategories: ["Best seller", "On Sale"],
+    filterCategories: ["Best seller", "New arrivals", "On Sale"],
     brand: "Ecomus",
-    isAvailable: true,
+    isAvailable: false,
   },
 ];
 export const products2 = [

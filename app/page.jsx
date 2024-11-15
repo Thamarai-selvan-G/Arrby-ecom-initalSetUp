@@ -10,13 +10,13 @@ import Brands from "@/components/homes/home-1/Brands";
 
 import Categories from "@/components/homes/home-1/Categories";
 
-import Hero from "@/components/homes/home-1/Hero";
-import Lookbook from "@/components/homes/home-1/Lookbook";
+// import Hero from "@/components/homes/home-1/Hero";      // Comment unnecessary imports ...
+// import Lookbook from "@/components/homes/home-1/Lookbook";
 import Marquee from "@/components/homes/home-1/Marquee";
 import Products from "@/components/homes/home-1/Products";
 
 export const metadata = {
-  title : "Arrby-Ecom",
+  title : "Aarby-Ecom",
   // title: "Home 1 || Ecomus - Ultimate Nextjs Ecommerce Template",  // SEO Area ....
   description: "Ecomus - Ultimate Nextjs Ecommerce Template",
 };
@@ -34,9 +34,9 @@ export default function Home() {
       <Products />
       {/* <Lookbook /> */}
       <Testimonials />
-      <Brands />
-      <ShopGram />
-      <Features />
+      {/* <Brands /> */}
+      {/* <ShopGram /> */}
+      <Features />  
       <Footer1 />
     </>
   );

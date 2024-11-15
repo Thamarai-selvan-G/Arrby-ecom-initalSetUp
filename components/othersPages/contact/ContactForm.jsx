@@ -41,26 +41,30 @@ export default function ContactForm() {
               <p className="mb_15">
                 <strong>Address</strong>
               </p>
-              <p>66 Mott St, New York, New York, Zip Code: 10006, AS</p>
+              <p>
+                3/537, Ring Road, opp. Container Freight Station, <br />
+                Thirumurugan Poondi, Tiruppur, Avinashi, <br />
+                Tamil Nadu 641652
+              </p>
             </div>
             <div className="mb_20">
               <p className="mb_15">
                 <strong>Phone</strong>
               </p>
-              <p>(623) 934-2400</p>
+              <p>(0421) 6612677</p>
             </div>
             <div className="mb_20">
               <p className="mb_15">
                 <strong>Email</strong>
               </p>
-              <p>EComposer@example.com</p>
+              <p>nsp@gmai.com</p>
             </div>
             <div className="mb_36">
               <p className="mb_15">
                 <strong>Open Time</strong>
               </p>
-              <p className="mb_15">Our store has re-opened for shopping,</p>
-              <p>exchange Every day 11am to 7pm</p>
+              <p className="mb_15">Our store has opened for shopping,</p>
+              <p>exchange Every day 9am to 5pm</p>
             </div>
             <div>
               <ul className="tf-social-icon d-flex gap-20 style-default">

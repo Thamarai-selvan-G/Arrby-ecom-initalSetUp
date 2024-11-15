@@ -68,8 +68,8 @@ export default function Categories() {
                         />
                       </Link>
                       <div className="collection-content">
-                        <Link
-                          href={`/shop-default`}
+                          <Link
+                            href={`/shop-default`}
                           className="tf-btn collection-title hover-icon fs-15"
                         >
                           <span>{item.title}</span>

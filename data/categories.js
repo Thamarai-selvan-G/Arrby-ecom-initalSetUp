@@ -1,28 +1,29 @@
 export const collections = [
+  // Home category Swiper ...
   {
-    imgSrc: "/images/collections/collection-17.jpg",
-    altText: "collection-img",
-    title: "Clothing",
-  },
-  {
-    imgSrc: "/images/collections/collection-14.jpg",
-    altText: "collection-img",
-    title: "Sunglasses",
-  },
-  {
-    imgSrc: "/images/collections/collection-18.jpg",
-    altText: "collection-demo-1",
-    title: "Bags",
-  },
-  {
-    imgSrc: "/images/collections/collection-15.jpg",
-    altText: "collection-demo-1",
+    imgSrc: "/images/collections/cat-1.svg",
+    altText: "Fashion-img",
     title: "Fashion",
   },
   {
-    imgSrc: "/images/collections/collection-20.jpg",
-    altText: "collection-demo-1",
-    title: "Accessories",
+    imgSrc: "/images/collections/cat-2.svg",
+    altText: "Cosmetics-img",
+    title: "Cosmetics",
+  },
+  {
+    imgSrc: "/images/collections/cat-3.svg",
+    altText: "footwear-img",
+    title: "Fragrance",
+  },
+  {
+    imgSrc: "/images/collections/cat-4.svg",
+    altText: "Footwear-img",
+    title: "Footwear",
+  },
+  {
+    imgSrc: "/images/collections/cat-4.svg",
+    altText: "footwear-img",
+    title: "Footwear",
   },
 ];
 
@@ -391,45 +392,23 @@ export const recentCollections3 = [
 
 export const swiperSlides = [
   {
-    iconClass: "icon-card",
-    title: "Physical or digital card?",
-    description: `Prefer a plastic card delivered by post? 
-      Or a digital one sent by email? Most of our gift cards 
-      offer both options.`,
+    iconClass: "icon-experienced",
+    title: "Quality You Can Trust",
+    description:
+      "All our products are carefully selected to meet high standards, so you get the best in fashion, footwear, and more.",
   },
   {
-    iconClass: "icon-shopping",
-    title: "Last minute shopping?",
-    description: `Most of our digital gift cards are delivered 
-      within 4 hours or can be scheduled to arrive on the 
-      day of your choice.`,
+    iconClass: "icon-safe",
+    title: "Secure Shopping Experience",
+    description:
+      "Shop confidently with us—your personal information is always safe and secure.",
   },
   {
-    iconClass: "icon-person",
-    title: "A large crowd to please?",
-    description: `For your convenience, you can send up to 
-      10 addresses in a single order.`,
+    iconClass: "icon-premium-support",
+    title: "Support When You Need It",
+    description: `"Our team is ready to help with any questions, making your shopping experience smooth and enjoyable."`,
   },
-  {
-    iconClass: "icon-card",
-    title: "Physical or digital card?",
-    description: `Prefer a plastic card delivered by post? 
-      Or a digital one sent by email? Most of our gift cards 
-      offer both options.`,
-  },
-  {
-    iconClass: "icon-shopping",
-    title: "Last minute shopping?",
-    description: `Most of our digital gift cards are delivered 
-      within 4 hours or can be scheduled to arrive on the 
-      day of your choice.`,
-  },
-  {
-    iconClass: "icon-person",
-    title: "A large crowd to please?",
-    description: `For your convenience, you can send up to 
-      10 addresses in a single order.`,
-  },
+  // Want more content just add here ...
 ];
 
 export const collectionSlides = [
@@ -1293,36 +1272,33 @@ export const collectionSlides2 = [
 ];
 
 export const collectionItems3 = [
+  // Category collection Data's ...
   {
-    imgSrc: "/images/collections/collection-8.jpg",
-    alt: "collection-img",
-    title: "Women",
+    imgSrc: "/images/collections/cat-1.svg",
+    alt: "fashion-img",
+    title: "Fashion",
   },
   {
-    imgSrc: "/images/collections/collection-9.jpg",
-    alt: "collection-img",
-    title: "Women",
+    imgSrc: "/images/collections/cat-2.svg",
+    alt: "Cosmetics-img",
+    title: "Cosmetics",
   },
   {
-    imgSrc: "/images/collections/collection-10.jpg",
-    alt: "collection-img",
-    title: "Women",
+    imgSrc: "/images/collections/cat-3.svg",
+    alt: "fragrance-img",
+    title: "Fragrance",
   },
   {
-    imgSrc: "/images/collections/collection-11.jpg",
-    alt: "collection-img",
-    title: "Women",
+    imgSrc: "/images/collections/cat-4.svg",
+    alt: "Footer-img",
+    title: "Footer",
   },
   {
-    imgSrc: "/images/collections/collection-12.jpg",
-    alt: "collection-img",
-    title: "Women",
+    imgSrc: "/images/collections/cat-4.svg",
+    alt: "Footer-img",
+    title: "Footer",
   },
-  {
-    imgSrc: "/images/collections/collection-13.jpg",
-    alt: "collection-img",
-    title: "Women",
-  },
+ 
 ];
 
 export const collectionItems5 = [

@@ -368,28 +368,36 @@ export const sliderData3 = [
 
 export const slides9 = [
   {
-    imgSrc: "/images/slider/Slideshow_Electronics1.jpg",
+    imgSrc: "/images/slider/fashion-banner.svg",
     imgAlt: "fashion-slideshow-01",
     imgWidth: 2000,
     imgHeight: 837,
     text: "UP TO 40% OFF CHARGERS AND MORE.",
-    heading: "Savings for\n dads and grads.",
+    heading: "Fashion heading",
   },
   {
-    imgSrc: "/images/slider/Slideshow_Electronics2.jpg",
-    imgAlt: "fashion-slideshow-01",
+    imgSrc: "/images/slider/cosmetic-banner.svg",
+    imgAlt: "cosmetic-slideshow-01",
     imgWidth: 1800,
     imgHeight: 753,
     text: "UP TO 40% OFF CHARGERS AND MORE.",
-    heading: "Modern design",
+    heading: "Cosmetic Header",
   },
   {
-    imgSrc: "/images/slider/Slideshow_Electronics3.jpg",
+    imgSrc: "/images/slider/foot-banner.svg",
     imgAlt: "fashion-slideshow-01",
     imgWidth: 2000,
     imgHeight: 836,
     text: "UP TO 40% OFF CHARGERS AND MORE.",
-    heading: "Fast charging",
+    heading: "Foot header",
+  },
+  {
+    imgSrc: "/images/slider/parfume-banner.svg",
+    imgAlt: "fashion-slideshow-01",
+    imgWidth: 2000,
+    imgHeight: 836,
+    text: "UP TO 40% OFF CHARGERS AND MORE.",
+    heading: "Parfume Header",
   },
 ];
 

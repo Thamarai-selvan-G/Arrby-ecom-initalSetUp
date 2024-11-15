@@ -68,7 +68,7 @@ export default function Footer1({ bgColor = "" }) {
                     <Link href={`/`}>
                       <Image
                         alt=""
-                        src="/images/logo/logo.svg"
+                        src="/images/logo/newLogo.svg"
                         width="136"
                         height="21"
                       />
@@ -77,18 +77,19 @@ export default function Footer1({ bgColor = "" }) {
                   <ul>
                     <li>
                       <p>
-                        Address: 1234 Fashion Street, Suite 567, <br />
-                        New York, NY 10001
+                        3/537, Ring Road, opp. Container Freight Station, <br />
+                        Thirumurugan Poondi, Tiruppur, Avinashi, <br />
+                        Tamil Nadu 641652
                       </p>
                     </li>
                     <li>
                       <p>
-                        Email: <a href="#">info@fashionshop.com</a>
+                        Email: <a href="#">nsp@gmail.com</a>
                       </p>
                     </li>
                     <li>
                       <p>
-                        Phone: <a href="#">(212) 555-1234</a>
+                        Phone: <a href="#">(0421) 6612677</a>
                       </p>
                     </li>
                   </ul>
@@ -238,7 +239,7 @@ export default function Footer1({ bgColor = "" }) {
                       <div className="subscribe-msg" />
                     </form>
                     <div className="tf-cur">
-                      <div className="tf-currencies">  
+                      <div className="tf-currencies">
                         {/* <CurrencySelect />     // Remove Language Images ... */}
                       </div>
                       <div className="tf-languages">
@@ -257,10 +258,13 @@ export default function Footer1({ bgColor = "" }) {
               <div className="col-12">
                 <div className="footer-bottom-wrap d-flex gap-20 flex-wrap justify-content-between align-items-center">
                   <div className="footer-menu_item">
-                    © {new Date().getFullYear()} Ecomus Store. All Rights
+                    © {new Date().getFullYear()} Aarby E-com. All Rights
                     Reserved
                   </div>
-                  <div className="tf-payment">  
+                  <div className="tf-payment">
+                    <Link href={"https://itboomi.com/"}>
+                      Made With Love by itboomi ❤️
+                    </Link>
                     {/* {paymentImages.map((image, index) => (
                       <Image                    // Payments Images ...
                         key={index}

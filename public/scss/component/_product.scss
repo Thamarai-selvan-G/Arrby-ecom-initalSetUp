@@ -1222,6 +1222,7 @@
     height: 100%;
     position: relative;
     align-items: stretch;
+    // border: 2px solid red;
   }
 
   .card-product-wrapper {
@@ -1229,6 +1230,7 @@
     border-radius: 10px;
     overflow: hidden;
     z-index: 20;
+    // border: 2px solid rebeccapurple;
     .sold-out {
       @include flex(center, center);
       z-index: 100;

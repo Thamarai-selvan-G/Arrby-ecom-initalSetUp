@@ -17,7 +17,7 @@ export default function page() {
       <Header2 />
       <div className="tf-page-title">
         <div className="container-full">
-          <div className="heading text-center">New Arrival</div>
+          <div className="heading text-center">All Categorys</div>
           <p className="text-center text-2 text_black-2 mt_5">
             Shop through our latest selection of Fashion
           </p>

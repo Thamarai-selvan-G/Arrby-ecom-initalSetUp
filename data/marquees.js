@@ -1,14 +1,15 @@
 export const marqueeItems = [
-  "Spring Clearance Event: Save Up to 70%",
-  "Spring Clearance Event: Save Up to 70%",
-  "Spring Clearance Event: Save Up to 70%",
-  "Spring Clearance Event: Save Up to 70%",
-  "Spring Clearance Event: Save Up to 70%",
-  "Spring Clearance Event: Save Up to 70%",
-  "Spring Clearance Event: Save Up to 70%",
-  "Spring Clearance Event: Save Up to 70%",
-  "Spring Clearance Event: Save Up to 70%",
-  "Spring Clearance Event: Save Up to 70%",
+  "Arbay: Save Up to 70%",
+  "Arbay: Save Up to 70%",
+  "Arbay: Save Up to 70%",
+  "Arbay: Save Up to 70%",
+  "Arbay: Save Up to 70%",
+  "Arbay: Save Up to 70%",
+  "Arbay: Save Up to 70%",
+  "Arbay: Save Up to 70%",
+  "Arbay: Save Up to 70%",
+  "Arbay: Save Up to 70%",
+
 ];
 
 export const marqueeItems2 = [
