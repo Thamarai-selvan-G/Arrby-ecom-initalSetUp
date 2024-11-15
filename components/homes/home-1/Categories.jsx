@@ -55,7 +55,7 @@ export default function Categories() {
                   <div className="collection-item style-left hover-img">
                     <div className="collection-inner">
                       <Link
-                        href={`/shop-default`}
+                        href={item.href}
                         className="collection-image img-style"
                       >
                         <Image
@@ -69,7 +69,7 @@ export default function Categories() {
                       </Link>
                       <div className="collection-content">
                           <Link
-                            href={`/shop-default`}
+                            href={item.href}
                           className="tf-btn collection-title hover-icon fs-15"
                         >
                           <span>{item.title}</span>

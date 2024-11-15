@@ -12,7 +12,7 @@ export default function ShopCollections() {
             <div className="collection-item hover-img" key={index}>
               <div className="collection-inner">
                 <Link
-                  href={`/shop-default`}
+                  href={item.href}
                   className="collection-image img-style"
                 >
                   <Image

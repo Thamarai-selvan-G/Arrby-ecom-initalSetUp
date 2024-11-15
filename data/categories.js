@@ -4,26 +4,31 @@ export const collections = [
     imgSrc: "/images/collections/cat-1.svg",
     altText: "Fashion-img",
     title: "Fashion",
+    href : "fashion"
   },
   {
     imgSrc: "/images/collections/cat-2.svg",
     altText: "Cosmetics-img",
     title: "Cosmetics",
+    href : "cosmetics"
   },
   {
     imgSrc: "/images/collections/cat-3.svg",
     altText: "footwear-img",
     title: "Fragrance",
+    href : "fragrance"
   },
   {
     imgSrc: "/images/collections/cat-4.svg",
     altText: "Footwear-img",
     title: "Footwear",
+    href : "footwear"
   },
   {
     imgSrc: "/images/collections/cat-4.svg",
     altText: "footwear-img",
     title: "Footwear",
+    href : "footwear"
   },
 ];
 
@@ -1277,26 +1282,31 @@ export const collectionItems3 = [
     imgSrc: "/images/collections/cat-1.svg",
     alt: "fashion-img",
     title: "Fashion",
+    href : "fashion"
   },
   {
     imgSrc: "/images/collections/cat-2.svg",
     alt: "Cosmetics-img",
     title: "Cosmetics",
+    href : "cosmetics"
   },
   {
     imgSrc: "/images/collections/cat-3.svg",
     alt: "fragrance-img",
     title: "Fragrance",
+    href : "fragrance"
   },
   {
     imgSrc: "/images/collections/cat-4.svg",
     alt: "Footer-img",
     title: "Footer",
+    href : "footwear"
   },
   {
     imgSrc: "/images/collections/cat-4.svg",
     alt: "Footer-img",
     title: "Footer",
+    href : "footwear"
   },
  
 ];
