@@ -390,7 +390,7 @@ export default function SidebarFilter({ setProducts }) {
         className="tf-btn style-2 btn-fill rounded animate-hover-btn"
         onClick={clearFilter}
       >
-        Clear Filter
+        Clear Filter  
       </a>
     </div>
   );

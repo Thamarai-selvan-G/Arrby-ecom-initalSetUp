@@ -1,8 +1,7 @@
 "use client";
 import React, { useState } from "react";
-
 import Image from "next/image";
-import CountdownComponent from "../common/Countdown";
+// import CountdownComponent from "../common/Countdown";
 import {
   colors,
   paymentImages,
@@ -15,7 +14,7 @@ import Slider1ZoomOuter from "./sliders/Slider1ZoomOuter";
 import { allProducts } from "@/data/products";
 import { useContextElement } from "@/context/Context";
 import { openCartModal } from "@/utlis/openCartModal";
-
+ 
 export default function DetailsOuterZoom({ product = allProducts[0] }) {
   const [currentColor, setCurrentColor] = useState(colors[0]);
   const [currentSize, setCurrentSize] = useState(sizeOptions[1]);
@@ -30,6 +29,8 @@ export default function DetailsOuterZoom({ product = allProducts[0] }) {
     }
   };
 
+  console.log(product);
+  
   const {
     addProductToCart,
     isAddedToCartProducts,

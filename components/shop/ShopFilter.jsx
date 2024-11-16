@@ -413,7 +413,7 @@ export default function ShopFilter({ setProducts, products = products1 }) {
             className="tf-btn style-2 btn-fill rounded animate-hover-btn"
             onClick={clearFilter}
           >
-            Clear Filter
+            Clear Filter 
           </a>
         </div>
       </div>

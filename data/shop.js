@@ -28,7 +28,6 @@ export const layouts = [
 
 export const sortingOptions = [
   { text: "Default" },
-
   { text: "Alphabetically, A-Z" },
   { text: "Alphabetically, Z-A" },
   { text: "Price, low to high" },

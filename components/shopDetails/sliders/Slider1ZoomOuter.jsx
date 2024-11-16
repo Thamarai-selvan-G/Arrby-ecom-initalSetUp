@@ -9,7 +9,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 const images = [
   {
     id: 1,
-    src: "/images/shop/products/p-d1.png",
+    src: "/images/shop/products/fashion-1.svg",
     alt: "",
     width: 770,
     height: 1075,

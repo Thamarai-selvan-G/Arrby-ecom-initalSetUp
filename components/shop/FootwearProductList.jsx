@@ -5,20 +5,20 @@ import { useState } from "react";
 import Pagination from "../common/Pagination";
 import ShopFilter from "./ShopFilter";
 import Sorting from "./Sorting";
-import { fashionProducts } from "@/data/products";
+import { footwearProducts } from "@/data/products";
 import { useEffect } from "react";
 
-export default function FashionList() {
+export default function FootwearList() {
   const [gridItems, setGridItems] = useState(4);
   const [products, setProducts] = useState([]);
-  const [finalSorted, setFinalSorted] = useState(fashionProducts);
+  const [finalSorted, setFinalSorted] = useState(footwearProducts);
 
   console.log("Products:", products);
   console.log("Final Sorted:", finalSorted);
 
   const getFashionProduct = async () => {
     try {
-      setProducts(fashionProducts);
+      setProducts(footwearProducts);
     } catch (error) {
       console.error(error.response);
     }
