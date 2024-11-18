@@ -204,7 +204,6 @@ export const products1 = [
   //   imgHoverSrc: "/images/products/black-6.jpg",
   //   title: "Stylish T-shirt",
   //   price: 12.0,
-
   //   sizes: ["S", "M", "L", "XL"],
   //   filterCategories: ["Best seller", "New arrivals", "On Sale"],
   //   brand: "Ecomus",
@@ -226,10 +225,8 @@ export const products1 = [
   //       imgSrc: "/images/products/black-8.jpg",
   //     },
   //   ],
-
   //   imgSrc: "/images/products/brown-4.jpg",
   //   imgHoverSrc: "/images/products/black-8.jpg",
-
   //   title: "Patterned scarf",
   //   filterCategories: ["Best seller", "New arrivals", "On Sale"],
   //   brand: "Ecomus",
@@ -251,10 +248,8 @@ export const products1 = [
   //       imgSrc: "/images/products/white-9.jpg",
   //     },
   //   ],
-
   //   imgSrc: "/images/products/black-9.jpg",
   //   imgHoverSrc: "/images/products/black-10.jpg",
-
   //   title: "Slim Fit Fine-knit Turtleneck Sweater",
   //   filterCategories: ["Best seller", "New arrivals", "On Sale"],
   //   brand: "Ecomus",
@@ -281,10 +276,8 @@ export const products1 = [
   //       imgSrc: "/images/products/light-pink.jpg",
   //     },
   //   ],
-
   //   imgSrc: "/images/products/grey-2.jpg",
   //   imgHoverSrc: "/images/products/grey.jpg",
-
   //   title: "Slim Fit Fine-knit Turtleneck Sweater",
   //   filterCategories: ["Best seller", "New arrivals"],
   //   brand: "Ecomus",
@@ -294,10 +287,8 @@ export const products1 = [
   //   id: 12,
   //   price: 18.95,
   //   sizes: ["S", "M", "L"],
-
   //   imgSrc: "/images/products/black-11.jpg",
   //   imgHoverSrc: "/images/products/black-12.jpg",
-
   //   title: "Slim Fit Fine-knit Turtleneck Sweater",
   //   filterCategories: ["Best seller", "On Sale"],
   //   brand: "Ecomus",
@@ -313,28 +304,65 @@ export const fashionProducts = [
     imgSrc: "/images/products/fashion-1.svg",
     imgHoverSrc: "/images/products/fashion-4.svg",
     title: "Ribbed Tank Top",
-    price: 16.95,
+    price: 1,
     colors: [
-      { name: "Orange", colorClass: "bg_orange-3", imgSrc: "/images/products/fashion-3.svg" },
-      { name: "Black", colorClass: "bg_dark", imgSrc: "/images/fashion-2.svg" },
-      { name: "White", colorClass: "bg_white", imgSrc: "/images/fashion-1.svg" },
+      {
+        id: "values-orange",
+        value: "Orange",
+        className: "bg_orange-3",
+        imgSrc: "/images/products/fashion-3.svg",
+        price: 7,
+        oldPrice: 10,
+      },
+      {
+        id: "values-black",
+        value: "Black",
+        className: "bg_dark",
+        imgSrc: "/images/fashion-2.svg",
+        price: 8,
+        oldPrice: 10,
+      },
+      {
+        id: "values-white",
+        value: "White",
+        className: "bg_white",
+        imgSrc: "/images/fashion-1.svg",
+        price: 10,
+        oldPrice: 12,
+      },
     ],
-    sizes: ["S", "M", "L", "XL"],
+    sizes: [
+      { id: "values-s", value: "S", defaultChecked: true },
+      { id: "values-m", value: "M", defaultChecked: false },
+      { id: "values-l", value: "L", defaultChecked: false },
+      { id: "values-xl", value: "XL", defaultChecked: false },
+    ],
     filterCategories: ["Best seller", "On Sale"],
     brand: "Ecomus",
     isAvailable: true,
-    
   },
   {
     id: 2,
     imgSrc: "/images/products/fashion-3.svg",
     imgHoverSrc: "/images/products/fashion-4.svg",
     title: "Ribbed Modal T-shirt",
-    price: 18.95,
+    price: 2,
     colors: [
-      { name: "Brown", colorClass: "bg_brown", imgSrc: "/images/products/brown.jpg" },
-      { name: "Light Purple", colorClass: "bg_purple", imgSrc: "/images/products/purple.jpg" },
-      { name: "Light Green", colorClass: "bg_light-green", imgSrc: "/images/products/green.jpg" },
+      {
+        name: "Brown",
+        colorClass: "bg_brown",
+        imgSrc: "/images/products/brown.jpg",
+      },
+      {
+        name: "Light Purple",
+        colorClass: "bg_purple",
+        imgSrc: "/images/products/purple.jpg",
+      },
+      {
+        name: "Light Green",
+        colorClass: "bg_light-green",
+        imgSrc: "/images/products/green.jpg",
+      },
     ],
     sizes: ["M", "L", "XL"],
     countdown: { time: 1007500, labels: "d :,h :,m :,s" },
@@ -347,7 +375,24 @@ export const fashionProducts = [
     imgSrc: "/images/products/fashion-2.svg",
     imgHoverSrc: "/images/products/fashion-1.svg",
     title: "Oversized Printed T-shirt",
-    price: 10.0,
+    price: 3,
+    colors: [
+      {
+        name: "Brown",
+        colorClass: "bg_brown",
+        imgSrc: "/images/products/brown.jpg",
+      },
+      {
+        name: "Light Purple",
+        colorClass: "bg_purple",
+        imgSrc: "/images/products/purple.jpg",
+      },
+      {
+        name: "Light Green",
+        colorClass: "bg_light-green",
+        imgSrc: "/images/products/green.jpg",
+      },
+    ],
     sizes: ["S", "M", "L", "XL"],
     filterCategories: ["Best seller", "On Sale"],
     brand: "M&H",
@@ -358,10 +403,18 @@ export const fashionProducts = [
     imgSrc: "/images/products/fashion-4.svg",
     imgHoverSrc: "/images/products/fashion-3.svg",
     title: "V-neck Linen T-shirt",
-    price: 14.95,
+    price: 4,
     colors: [
-      { name: "Brown", colorClass: "bg_brown", imgSrc: "/images/products/brown-2.jpg" },
-      { name: "White", colorClass: "bg_white", imgSrc: "/images/products/white-5.jpg" },
+      {
+        name: "Brown",
+        colorClass: "bg_brown",
+        imgSrc: "/images/products/brown-2.jpg",
+      },
+      {
+        name: "White",
+        colorClass: "bg_white",
+        imgSrc: "/images/products/white-5.jpg",
+      },
     ],
     sizes: ["S", "M", "L", "XL"],
     filterCategories: ["Best seller", "New arrivals"],
@@ -373,14 +426,38 @@ export const fashionProducts = [
     imgSrc: "/images/products/fashion-1.svg",
     imgHoverSrc: "/images/products/fashion-2.svg",
     title: "Loose Fit Sweatshirt",
-    price: 10.0,
+    price: 5,
     colors: [
-      { name: "Light Green", colorClass: "bg_light-green", imgSrc: "/images/products/light-green-1.jpg" },
-      { name: "Black", colorClass: "bg_dark", imgSrc: "/images/products/black-3.jpg" },
-      { name: "Blue", colorClass: "bg_blue-2", imgSrc: "/images/products/blue.jpg" },
-      { name: "Dark Blue", colorClass: "bg_dark-blue", imgSrc: "/images/products/dark-blue.jpg" },
-      { name: "White", colorClass: "bg_white", imgSrc: "/images/products/white-6.jpg" },
-      { name: "Light Grey", colorClass: "bg_light-grey", imgSrc: "/images/products/light-grey.jpg" },
+      {
+        name: "Light Green",
+        colorClass: "bg_light-green",
+        imgSrc: "/images/products/light-green-1.jpg",
+      },
+      {
+        name: "Black",
+        colorClass: "bg_dark",
+        imgSrc: "/images/products/black-3.jpg",
+      },
+      {
+        name: "Blue",
+        colorClass: "bg_blue-2",
+        imgSrc: "/images/products/blue.jpg",
+      },
+      {
+        name: "Dark Blue",
+        colorClass: "bg_dark-blue",
+        imgSrc: "/images/products/dark-blue.jpg",
+      },
+      {
+        name: "White",
+        colorClass: "bg_white",
+        imgSrc: "/images/products/white-6.jpg",
+      },
+      {
+        name: "Light Grey",
+        colorClass: "bg_light-grey",
+        imgSrc: "/images/products/light-grey.jpg",
+      },
     ],
     filterCategories: ["Best seller", "New arrivals"],
     brand: "Ecomus",
@@ -391,13 +468,33 @@ export const fashionProducts = [
     imgSrc: "/images/products/fashion-3.svg",
     imgHoverSrc: "/images/products/fashion-4.svg",
     title: "Regular Fit Oxford Shirt",
-    price: 10.0,
+    price: 6,
     colors: [
-      { name: "Black", colorClass: "bg_dark", imgSrc: "/images/products/black-4.jpg" },
-      { name: "Dark Blue", colorClass: "bg_dark-blue", imgSrc: "/images/products/dark-blue-2.jpg" },
-      { name: "Beige", colorClass: "bg_beige", imgSrc: "/images/products/beige.jpg" },
-      { name: "Light Blue", colorClass: "bg_light-blue", imgSrc: "/images/products/light-blue.jpg" },
-      { name: "White", colorClass: "bg_white", imgSrc: "/images/products/white-7.jpg" },
+      {
+        name: "Black",
+        colorClass: "bg_dark",
+        imgSrc: "/images/products/black-4.jpg",
+      },
+      {
+        name: "Dark Blue",
+        colorClass: "bg_dark-blue",
+        imgSrc: "/images/products/dark-blue-2.jpg",
+      },
+      {
+        name: "Beige",
+        colorClass: "bg_beige",
+        imgSrc: "/images/products/beige.jpg",
+      },
+      {
+        name: "Light Blue",
+        colorClass: "bg_light-blue",
+        imgSrc: "/images/products/light-blue.jpg",
+      },
+      {
+        name: "White",
+        colorClass: "bg_white",
+        imgSrc: "/images/products/white-7.jpg",
+      },
     ],
     sizes: ["S", "M", "L"],
     filterCategories: ["Best seller", "New arrivals", "On Sale"],
@@ -409,7 +506,7 @@ export const fashionProducts = [
     imgSrc: "/images/products/fashion-2.svg",
     imgHoverSrc: "/images/products/fashion-1.svg",
     title: "Stylish T-shirt",
-    price: 12.0,
+    price: 7,
     sizes: ["S", "M", "L", "XL"],
     filterCategories: ["Best seller", "New arrivals", "On Sale"],
     brand: "Ecomus",
@@ -420,11 +517,23 @@ export const fashionProducts = [
     imgSrc: "/images/products/fashion-4.svg",
     imgHoverSrc: "/images/products/fashion-3.svg",
     title: "Oversized Printed T-shirt",
-    price: 16.95,
+    price: 8,
     colors: [
-      { name: "White", colorClass: "bg_white", imgSrc: "/images/products/white-2.jpg" },
-      { name: "Pink", colorClass: "bg_purple", imgSrc: "/images/products/pink-1.jpg" },
-      { name: "Black", colorClass: "bg_dark", imgSrc: "/images/products/black-2.jpg" },
+      {
+        name: "White",
+        colorClass: "bg_white",
+        imgSrc: "/images/products/white-2.jpg",
+      },
+      {
+        name: "Pink",
+        colorClass: "bg_purple",
+        imgSrc: "/images/products/pink-1.jpg",
+      },
+      {
+        name: "Black",
+        colorClass: "bg_dark",
+        imgSrc: "/images/products/black-2.jpg",
+      },
     ],
     sizes: ["S", "M", "L", "XL"],
     filterCategories: ["Best seller", "On Sale"],
@@ -436,7 +545,7 @@ export const fashionProducts = [
     imgSrc: "/images/products/fashion-1.svg",
     imgHoverSrc: "/images/products/fashion-2.svg",
     title: "Premium Linen Shirt",
-    price: 20.0,
+    price: 9,
     sizes: ["M", "L", "XL"],
     filterCategories: ["New arrivals"],
     brand: "Luxe",
@@ -447,7 +556,7 @@ export const fashionProducts = [
     imgSrc: "/images/products/fashion-3.svg",
     imgHoverSrc: "/images/products/fashion-4.svg",
     title: "Cotton Joggers",
-    price: 25.0,
+    price: 10,
     sizes: ["S", "M", "L", "XL"],
     filterCategories: ["Best seller", "On Sale"],
     brand: "Comfy",
@@ -458,7 +567,7 @@ export const fashionProducts = [
     imgSrc: "/images/products/fashion-2.svg",
     imgHoverSrc: "/images/products/fashion-1.svg",
     title: "Sporty Hoodie",
-    price: 35.0,
+    price: 11,
     sizes: ["M", "L", "XL"],
     filterCategories: ["New arrivals"],
     brand: "Athlex",
@@ -469,7 +578,7 @@ export const fashionProducts = [
     imgSrc: "/images/products/fashion-3.svg",
     imgHoverSrc: "/images/products/fashion-4.svg",
     title: "Casual Polo Shirt",
-    price: 15.0,
+    price: 12,
     sizes: ["S", "M", "L"],
     filterCategories: ["Best seller"],
     brand: "Ecomus",
@@ -484,9 +593,21 @@ export const fragranceProducts = [
     title: "Ribbed Tank Top",
     price: 16.95,
     colors: [
-      { name: "Orange", colorClass: "bg_orange-3", imgSrc: "/images/products/parfume-3.svg" },
-      { name: "Black", colorClass: "bg_dark", imgSrc: "/images/products/parfume-4.svg" },
-      { name: "White", colorClass: "bg_white", imgSrc: "/images/products/parfume-5.svg" },
+      {
+        name: "Orange",
+        colorClass: "bg_orange-3",
+        imgSrc: "/images/products/parfume-3.svg",
+      },
+      {
+        name: "Black",
+        colorClass: "bg_dark",
+        imgSrc: "/images/products/parfume-4.svg",
+      },
+      {
+        name: "White",
+        colorClass: "bg_white",
+        imgSrc: "/images/products/parfume-5.svg",
+      },
     ],
     sizes: ["S", "M", "L", "XL"],
     filterCategories: ["Best seller", "On Sale"],
@@ -500,9 +621,21 @@ export const fragranceProducts = [
     title: "Ribbed Modal T-shirt",
     price: 18.95,
     colors: [
-      { name: "Brown", colorClass: "bg_brown", imgSrc: "/images/products/parfume-4.svg" },
-      { name: "Light Purple", colorClass: "bg_purple", imgSrc: "/images/products/parfume-5.svg" },
-      { name: "Light Green", colorClass: "bg_light-green", imgSrc: "/images/products/parfume-1.svg" },
+      {
+        name: "Brown",
+        colorClass: "bg_brown",
+        imgSrc: "/images/products/parfume-4.svg",
+      },
+      {
+        name: "Light Purple",
+        colorClass: "bg_purple",
+        imgSrc: "/images/products/parfume-5.svg",
+      },
+      {
+        name: "Light Green",
+        colorClass: "bg_light-green",
+        imgSrc: "/images/products/parfume-1.svg",
+      },
     ],
     sizes: ["M", "L", "XL"],
     countdown: { time: 1007500, labels: "d :,h :,m :,s" },
@@ -528,8 +661,16 @@ export const fragranceProducts = [
     title: "V-neck Linen T-shirt",
     price: 14.95,
     colors: [
-      { name: "Brown", colorClass: "bg_brown", imgSrc: "/images/products/parfume-1.svg" },
-      { name: "White", colorClass: "bg_white", imgSrc: "/images/products/parfume-2.svg" },
+      {
+        name: "Brown",
+        colorClass: "bg_brown",
+        imgSrc: "/images/products/parfume-1.svg",
+      },
+      {
+        name: "White",
+        colorClass: "bg_white",
+        imgSrc: "/images/products/parfume-2.svg",
+      },
     ],
     sizes: ["S", "M", "L", "XL"],
     filterCategories: ["Best seller", "New arrivals"],
@@ -543,12 +684,36 @@ export const fragranceProducts = [
     title: "Loose Fit Sweatshirt",
     price: 10.0,
     colors: [
-      { name: "Light Green", colorClass: "bg_light-green", imgSrc: "/images/products/parfume-3.svg" },
-      { name: "Black", colorClass: "bg_dark", imgSrc: "/images/products/parfume-4.svg" },
-      { name: "Blue", colorClass: "bg_blue-2", imgSrc: "/images/products/parfume-5.svg" },
-      { name: "Dark Blue", colorClass: "bg_dark-blue", imgSrc: "/images/products/parfume-1.svg" },
-      { name: "White", colorClass: "bg_white", imgSrc: "/images/products/parfume-2.svg" },
-      { name: "Light Grey", colorClass: "bg_light-grey", imgSrc: "/images/products/parfume-3.svg" },
+      {
+        name: "Light Green",
+        colorClass: "bg_light-green",
+        imgSrc: "/images/products/parfume-3.svg",
+      },
+      {
+        name: "Black",
+        colorClass: "bg_dark",
+        imgSrc: "/images/products/parfume-4.svg",
+      },
+      {
+        name: "Blue",
+        colorClass: "bg_blue-2",
+        imgSrc: "/images/products/parfume-5.svg",
+      },
+      {
+        name: "Dark Blue",
+        colorClass: "bg_dark-blue",
+        imgSrc: "/images/products/parfume-1.svg",
+      },
+      {
+        name: "White",
+        colorClass: "bg_white",
+        imgSrc: "/images/products/parfume-2.svg",
+      },
+      {
+        name: "Light Grey",
+        colorClass: "bg_light-grey",
+        imgSrc: "/images/products/parfume-3.svg",
+      },
     ],
     filterCategories: ["Best seller", "New arrivals"],
     brand: "Ecomus",
@@ -561,11 +726,31 @@ export const fragranceProducts = [
     title: "Regular Fit Oxford Shirt",
     price: 10.0,
     colors: [
-      { name: "Black", colorClass: "bg_dark", imgSrc: "/images/products/parfume-4.svg" },
-      { name: "Dark Blue", colorClass: "bg_dark-blue", imgSrc: "/images/products/parfume-5.svg" },
-      { name: "Beige", colorClass: "bg_beige", imgSrc: "/images/products/parfume-1.svg" },
-      { name: "Light Blue", colorClass: "bg_light-blue", imgSrc: "/images/products/parfume-2.svg" },
-      { name: "White", colorClass: "bg_white", imgSrc: "/images/products/parfume-3.svg" },
+      {
+        name: "Black",
+        colorClass: "bg_dark",
+        imgSrc: "/images/products/parfume-4.svg",
+      },
+      {
+        name: "Dark Blue",
+        colorClass: "bg_dark-blue",
+        imgSrc: "/images/products/parfume-5.svg",
+      },
+      {
+        name: "Beige",
+        colorClass: "bg_beige",
+        imgSrc: "/images/products/parfume-1.svg",
+      },
+      {
+        name: "Light Blue",
+        colorClass: "bg_light-blue",
+        imgSrc: "/images/products/parfume-2.svg",
+      },
+      {
+        name: "White",
+        colorClass: "bg_white",
+        imgSrc: "/images/products/parfume-3.svg",
+      },
     ],
     sizes: ["S", "M", "L"],
     filterCategories: ["Best seller", "New arrivals", "On Sale"],
@@ -590,9 +775,21 @@ export const fragranceProducts = [
     title: "Oversized Printed T-shirt",
     price: 16.95,
     colors: [
-      { name: "White", colorClass: "bg_white", imgSrc: "/images/products/parfume-1.svg" },
-      { name: "Pink", colorClass: "bg_purple", imgSrc: "/images/products/parfume-2.svg" },
-      { name: "Black", colorClass: "bg_dark", imgSrc: "/images/products/parfume-3.svg" },
+      {
+        name: "White",
+        colorClass: "bg_white",
+        imgSrc: "/images/products/parfume-1.svg",
+      },
+      {
+        name: "Pink",
+        colorClass: "bg_purple",
+        imgSrc: "/images/products/parfume-2.svg",
+      },
+      {
+        name: "Black",
+        colorClass: "bg_dark",
+        imgSrc: "/images/products/parfume-3.svg",
+      },
     ],
     sizes: ["S", "M", "L", "XL"],
     filterCategories: ["Best seller", "On Sale"],
@@ -652,9 +849,21 @@ export const footwearProducts = [
     title: "Running Shoes",
     price: 49.99,
     colors: [
-      { name: "Red", colorClass: "bg_red", imgSrc: "/images/products/foot-3.svg" },
-      { name: "Blue", colorClass: "bg_blue", imgSrc: "/images/products/foot-4.svg" },
-      { name: "Black", colorClass: "bg_black", imgSrc: "/images/products/foot-5.svg" },
+      {
+        name: "Red",
+        colorClass: "bg_red",
+        imgSrc: "/images/products/foot-3.svg",
+      },
+      {
+        name: "Blue",
+        colorClass: "bg_blue",
+        imgSrc: "/images/products/foot-4.svg",
+      },
+      {
+        name: "Black",
+        colorClass: "bg_black",
+        imgSrc: "/images/products/foot-5.svg",
+      },
     ],
     sizes: [7, 8, 9, 10, 11],
     filterCategories: ["Best seller", "New arrivals"],
@@ -668,8 +877,16 @@ export const footwearProducts = [
     title: "Casual Sneakers",
     price: 39.99,
     colors: [
-      { name: "Grey", colorClass: "bg_grey", imgSrc: "/images/products/foot-grey.svg" },
-      { name: "White", colorClass: "bg_white", imgSrc: "/images/products/foot-white.svg" },
+      {
+        name: "Grey",
+        colorClass: "bg_grey",
+        imgSrc: "/images/products/foot-grey.svg",
+      },
+      {
+        name: "White",
+        colorClass: "bg_white",
+        imgSrc: "/images/products/foot-white.svg",
+      },
     ],
     sizes: [6, 7, 8, 9],
     countdown: { time: 800000, labels: "d :,h :,m :,s" },
@@ -695,8 +912,16 @@ export const footwearProducts = [
     title: "Formal Leather Shoes",
     price: 79.99,
     colors: [
-      { name: "Black", colorClass: "bg_black", imgSrc: "/images/products/foot-black.svg" },
-      { name: "Brown", colorClass: "bg_brown", imgSrc: "/images/products/foot-brown.svg" },
+      {
+        name: "Black",
+        colorClass: "bg_black",
+        imgSrc: "/images/products/foot-black.svg",
+      },
+      {
+        name: "Brown",
+        colorClass: "bg_brown",
+        imgSrc: "/images/products/foot-brown.svg",
+      },
     ],
     sizes: [8, 9, 10, 11],
     filterCategories: ["Best seller"],
@@ -710,8 +935,16 @@ export const footwearProducts = [
     title: "Hiking Boots",
     price: 89.99,
     colors: [
-      { name: "Olive Green", colorClass: "bg_green", imgSrc: "/images/products/foot-green.svg" },
-      { name: "Grey", colorClass: "bg_grey", imgSrc: "/images/products/foot-grey.svg" },
+      {
+        name: "Olive Green",
+        colorClass: "bg_green",
+        imgSrc: "/images/products/foot-green.svg",
+      },
+      {
+        name: "Grey",
+        colorClass: "bg_grey",
+        imgSrc: "/images/products/foot-grey.svg",
+      },
     ],
     sizes: [7, 8, 9, 10, 11, 12],
     filterCategories: ["New arrivals"],
@@ -725,8 +958,16 @@ export const footwearProducts = [
     title: "Sports Sandals",
     price: 29.99,
     colors: [
-      { name: "Blue", colorClass: "bg_blue", imgSrc: "/images/products/foot-blue.svg" },
-      { name: "Black", colorClass: "bg_black", imgSrc: "/images/products/foot-black-2.svg" },
+      {
+        name: "Blue",
+        colorClass: "bg_blue",
+        imgSrc: "/images/products/foot-blue.svg",
+      },
+      {
+        name: "Black",
+        colorClass: "bg_black",
+        imgSrc: "/images/products/foot-black-2.svg",
+      },
     ],
     sizes: [6, 7, 8, 9, 10],
     filterCategories: ["On Sale"],
@@ -740,8 +981,16 @@ export const footwearProducts = [
     title: "High-top Sneakers",
     price: 64.99,
     colors: [
-      { name: "Black", colorClass: "bg_black", imgSrc: "/images/products/foot-black-3.svg" },
-      { name: "White", colorClass: "bg_white", imgSrc: "/images/products/foot-white-2.svg" },
+      {
+        name: "Black",
+        colorClass: "bg_black",
+        imgSrc: "/images/products/foot-black-3.svg",
+      },
+      {
+        name: "White",
+        colorClass: "bg_white",
+        imgSrc: "/images/products/foot-white-2.svg",
+      },
     ],
     sizes: [8, 9, 10, 11],
     filterCategories: ["Best seller", "New arrivals"],
@@ -755,8 +1004,16 @@ export const footwearProducts = [
     title: "Loafers",
     price: 74.99,
     colors: [
-      { name: "Brown", colorClass: "bg_brown", imgSrc: "/images/products/foot-brown-2.svg" },
-      { name: "Black", colorClass: "bg_black", imgSrc: "/images/products/foot-black-4.svg" },
+      {
+        name: "Brown",
+        colorClass: "bg_brown",
+        imgSrc: "/images/products/foot-brown-2.svg",
+      },
+      {
+        name: "Black",
+        colorClass: "bg_black",
+        imgSrc: "/images/products/foot-black-4.svg",
+      },
     ],
     sizes: [7, 8, 9, 10],
     filterCategories: ["Best seller"],
@@ -770,8 +1027,16 @@ export const footwearProducts = [
     title: "Beach Flip-flops",
     price: 19.99,
     colors: [
-      { name: "Blue", colorClass: "bg_blue", imgSrc: "/images/products/foot-blue-2.svg" },
-      { name: "Yellow", colorClass: "bg_yellow", imgSrc: "/images/products/foot-yellow.svg" },
+      {
+        name: "Blue",
+        colorClass: "bg_blue",
+        imgSrc: "/images/products/foot-blue-2.svg",
+      },
+      {
+        name: "Yellow",
+        colorClass: "bg_yellow",
+        imgSrc: "/images/products/foot-yellow.svg",
+      },
     ],
     sizes: [5, 6, 7, 8, 9],
     filterCategories: ["On Sale"],
@@ -785,8 +1050,16 @@ export const footwearProducts = [
     title: "Winter Boots",
     price: 99.99,
     colors: [
-      { name: "Black", colorClass: "bg_black", imgSrc: "/images/products/foot-black-5.svg" },
-      { name: "Brown", colorClass: "bg_brown", imgSrc: "/images/products/foot-brown-3.svg" },
+      {
+        name: "Black",
+        colorClass: "bg_black",
+        imgSrc: "/images/products/foot-black-5.svg",
+      },
+      {
+        name: "Brown",
+        colorClass: "bg_brown",
+        imgSrc: "/images/products/foot-brown-3.svg",
+      },
     ],
     sizes: [7, 8, 9, 10, 11],
     filterCategories: ["New arrivals"],
@@ -800,8 +1073,16 @@ export const footwearProducts = [
     title: "Luxury Loafers",
     price: 149.99,
     colors: [
-      { name: "Tan", colorClass: "bg_tan", imgSrc: "/images/products/foot-tan.svg" },
-      { name: "Black", colorClass: "bg_black", imgSrc: "/images/products/foot-black-6.svg" },
+      {
+        name: "Tan",
+        colorClass: "bg_tan",
+        imgSrc: "/images/products/foot-tan.svg",
+      },
+      {
+        name: "Black",
+        colorClass: "bg_black",
+        imgSrc: "/images/products/foot-black-6.svg",
+      },
     ],
     sizes: [8, 9, 10],
     filterCategories: ["Best seller"],
@@ -815,8 +1096,16 @@ export const footwearProducts = [
     title: "Performance Runners",
     price: 89.99,
     colors: [
-      { name: "Grey", colorClass: "bg_grey", imgSrc: "/images/products/foot-grey-2.svg" },
-      { name: "Blue", colorClass: "bg_blue", imgSrc: "/images/products/foot-blue-3.svg" },
+      {
+        name: "Grey",
+        colorClass: "bg_grey",
+        imgSrc: "/images/products/foot-grey-2.svg",
+      },
+      {
+        name: "Blue",
+        colorClass: "bg_blue",
+        imgSrc: "/images/products/foot-blue-3.svg",
+      },
     ],
     sizes: [7, 8, 9, 10, 11, 12],
     filterCategories: ["Best seller", "New arrivals"],
@@ -832,9 +1121,21 @@ export const cosmeticsProducts = [
     title: "Matte Lipstick",
     price: 12.99,
     colors: [
-      { name: "Red", colorClass: "bg_red", imgSrc: "/images/products/cos-3.svg" },
-      { name: "Pink", colorClass: "bg_pink", imgSrc: "/images/products/cos-4.svg" },
-      { name: "Nude", colorClass: "bg_nude", imgSrc: "/images/products/cos-5.svg" },
+      {
+        name: "Red",
+        colorClass: "bg_red",
+        imgSrc: "/images/products/cos-3.svg",
+      },
+      {
+        name: "Pink",
+        colorClass: "bg_pink",
+        imgSrc: "/images/products/cos-4.svg",
+      },
+      {
+        name: "Nude",
+        colorClass: "bg_nude",
+        imgSrc: "/images/products/cos-5.svg",
+      },
     ],
     sizes: ["5ml", "10ml"],
     filterCategories: ["Best seller", "New arrivals"],
@@ -848,8 +1149,16 @@ export const cosmeticsProducts = [
     title: "Hydrating Foundation",
     price: 19.99,
     colors: [
-      { name: "Ivory", colorClass: "bg_ivory", imgSrc: "/images/products/cos-ivory.svg" },
-      { name: "Beige", colorClass: "bg_beige", imgSrc: "/images/products/cos-beige.svg" },
+      {
+        name: "Ivory",
+        colorClass: "bg_ivory",
+        imgSrc: "/images/products/cos-ivory.svg",
+      },
+      {
+        name: "Beige",
+        colorClass: "bg_beige",
+        imgSrc: "/images/products/cos-beige.svg",
+      },
     ],
     sizes: ["30ml", "50ml"],
     countdown: { time: 700000, labels: "d :,h :,m :,s" },
@@ -875,8 +1184,16 @@ export const cosmeticsProducts = [
     title: "Eyeshadow Palette",
     price: 29.99,
     colors: [
-      { name: "Rainbow", colorClass: "bg_rainbow", imgSrc: "/images/products/cos-rainbow.svg" },
-      { name: "Natural", colorClass: "bg_natural", imgSrc: "/images/products/cos-natural.svg" },
+      {
+        name: "Rainbow",
+        colorClass: "bg_rainbow",
+        imgSrc: "/images/products/cos-rainbow.svg",
+      },
+      {
+        name: "Natural",
+        colorClass: "bg_natural",
+        imgSrc: "/images/products/cos-natural.svg",
+      },
     ],
     sizes: ["12 shades", "24 shades"],
     filterCategories: ["Best seller"],
@@ -890,8 +1207,16 @@ export const cosmeticsProducts = [
     title: "Waterproof Mascara",
     price: 9.99,
     colors: [
-      { name: "Black", colorClass: "bg_black", imgSrc: "/images/products/cos-black.svg" },
-      { name: "Brown", colorClass: "bg_brown", imgSrc: "/images/products/cos-brown.svg" },
+      {
+        name: "Black",
+        colorClass: "bg_black",
+        imgSrc: "/images/products/cos-black.svg",
+      },
+      {
+        name: "Brown",
+        colorClass: "bg_brown",
+        imgSrc: "/images/products/cos-brown.svg",
+      },
     ],
     sizes: ["8ml"],
     filterCategories: ["New arrivals"],
@@ -905,8 +1230,16 @@ export const cosmeticsProducts = [
     title: "Lip Gloss",
     price: 8.99,
     colors: [
-      { name: "Clear", colorClass: "bg_clear", imgSrc: "/images/products/cos-clear.svg" },
-      { name: "Pink", colorClass: "bg_pink", imgSrc: "/images/products/cos-pink.svg" },
+      {
+        name: "Clear",
+        colorClass: "bg_clear",
+        imgSrc: "/images/products/cos-clear.svg",
+      },
+      {
+        name: "Pink",
+        colorClass: "bg_pink",
+        imgSrc: "/images/products/cos-pink.svg",
+      },
     ],
     sizes: ["5ml"],
     filterCategories: ["On Sale"],
@@ -920,8 +1253,16 @@ export const cosmeticsProducts = [
     title: "Blush Compact",
     price: 11.99,
     colors: [
-      { name: "Peach", colorClass: "bg_peach", imgSrc: "/images/products/cos-peach.svg" },
-      { name: "Rose", colorClass: "bg_rose", imgSrc: "/images/products/cos-rose.svg" },
+      {
+        name: "Peach",
+        colorClass: "bg_peach",
+        imgSrc: "/images/products/cos-peach.svg",
+      },
+      {
+        name: "Rose",
+        colorClass: "bg_rose",
+        imgSrc: "/images/products/cos-rose.svg",
+      },
     ],
     sizes: ["Small", "Large"],
     filterCategories: ["Best seller", "New arrivals"],
@@ -935,8 +1276,16 @@ export const cosmeticsProducts = [
     title: "Eyeliner Pencil",
     price: 6.99,
     colors: [
-      { name: "Black", colorClass: "bg_black", imgSrc: "/images/products/cos-black-pencil.svg" },
-      { name: "Blue", colorClass: "bg_blue", imgSrc: "/images/products/cos-blue-pencil.svg" },
+      {
+        name: "Black",
+        colorClass: "bg_black",
+        imgSrc: "/images/products/cos-black-pencil.svg",
+      },
+      {
+        name: "Blue",
+        colorClass: "bg_blue",
+        imgSrc: "/images/products/cos-blue-pencil.svg",
+      },
     ],
     sizes: ["Standard"],
     filterCategories: ["Best seller"],
@@ -950,8 +1299,16 @@ export const cosmeticsProducts = [
     title: "Highlighter Stick",
     price: 14.99,
     colors: [
-      { name: "Gold", colorClass: "bg_gold", imgSrc: "/images/products/cos-gold.svg" },
-      { name: "Silver", colorClass: "bg_silver", imgSrc: "/images/products/cos-silver.svg" },
+      {
+        name: "Gold",
+        colorClass: "bg_gold",
+        imgSrc: "/images/products/cos-gold.svg",
+      },
+      {
+        name: "Silver",
+        colorClass: "bg_silver",
+        imgSrc: "/images/products/cos-silver.svg",
+      },
     ],
     sizes: ["10g"],
     filterCategories: ["On Sale"],
@@ -976,8 +1333,16 @@ export const cosmeticsProducts = [
     title: "BB Cream",
     price: 15.99,
     colors: [
-      { name: "Light", colorClass: "bg_light", imgSrc: "/images/products/cos-light.svg" },
-      { name: "Medium", colorClass: "bg_medium", imgSrc: "/images/products/cos-medium.svg" },
+      {
+        name: "Light",
+        colorClass: "bg_light",
+        imgSrc: "/images/products/cos-light.svg",
+      },
+      {
+        name: "Medium",
+        colorClass: "bg_medium",
+        imgSrc: "/images/products/cos-medium.svg",
+      },
     ],
     sizes: ["30ml"],
     filterCategories: ["Best seller"],
@@ -991,8 +1356,16 @@ export const cosmeticsProducts = [
     title: "Nail Polish",
     price: 4.99,
     colors: [
-      { name: "Red", colorClass: "bg_red", imgSrc: "/images/products/cos-red-polish.svg" },
-      { name: "Purple", colorClass: "bg_purple", imgSrc: "/images/products/cos-purple-polish.svg" },
+      {
+        name: "Red",
+        colorClass: "bg_red",
+        imgSrc: "/images/products/cos-red-polish.svg",
+      },
+      {
+        name: "Purple",
+        colorClass: "bg_purple",
+        imgSrc: "/images/products/cos-purple-polish.svg",
+      },
     ],
     sizes: ["10ml"],
     filterCategories: ["Best seller", "New arrivals"],
@@ -1000,7 +1373,6 @@ export const cosmeticsProducts = [
     isAvailable: true,
   },
 ];
-
 
 export const products2 = [
   {
@@ -6205,8 +6577,8 @@ export const products50 = [
 
 export const allProducts = [
   // ...products1,
-  ...fashionProducts,  
-  ...fragranceProducts, 
+  ...fashionProducts,
+  ...fragranceProducts,
   ...footwearProducts,
   ...cosmeticsProducts,
   ...products2,

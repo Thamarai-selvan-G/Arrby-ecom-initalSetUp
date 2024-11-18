@@ -38,7 +38,7 @@ export default function CosmeticsList() {
                 className="tf-btn-filter"
               >
                 <span className="icon icon-filter" />
-                <span className="text">Filter </span>
+                <span className="text">Filter Here</span>
               </a>
             </div>
             <ul className="tf-control-layout d-flex justify-content-center">
@@ -76,7 +76,7 @@ export default function CosmeticsList() {
           </div>
         </div>
       </section>
-      <ShopFilter setProducts={setProducts} />
+      <ShopFilter setProducts={setProducts} products={cosmeticsProducts} />
     </>
   );
 }

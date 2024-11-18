@@ -11,6 +11,7 @@ import { useEffect } from "react";
 export default function FashionList() {
   const [gridItems, setGridItems] = useState(4);
   const [products, setProducts] = useState([]);
+
   const [finalSorted, setFinalSorted] = useState(fashionProducts);
 
   console.log("Products:", products);
@@ -79,7 +80,7 @@ export default function FashionList() {
           </div>
         </div>
       </section>
-      <ShopFilter setProducts={setProducts} />
+      <ShopFilter setProducts={setProducts} products={fashionProducts} />
     </>
   );
 }

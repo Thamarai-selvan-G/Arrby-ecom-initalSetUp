@@ -79,7 +79,7 @@ export default function FragranceList() {
           </div>
         </div>
       </section>
-      <ShopFilter setProducts={setProducts} />
+      <ShopFilter setProducts={setProducts} products={fragranceProducts} />
     </>
   );
 }

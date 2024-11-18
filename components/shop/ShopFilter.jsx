@@ -32,9 +32,9 @@ const availabilities = [
 ];
 const sizes = ["S", "M", "L", "XL"];
 import Slider from "rc-slider";
-import { products1 } from "@/data/products";
 import Link from "next/link";
-export default function ShopFilter({ setProducts, products = products1 }) {
+
+export default function ShopFilter({ setProducts, products  }) {
   const [price, setPrice] = useState([10, 20]);
   const handlePrice = (value) => {
     setPrice(value);
@@ -73,6 +73,7 @@ export default function ShopFilter({ setProducts, products = products1 }) {
       setSelectedSizes((pre) => [...pre, size]);
     }
   };
+console.log( 'filter component:' + products);
 
   useEffect(() => {
     let filteredArrays = [];
@@ -137,7 +138,8 @@ export default function ShopFilter({ setProducts, products = products1 }) {
       filteredArrays.every((array) => array.includes(item))
     );
     setProducts(commonItems);
-  }, [
+  },
+   [
     price,
     selectedColors,
     selectedBrands,
@@ -151,6 +153,7 @@ export default function ShopFilter({ setProducts, products = products1 }) {
     setSelectedAvailabilities([]);
     setSelectedSizes([]);
     setPrice([10, 20]);
+   
   };
   return (
     <div className="offcanvas offcanvas-start canvas-filter" id="filterShop">

@@ -13,8 +13,8 @@ export default function FootwearList() {
   const [products, setProducts] = useState([]);
   const [finalSorted, setFinalSorted] = useState(footwearProducts);
 
-  console.log("Products:", products);
-  console.log("Final Sorted:", finalSorted);
+  // console.log("Products:", products);
+  // console.log("Final Sorted:", finalSorted);
 
   const getFashionProduct = async () => {
     try {
@@ -79,7 +79,7 @@ export default function FootwearList() {
           </div>
         </div>
       </section>
-      <ShopFilter setProducts={setProducts} />
+      <ShopFilter setProducts={setProducts} products={ footwearProducts}/>
     </>
   );
 }
