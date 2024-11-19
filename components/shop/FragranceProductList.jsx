@@ -7,14 +7,12 @@ import ShopFilter from "./ShopFilter";
 import Sorting from "./Sorting";
 import { fragranceProducts } from "@/data/products";
 import { useEffect } from "react";
+import FragranceFilter from "./FragranceFilter";
 
 export default function FragranceList() {
   const [gridItems, setGridItems] = useState(4);
   const [products, setProducts] = useState([]);
-  const [finalSorted, setFinalSorted] = useState(fragranceProducts);
-
-  console.log("Products:", products);
-  console.log("Final Sorted:", finalSorted);
+  const [finalSorted, setFinalSorted] = useState([]);
 
   const getFashionProduct = async () => {
     try {
@@ -79,7 +77,11 @@ export default function FragranceList() {
           </div>
         </div>
       </section>
-      <ShopFilter setProducts={setProducts} products={fragranceProducts} />
+      <FragranceFilter
+        setProducts={setProducts}
+        products={fragranceProducts}
+        category={"FRAGRANCE"}
+      />
     </>
   );
 }

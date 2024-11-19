@@ -11,24 +11,21 @@ import { useEffect } from "react";
 export default function FashionList() {
   const [gridItems, setGridItems] = useState(4);
   const [products, setProducts] = useState([]);
+  const [finalSorted, setFinalSorted] = useState([]);
 
-  const [finalSorted, setFinalSorted] = useState(fashionProducts);
-
-  console.log("Products:", products);
-  console.log("Final Sorted:", finalSorted);
-
-  const getFashionProduct = async () => {
+  const fetchFashionProducts = async () => {  // Ferch api ...
     try {
-      setProducts(fashionProducts);
+        setProducts(fashionProducts); 
     } catch (error) {
-      console.error(error.response);
+      console.log("Error fetching products:", error);
     }
   };
 
   useEffect(() => {
-    getFashionProduct();
+    fetchFashionProducts();
   }, []);
-
+  // console.log("products:", products);
+  // console.log("finalsorted:", finalSorted);
   return (
     <>
       <section className="flat-spacing-2">
@@ -80,7 +77,11 @@ export default function FashionList() {
           </div>
         </div>
       </section>
-      <ShopFilter setProducts={setProducts} products={fashionProducts} />
+      <ShopFilter
+        setProducts={setProducts}
+        products={fashionProducts}
+        category={"FASHION"}
+      />
     </>
   );
 }

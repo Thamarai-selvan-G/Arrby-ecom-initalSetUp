@@ -2,7 +2,7 @@ import React from "react";
 import { ProductCard } from "../shopCards/ProductCard";
 
 export default function ProductGrid({ allproducts, gridItems }) {
-  console.log("allproducts===>",allproducts);
+ 
   return (
     <>
       <div

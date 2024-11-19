@@ -97,13 +97,6 @@ export const ProductCard = ({ product }) => {
             <span className="tooltip">Quick View</span>
           </a>
         </div>
-        {/* {product.countdown && (        // Here remove the offer condown ...
-          <div className="countdown-box">
-            <div className="js-countdown">
-              <CountdownComponent />
-            </div>
-          </div>
-        )} */}
         {product.sizes && (
           <div className="size-list">
             {product.sizes.map((size) => (

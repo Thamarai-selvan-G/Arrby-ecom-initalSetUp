@@ -29,7 +29,6 @@ export default function DetailsOuterZoom({ product = allProducts[0] }) {
     }
   };
 
-  console.log(product);
   
   const {
     addProductToCart,

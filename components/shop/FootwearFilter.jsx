@@ -10,31 +10,36 @@ const categories = [
 ];
 
 const filterColors = [
-  { name: "Orange", colorClass: "bg_orange-3" },
-  { name: "Black", colorClass: "bg_dark" },
+  { name: "Black", colorClass: "bg_black" },
   { name: "White", colorClass: "bg_white" },
-  { name: "Brown", colorClass: "bg_brown" },
-  { name: "Light Purple", colorClass: "bg_purple" },
-  { name: "Light Green", colorClass: "bg_light-green" },
-  { name: "Pink", colorClass: "bg_purple" },
-  { name: "Blue", colorClass: "bg_blue-2" },
-  { name: "Dark Blue", colorClass: "bg_dark-blue" },
-  { name: "Light Grey", colorClass: "bg_light-grey" },
-  { name: "Beige", colorClass: "bg_beige" },
-  { name: "Light Blue", colorClass: "bg_light-blue" },
   { name: "Grey", colorClass: "bg_grey" },
-  { name: "Light Pink", colorClass: "bg_light-pink" },
+  { name: "Blue", colorClass: "bg_blue" },
+  { name: "Red", colorClass: "bg_red" },
+  { name: "Brown", colorClass: "bg_brown" },
+  { name: "Pink", colorClass: "bg_pink" },
 ];
-const brands = ["Ecomus", "M&H","Luxe","Comfy","Athlex"];
+const brands = [
+  "Nike",
+  "Adidas",
+  "Puma",
+  "Reebok",
+  "Converse",
+  "New Balance",
+  "Vans",
+  "Under Armour",
+  "Asics",
+  "Skechers",
+];
 const availabilities = [
   { id: 1, isAvailable: true, text: "Available", count: 10 },
   { id: 2, isAvailable: false, text: "Out of Stock", count: 2 },
 ];
-const sizes = ["S", "M", "L", "XL"];
+const sizes = [6, 7, 8, 9, 10, 11, 12, 13];
 import Slider from "rc-slider";
 import Link from "next/link";
-export default function ShopFilter({ setProducts, products, category  }) {
-  const [price, setPrice] = useState([0,35]);
+
+export default function FooterFilter({ setProducts, products, category }) {
+  const [price, setPrice] = useState([0, 200]);
   const handlePrice = (value) => {
     setPrice(value);
   };
@@ -56,8 +61,11 @@ export default function ShopFilter({ setProducts, products, category  }) {
   };
   const [selectedAvailabilities, setSelectedAvailabilities] = useState([]);
   const handleSelectAvailabilities = (availability) => {
-
-    if (selectedAvailabilities.some((el) => el.isAvailable === availability.isAvailable)) {
+    if (
+      selectedAvailabilities.some(
+        (el) => el.isAvailable === availability.isAvailable
+      )
+    ) {
       setSelectedAvailabilities((prev) =>
         prev.filter((el) => el.isAvailable !== availability.isAvailable)
       );
@@ -65,7 +73,7 @@ export default function ShopFilter({ setProducts, products, category  }) {
       setSelectedAvailabilities((prev) => [...prev, availability]);
     }
   };
-  
+
   const [selectedSizes, setSelectedSizes] = useState([]);
   const handleSelectSizes = (size) => {
     if (selectedSizes.includes(size)) {
@@ -133,7 +141,7 @@ export default function ShopFilter({ setProducts, products, category  }) {
         ],
       ];
     }
-    
+
     const commonItems = products.filter((item) =>
       filteredArrays.every((array) => array.includes(item))
     );
@@ -151,8 +159,7 @@ export default function ShopFilter({ setProducts, products, category  }) {
     setSelectedBrands([]);
     setSelectedAvailabilities([]);
     setSelectedSizes([]);
-    setPrice([0, 35]);
-
+    setPrice([50, 200]);
   };
   return (
     <div className="offcanvas offcanvas-start canvas-filter" id="filterShop">
@@ -263,8 +270,8 @@ export default function ShopFilter({ setProducts, products, category  }) {
                   <Slider
                     formatLabel={() => ``}
                     range
-                    max={35}
-                    min={5}
+                    max={180}
+                    min={15}
                     defaultValue={price}
                     onChange={(value) => handlePrice(value)}
                     id="slider"
@@ -415,7 +422,7 @@ export default function ShopFilter({ setProducts, products, category  }) {
             className="tf-btn style-2 btn-fill rounded animate-hover-btn"
             onClick={clearFilter}
           >
-            Clear Filter 
+            Clear Filter
           </a>
         </div>
       </div>

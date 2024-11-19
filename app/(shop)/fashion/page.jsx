@@ -6,16 +6,16 @@ import React from 'react'
 const FashionPage = () => {
   return (
   <>
-    <Header2/>
-    <div className="tf-page-title">
+     <Header2 />
+      <div className="tf-page-title">
         <div className="container-full">
-          <div className="heading text-center">Fashion</div>
+          <div className="heading text-center">Fashion Products</div>
           <p className="text-center text-2 text_black-2 mt_5">
             Shop through our latest selection of Fashion
           </p>
         </div>
       </div>
-      <FashionList/>
+      <FashionList />
       <Footer1 />
   </>
   )

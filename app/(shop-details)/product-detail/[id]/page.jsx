@@ -16,12 +16,9 @@ export const metadata = {
 export default function page({ params }) {
   const product =
     allProducts.filter((elm) => elm.id == params.id)[0] || allProducts[0];
-
-    console.log(product + 'from zoom');
-    
   return (
     <>
-      <Header2 />
+      <Header2/>
       <div className="tf-breadcrumb">
         <div className="container">
           <div className="tf-breadcrumb-wrap d-flex justify-content-between flex-wrap align-items-center">
@@ -35,9 +32,7 @@ export default function page({ params }) {
               </a>
               <i className="icon icon-arrow-right" />
               <span className="text">
-                {product.title
-                  ? product.title
-                  : "current product name in the burgger menu"}
+                {product.title ? product.title : "product name"}
               </span>
             </div>
             <div className="tf-breadcrumb-prev-next">
@@ -59,7 +54,7 @@ export default function page({ params }) {
       </div>
       <DetailsOuterZoom product={product} />
       <ShopDetailsTab />
-      <Testimonials />
+      <Testimonials/>
       <Products />
       <RecentProducts />
       <Footer1 />

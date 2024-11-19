@@ -7,6 +7,7 @@ import ShopFilter from "./ShopFilter";
 import Sorting from "./Sorting";
 import { footwearProducts } from "@/data/products";
 import { useEffect } from "react";
+import FooterFilter from "./FootwearFilter";
 
 export default function FootwearList() {
   const [gridItems, setGridItems] = useState(4);
@@ -79,7 +80,7 @@ export default function FootwearList() {
           </div>
         </div>
       </section>
-      <ShopFilter setProducts={setProducts} products={ footwearProducts}/>
+      <FooterFilter setProducts={setProducts} products={ footwearProducts} category={"FOOTWEAR"}/>
     </>
   );
 }

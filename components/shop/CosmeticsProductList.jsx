@@ -7,11 +7,12 @@ import ShopFilter from "./ShopFilter";
 import Sorting from "./Sorting";
 import { cosmeticsProducts } from "@/data/products";
 import { useEffect } from "react";
+import CosmeticFilter from "./CosmeticFilter";
 
 export default function CosmeticsList() {
   const [gridItems, setGridItems] = useState(4);
   const [products, setProducts] = useState([]);
-  const [finalSorted, setFinalSorted] = useState(cosmeticsProducts);
+  const [finalSorted, setFinalSorted] = useState([]);
 
   const getFashionProduct = async () => {
     try {
@@ -76,7 +77,7 @@ export default function CosmeticsList() {
           </div>
         </div>
       </section>
-      <ShopFilter setProducts={setProducts} products={cosmeticsProducts} />
+      <CosmeticFilter setProducts={setProducts} products={cosmeticsProducts} category={"COSMETICS"}/>
     </>
   );
 }
