@@ -1,181 +1,33 @@
 "use client";
+
+import { useEffect, useRef, useState } from "react";
 import Drift from "drift-zoom";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
 import { Gallery, Item } from "react-photoswipe-gallery";
 import { Navigation, Thumbs } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-const images = [
-  {
-    id: 1,
-    src: "/images/shop/products/fashion-1.svg",
-    alt: "",
-    width: 770,
-    height: 1075,
-    dataValue: "beige",
-  },
-  {
-    id: 2,
-    src: "/images/shop/products/hmgoepprod.jpg",
-    alt: "",
-    width: 713,
-    height: 1070,
-    dataValue: "beige",
-  },
-  {
-    id: 3,
-    src: "/images/shop/products/hmgoepprod2.jpg",
-    alt: "img-compare",
-    width: 713,
-    height: 1070,
-    dataValue: "beige",
-  },
-  {
-    id: 4,
-    src: "/images/shop/products/hmgoepprod3.jpg",
-    alt: "img-compare",
-    width: 713,
-    height: 1070,
-    dataValue: "beige",
-  },
-  {
-    id: 5,
-    src: "/images/shop/products/hmgoepprod4.jpg",
-    alt: "img-compare",
-    width: 768,
-    height: 1152,
-    dataValue: "beige",
-  },
-  {
-    id: 6,
-    src: "/images/shop/products/hmgoepprod5.jpg",
-    alt: "img-compare",
-    width: 713,
-    height: 1070,
-    dataValue: "beige",
-  },
-  {
-    id: 7,
-    src: "/images/shop/products/hmgoepprod6.jpg",
-    alt: "",
-    width: 768,
-    height: 1152,
-    dataValue: "black",
-  },
-  {
-    id: 8,
-    src: "/images/shop/products/hmgoepprod7.jpg",
-    alt: "",
-    width: 713,
-    height: 1070,
-    dataValue: "black",
-  },
-  {
-    id: 9,
-    src: "/images/shop/products/hmgoepprod8.jpg",
-    alt: "",
-    width: 713,
-    height: 1070,
-    dataValue: "black",
-  },
-  {
-    id: 10,
-    src: "/images/shop/products/hmgoepprod9.jpg",
-    alt: "",
-    width: 768,
-    height: 1152,
-    dataValue: "black",
-  },
-  {
-    id: 11,
-    src: "/images/shop/products/hmgoepprod10.jpg",
-    alt: "",
-    width: 713,
-    height: 1070,
-    dataValue: "blue",
-  },
-  {
-    id: 12,
-    src: "/images/shop/products/hmgoepprod11.jpg",
-    alt: "",
-    width: 713,
-    height: 1070,
-    dataValue: "blue",
-  },
-  {
-    id: 13,
-    src: "/images/shop/products/hmgoepprod12.jpg",
-    alt: "",
-    width: 768,
-    height: 1152,
-    dataValue: "blue",
-  },
-  {
-    id: 14,
-    src: "/images/shop/products/hmgoepprod13.jpg",
-    alt: "",
-    width: 768,
-    height: 1152,
-    dataValue: "blue",
-  },
-  {
-    id: 15,
-    src: "/images/shop/products/hmgoepprod14.jpg",
-    alt: "",
-    width: 768,
-    height: 1152,
-    dataValue: "white",
-  },
-  {
-    id: 16,
-    src: "/images/shop/products/hmgoepprod15.jpg",
-    alt: "",
-    width: 768,
-    height: 1152,
-    dataValue: "white",
-  },
-  {
-    id: 17,
-    src: "/images/shop/products/hmgoepprod16.jpg",
-    alt: "",
-    width: 768,
-    height: 1152,
-    dataValue: "white",
-  },
-  {
-    id: 18,
-    src: "/images/shop/products/hmgoepprod17.jpg",
-    alt: "",
-    width: 768,
-    height: 1152,
-    dataValue: "white",
-  },
-];
-
 export default function Slider1ZoomOuter({
-  currentColor = "Beige",
-  handleColor = () => {},
+  images = [], // Default to an empty array if no images are passed
 }) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const swiperRef = useRef(null);
-  useEffect(() => {
-    const slideIndex =
-      images.filter(
-        (elm) => elm.dataValue.toLowerCase() == currentColor.toLowerCase()
-      )[0]?.id - 1;
-    swiperRef.current.slideTo(slideIndex);
-  }, [currentColor]);
-  useEffect(() => {
-    // Function to initialize Drift
-    const imageZoom = () => {
-      const driftAll = document.querySelectorAll(".tf-image-zoom");
-      const pane = document.querySelector(".tf-zoom-main");
 
-      driftAll.forEach((el) => {
+  useEffect(() => {
+    if (swiperRef.current) {
+      swiperRef.current.slideTo(0); // Reset to the first image when images update
+    }
+  }, [images]);
+
+  useEffect(() => {
+    const initializeZoom = () => {
+      const driftElements = document.querySelectorAll(".tf-image-zoom");
+      const zoomPane = document.querySelector(".tf-zoom-main");
+
+      driftElements.forEach((el) => {
         new Drift(el, {
           zoomFactor: 2,
-          paneContainer: pane,
+          paneContainer: zoomPane,
           inlinePane: false,
           handleTouch: false,
           hoverBoundingBox: true,
@@ -183,21 +35,17 @@ export default function Slider1ZoomOuter({
         });
       });
     };
-    imageZoom();
-    const zoomElements = document.querySelectorAll(".tf-image-zoom");
 
+    initializeZoom();
+
+    const zoomElements = document.querySelectorAll(".tf-image-zoom");
     const handleMouseOver = (event) => {
       const parent = event.target.closest(".section-image-zoom");
-      if (parent) {
-        parent.classList.add("zoom-active");
-      }
+      if (parent) parent.classList.add("zoom-active");
     };
-
     const handleMouseLeave = (event) => {
       const parent = event.target.closest(".section-image-zoom");
-      if (parent) {
-        parent.classList.remove("zoom-active");
-      }
+      if (parent) parent.classList.remove("zoom-active");
     };
 
     zoomElements.forEach((element) => {
@@ -205,14 +53,13 @@ export default function Slider1ZoomOuter({
       element.addEventListener("mouseleave", handleMouseLeave);
     });
 
-    // Cleanup event listeners on component unmount
     return () => {
       zoomElements.forEach((element) => {
         element.removeEventListener("mouseover", handleMouseOver);
         element.removeEventListener("mouseleave", handleMouseLeave);
       });
     };
-  }, []); // Empty dependency array to run only once on mount
+  }, [images]);
 
   return (
     <>
@@ -224,22 +71,17 @@ export default function Slider1ZoomOuter({
         onSwiper={setThumbsSwiper}
         modules={[Thumbs]}
         breakpoints={{
-          0: {
-            direction: "horizontal",
-          },
-          1150: {
-            direction: "vertical",
-          },
+          0: { direction: "horizontal" },
+          1150: { direction: "vertical" },
         }}
       >
         {images.map((slide, index) => (
-          <SwiperSlide key={index} className="stagger-item">
+          <SwiperSlide key={index}>
             <div className="item">
               <Image
                 className="lazyload"
-                data-src={slide.src}
-                alt={""}
-                src={slide.src} // Optional fallback for non-lazy loading
+                src={slide.src}
+                alt={slide.alt || ""}
                 width={slide.width}
                 height={slide.height}
               />
@@ -257,13 +99,9 @@ export default function Slider1ZoomOuter({
             prevEl: ".swiper-button-prev",
           }}
           className="tf-product-media-main"
-          id="gallery-swiper-started"
           thumbs={{ swiper: thumbsSwiper }}
           modules={[Thumbs, Navigation]}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
-          onSlideChange={(swiper) => {
-            handleColor(images[swiper.activeIndex].dataValue);
-          }}
         >
           {images.map((slide, index) => (
             <SwiperSlide key={index}>
@@ -283,23 +121,20 @@ export default function Slider1ZoomOuter({
                     <Image
                       className="tf-image-zoom lazyload"
                       data-zoom={slide.src}
-                      data-src={slide.src}
                       ref={ref}
-                      alt=""
+                      alt={slide.alt || ""}
                       width={slide.width}
                       height={slide.height}
-                      src={slide.src} // Optional fallback for non-lazy loading
+                      src={slide.src}
                     />
                   </a>
                 )}
               </Item>
             </SwiperSlide>
           ))}
-
-          {/* Navigation buttons */}
           <div className="swiper-button-next button-style-arrow thumbs-next"></div>
           <div className="swiper-button-prev button-style-arrow thumbs-prev"></div>
-        </Swiper>{" "}
+        </Swiper>
       </Gallery>
     </>
   );

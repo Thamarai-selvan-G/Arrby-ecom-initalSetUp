@@ -53,14 +53,6 @@ export default function Header2({
             <nav className="box-navigation text-center">
               <ul className="box-nav-ul d-flex align-items-center justify-content-center gap-30">
                 <Nav isArrow={isArrow} Linkfs={Linkfs} />
-                {/* <li className={`menu-item`}>
-                  <a
-                    href="https://themeforest.net/item/ecomus-ultimate-html5-template/53417990?s_rank=3"
-                    className={`item-link  ${Linkfs}`}
-                  >
-                    Buy now
-                  </a>
-                </li> */}
               </ul>
             </nav>
           </div>
