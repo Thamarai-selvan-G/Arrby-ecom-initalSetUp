@@ -1,14 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-const categories = [
-  { id: 1, name: "Fashion", isActive: true, link: "/shop-default" },
-  { id: 2, name: "Men", isActive: false, link: "/shop-men" },
-  { id: 3, name: "Women", isActive: false, link: "/shop-women" },
-  { id: 4, name: "Denim", isActive: false, link: "/shop-default" },
-  { id: 5, name: "Dress", isActive: false, link: "/shop-default" },
-];
-
 const filterColors = [
   { name: "Black", colorClass: "bg_black" },
   { name: "White", colorClass: "bg_white" },
@@ -176,35 +168,6 @@ export default function FooterFilter({ setProducts, products, category }) {
           />
         </header>
         <div className="canvas-body">
-          <div className="widget-facet wd-categories">
-            <div
-              className="facet-title"
-              data-bs-target="#categories"
-              data-bs-toggle="collapse"
-              aria-expanded="true"
-              aria-controls="categories"
-            >
-              <span>Product categories</span>
-              <span className="icon icon-arrow-up" />
-            </div>
-            <div id="categories" className="collapse show">
-              <ul className="list-categoris current-scrollbar mb_36">
-                {categories.map((category) => (
-                  <li key={category.id} className={`cate-item`}>
-                    {category.link ? (
-                      <Link href={category.link}>
-                        <span>{category.name}</span>
-                      </Link>
-                    ) : (
-                      <a href="#">
-                        <span>{category.name}</span>
-                      </a>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
           <form
             onSubmit={(e) => e.preventDefault()}
             action="#"

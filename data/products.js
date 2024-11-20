@@ -684,7 +684,7 @@ export const footwearProducts = [
       { name: "Red", colorClass: "bg_red" },
       { name: "Black", colorClass: "bg_black" },
     ],
-    isAvailable: true,
+    isAvailable: false,
   },
   {
     id: 4,
@@ -729,7 +729,7 @@ export const footwearProducts = [
       { name: "Grey", colorClass: "bg_grey" },
       { name: "Black", colorClass: "bg_black" },
     ],
-    isAvailable: true,
+    isAvailable: false,
   },
   {
     id: 7,
@@ -774,7 +774,7 @@ export const footwearProducts = [
       { name: "Grey", colorClass: "bg_grey" },
       { name: "Blue", colorClass: "bg_blue" },
     ],
-    isAvailable: true,
+    isAvailable: false,
   },
   {
     id: 10,

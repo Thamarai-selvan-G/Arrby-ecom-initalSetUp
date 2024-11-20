@@ -1,15 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-const categories = [
-  { id: 1, name: "Fashion", isActive: true, link: "/shop-default" },
-  { id: 2, name: "Men", isActive: false, link: "/shop-men" },
-  { id: 3, name: "Women", isActive: false, link: "/shop-women" },
-  { id: 4, name: "Denim", isActive: false, link: "/shop-default" },
-  { id: 5, name: "Dress", isActive: false, link: "/shop-default" },
-];
-
-const filterColors = [];
 const brands = [
   "Chanel",
   "Dior",
@@ -45,14 +36,6 @@ export default function FragranceFilter({ setProducts, products, category }) {
   const [price, setPrice] = useState([0, 160]);
   const handlePrice = (value) => {
     setPrice(value);
-  };
-  const [selectedColors, setSelectedColors] = useState([]);
-  const handleSelectColor = (color) => {
-    if (selectedColors.includes(color)) {
-      setSelectedColors((pre) => [...pre.filter((el) => el != color)]);
-    } else {
-      setSelectedColors((pre) => [...pre, color]);
-    }
   };
   const [selectedBrands, setSelectedBrands] = useState([]);
   const handleSelectBrand = (brand) => {
@@ -98,20 +81,6 @@ export default function FragranceFilter({ setProducts, products, category }) {
       ],
     ];
     // console.log(filteredByPrice, "filteredByPrice");
-    if (selectedColors.length) {
-      filteredArrays = [
-        ...filteredArrays,
-        [
-          ...products.filter((elm) =>
-            elm.colors
-              ?.map((el2) => el2.name)
-              .some((el3) => selectedColors.includes(el3))
-          ),
-        ],
-      ];
-    }
-
-    // console.log(filteredByselectedColors, "filteredByselectedColors");
     if (selectedBrands.length) {
       filteredArrays = [
         ...filteredArrays,
@@ -151,14 +120,12 @@ export default function FragranceFilter({ setProducts, products, category }) {
     setProducts(commonItems);
   }, [
     price,
-    selectedColors,
     selectedBrands,
     selectedAvailabilities,
     selectedSizes,
     products,
   ]);
   const clearFilter = () => {
-    setSelectedColors([]);
     setSelectedBrands([]);
     setSelectedAvailabilities([]);
     setSelectedSizes([]);
@@ -179,35 +146,6 @@ export default function FragranceFilter({ setProducts, products, category }) {
           />
         </header>
         <div className="canvas-body">
-          <div className="widget-facet wd-categories">
-            <div
-              className="facet-title"
-              data-bs-target="#categories"
-              data-bs-toggle="collapse"
-              aria-expanded="true"
-              aria-controls="categories"
-            >
-              <span>Product categories</span>
-              <span className="icon icon-arrow-up" />
-            </div>
-            <div id="categories" className="collapse show">
-              <ul className="list-categoris current-scrollbar mb_36">
-                {categories.map((category) => (
-                  <li key={category.id} className={`cate-item`}>
-                    {category.link ? (
-                      <Link href={category.link}>
-                        <span>{category.name}</span>
-                      </Link>
-                    ) : (
-                      <a href="#">
-                        <span>{category.name}</span>
-                      </a>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
           <form
             onSubmit={(e) => e.preventDefault()}
             action="#"
@@ -325,51 +263,6 @@ export default function FragranceFilter({ setProducts, products, category }) {
                         <span>{brand}</span>&nbsp;
                         <span>
                           ({products.filter((elm) => elm.brand == brand).length}
-                          )
-                        </span>
-                      </label>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div className="widget-facet">
-              <div
-                className="facet-title"
-                data-bs-target="#color"
-                data-bs-toggle="collapse"
-                aria-expanded="true"
-                aria-controls="color"
-              >
-                <span>Color</span>
-                <span className="icon icon-arrow-up" />
-              </div>
-              <div id="color" className="collapse show">
-                <ul className="tf-filter-group filter-color current-scrollbar mb_36">
-                  {filterColors.map((elm, i) => (
-                    <li
-                      key={i}
-                      className="list-item d-flex gap-12 align-items-center"
-                      onClick={() => handleSelectColor(elm.name)}
-                    >
-                      <input
-                        type="checkbox"
-                        name="color"
-                        className={`tf-check-color ${elm.colorClass}`}
-                        readOnly
-                        checked={selectedColors.includes(elm.name)}
-                      />
-                      <label className="label">
-                        <span>{elm.name}</span>&nbsp;
-                        <span>
-                          (
-                          {
-                            products.filter((el) =>
-                              el.colors
-                                ?.map((col) => col?.name)
-                                ?.includes(elm.name)
-                            ).length
-                          }
                           )
                         </span>
                       </label>
