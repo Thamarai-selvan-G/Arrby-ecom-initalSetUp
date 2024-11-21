@@ -24,8 +24,7 @@ export default function FashionList() {
   useEffect(() => {
     fetchFashionProducts();
   }, []);
-  // console.log("products:", products);
-  // console.log("finalsorted:", finalSorted);
+  
   return (
     <>
       <section className="flat-spacing-2">

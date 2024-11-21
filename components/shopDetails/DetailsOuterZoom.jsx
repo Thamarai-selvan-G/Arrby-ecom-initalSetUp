@@ -178,25 +178,7 @@ export default function DetailsOuterZoom({ product }) {
                         </span>
                         <span className="icon icon-delete" />
                       </a>
-                      <a
-                        href="#compare"
-                        data-bs-toggle="offcanvas"
-                        onClick={() => addToCompareItem(product.id)}
-                        aria-controls="offcanvasLeft"
-                        className="tf-product-btn-wishlist hover-tooltip box-icon bg_white compare btn-icon-action"
-                      >
-                        <span
-                          className={`icon icon-compare ${
-                            isAddedtoCompareItem(product.id) ? "added" : ""
-                          }`}
-                        />
-                        <span className="tooltip">
-                          {isAddedtoCompareItem(product.id)
-                            ? "Already Compared"
-                            : "Add to Compare"}
-                        </span>
-                        <span className="icon icon-check" />
-                      </a>
+        
                       <div className="w-100">
                         <a href="#" className="btns-full">
                           Buy with

@@ -71,6 +71,10 @@ export default function page({ params }) {
                 Home
               </Link>
               <i className="icon icon-arrow-right" />
+              <Link href={`/fashion`} className="text">
+                Fashion
+              </Link>
+              <i className="icon icon-arrow-right" />
               <span className="text">
                 {product ? product[0].title : "product name"}
               </span>
