@@ -80,7 +80,6 @@ export default function FashionList() {
       <ShopFilter
         setProducts={setProducts}
         products={fashionProducts}
-        category={"FASHION"}
       />
     </>
   );

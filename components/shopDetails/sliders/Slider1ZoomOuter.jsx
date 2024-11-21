@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useRef, useState } from "react";
 import Drift from "drift-zoom";
 import Image from "next/image";
@@ -7,9 +5,7 @@ import { Gallery, Item } from "react-photoswipe-gallery";
 import { Navigation, Thumbs } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-export default function Slider1ZoomOuter({
-  images = [], // Default to an empty array if no images are passed
-}) {
+export default function Slider1ZoomOuter({ images = [] }) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const swiperRef = useRef(null);
 

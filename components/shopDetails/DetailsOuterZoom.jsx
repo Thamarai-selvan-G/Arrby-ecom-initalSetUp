@@ -1,7 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
-import { colors, sizeOptions } from "@/data/singleProductOptions";
 import Quantity from "./Quantity";
 
 import Slider1ZoomOuter from "./sliders/Slider1ZoomOuter";
@@ -12,15 +10,6 @@ export default function DetailsOuterZoom({ product }) {
   const [currentColor, setCurrentColor] = useState(product[0].colors[0]);
   const [currentSize, setCurrentSize] = useState(product[0].sizes[0]);
   const [quantity, setQuantity] = useState(1);
-
-  const handleColor = (color) => {
-    const updatedColor = product[0].colors.filter(
-      (elm) => elm.name.toLowerCase() == color.toLowerCase()
-    )[0];
-    if (updatedColor) {
-      setCurrentColor(updatedColor);
-    }
-  };
 
   const {
     addProductToCart,
@@ -45,11 +34,11 @@ export default function DetailsOuterZoom({ product }) {
               <div className="tf-product-media-wrap sticky-top">
                 <div className="thumbs-slider">
                   <Slider1ZoomOuter
-                    images={currentColor.imgSrc.map((src) => ({
-                      src,
-                      width: currentColor.width || 800, // Default width if not provided
-                      height: currentColor.height || 1200, // Default height if not provided
-                      alt: `Image for ${currentColor.name}`,
+                    images={currentColor.img.map((imageSrc, index) => ({
+                      src: imageSrc, // Use imageSrc from the current color's image array
+                      width: 800, // Default width
+                      height: 1200, // Default height
+                      alt: `${currentColor.name} image ${index + 1}`, // Dynamic alt text
                     }))}
                   />
                 </div>
@@ -65,11 +54,11 @@ export default function DetailsOuterZoom({ product }) {
 
                   <div className="tf-product-info-price">
                     <div className="price-on-sale">
-                      ${currentColor.price.toFixed(2)}
+                      ₹{currentColor.price.toFixed(2)}
                     </div>
 
                     <div className="compare-at-price">
-                      ${currentColor.oldPrice.toFixed(2)}
+                      ₹{currentColor.oldPrice.toFixed(2)}
                     </div>
 
                     <div className="badges-on-sale">
@@ -169,7 +158,7 @@ export default function DetailsOuterZoom({ product }) {
                           -{" "}
                         </span>
                         <span className="tf-qty-price">
-                          ${(currentColor.price * quantity).toFixed(2)}
+                          ₹{(currentColor.price * quantity).toFixed(2)}
                         </span>
                       </a>
                       <a

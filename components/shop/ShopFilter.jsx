@@ -25,16 +25,16 @@ const filterColors = [
   { name: "Grey", colorClass: "bg_grey" },
   { name: "Light Pink", colorClass: "bg_light-pink" },
 ];
-const brands = ["Ecomus", "M&H","Luxe","Comfy","Athlex"];
+const brands = ["Ecomus", "M&H", "Luxe", "Comfy", "Athlex"];
 const availabilities = [
-  { id: 1, isAvailable: true, text: "Available", count: 10 },
-  { id: 2, isAvailable: false, text: "Out of Stock", count: 2 },
+  { id: 1, isAvailable: true, text: "Available" },
+  { id: 2, isAvailable: false, text: "Out of Stock" },
 ];
 const sizes = ["S", "M", "L", "XL"];
 import Slider from "rc-slider";
 import Link from "next/link";
-export default function ShopFilter({ setProducts, products, category  }) {
-  const [price, setPrice] = useState([0,35]);
+export default function ShopFilter({ setProducts, products }) {
+  const [price, setPrice] = useState([0, 70]);
   const handlePrice = (value) => {
     setPrice(value);
   };
@@ -56,8 +56,11 @@ export default function ShopFilter({ setProducts, products, category  }) {
   };
   const [selectedAvailabilities, setSelectedAvailabilities] = useState([]);
   const handleSelectAvailabilities = (availability) => {
-
-    if (selectedAvailabilities.some((el) => el.isAvailable === availability.isAvailable)) {
+    if (
+      selectedAvailabilities.some(
+        (el) => el.isAvailable === availability.isAvailable
+      )
+    ) {
       setSelectedAvailabilities((prev) =>
         prev.filter((el) => el.isAvailable !== availability.isAvailable)
       );
@@ -65,7 +68,7 @@ export default function ShopFilter({ setProducts, products, category  }) {
       setSelectedAvailabilities((prev) => [...prev, availability]);
     }
   };
-  
+
   const [selectedSizes, setSelectedSizes] = useState([]);
   const handleSelectSizes = (size) => {
     if (selectedSizes.includes(size)) {
@@ -114,13 +117,11 @@ export default function ShopFilter({ setProducts, products, category  }) {
         ...filteredArrays,
         [
           ...products.filter((elm) =>
-            elm.sizes?.some((elm2) => selectedSizes.includes(elm2))
+            elm.sizes?.some((sizeObj) => selectedSizes.includes(sizeObj.value))
           ),
         ],
       ];
     }
-
-    // console.log(filteredByselectedSizes);
     if (selectedAvailabilities.length) {
       filteredArrays = [
         ...filteredArrays,
@@ -133,7 +134,7 @@ export default function ShopFilter({ setProducts, products, category  }) {
         ],
       ];
     }
-    
+
     const commonItems = products.filter((item) =>
       filteredArrays.every((array) => array.includes(item))
     );
@@ -151,8 +152,7 @@ export default function ShopFilter({ setProducts, products, category  }) {
     setSelectedBrands([]);
     setSelectedAvailabilities([]);
     setSelectedSizes([]);
-    setPrice([0, 35]);
-
+    setPrice([0, 80]);
   };
   return (
     <div className="offcanvas offcanvas-start canvas-filter" id="filterShop">
@@ -263,8 +263,8 @@ export default function ShopFilter({ setProducts, products, category  }) {
                   <Slider
                     formatLabel={() => ``}
                     range
-                    max={35}
-                    min={5}
+                    max={80}
+                    min={0}
                     defaultValue={price}
                     onChange={(value) => handlePrice(value)}
                     id="slider"
@@ -398,8 +398,9 @@ export default function ShopFilter({ setProducts, products, category  }) {
                         <span>
                           (
                           {
-                            products.filter((el) => el.sizes?.includes(elm))
-                              .length
+                            products.filter((product) =>
+                              product.sizes?.some((size) => size.value === elm)
+                            ).length
                           }
                           )
                         </span>
@@ -415,7 +416,7 @@ export default function ShopFilter({ setProducts, products, category  }) {
             className="tf-btn style-2 btn-fill rounded animate-hover-btn"
             onClick={clearFilter}
           >
-            Clear Filter 
+            Clear Filter
           </a>
         </div>
       </div>

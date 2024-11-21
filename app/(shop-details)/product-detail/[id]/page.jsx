@@ -16,50 +16,50 @@ export const metadata = {
 export default function page({ params }) {
   // const product = allProducts.filter((elm) => elm.id == params.id)[0] || allProducts[0];
 
-  const product = [
-    {
-      id: 1,
-      imgSrc: "/images/products/fashion-1.svg",
-      imgHoverSrc: "/images/products/fashion-4.svg",
-      title: "Ribbed Tank Top",
-      price: 16.95,
-      colors: [
-        {
-          name: "Orange",
-          colorClass: "bg_orange-3",
-          imgSrc: ["/images/products/fashion-1.svg","/images/products/fashion-1.svg","/images/products/fashion-1.svg"],
-          width :713 ,
-          height : 1152,
-          price: 11,
-          oldPrice: 10,
-        },
-        {
-          name: "Black",
-          colorClass: "bg_dark",
-          imgSrc: ["/images/products/fashion-2.svg","/images/products/fashion-2.svg","/images/products/fashion-2.svg"],
-          price: 12,
-          oldPrice: 10,
-        },
-        {
-          name: "White",
-          colorClass: "bg_white",
-          imgSrc: ["/images/products/fashion-3.svg","/images/products/fashion-3.svg","/images/products/fashion-3.svg"],
-          price: 18,
-          oldPrice: 10,
-        },
-      ],
-      sizes: [
-        { id: "values-s", value: "SS", defaultChecked: true },
-        { id: "values-m", value: "MM", defaultChecked: false },
-        { id: "values-l", value: "LL", defaultChecked: false },
-        { id: "values-xl", value: "L", defaultChecked: false },
-      ],
-      filterCategories: ["Best seller", "On Sale"],
-      brand: "Ecomus",
-      isAvailable: true,
-    },
-  ];
-  // const product = fashionProducts.filter((elm) => elm.id == params.id);
+  // const product = [
+  //   {
+  //     id: 1,
+  //     imgSrc: "/images/products/fashion-1.svg",
+  //     imgHoverSrc: "/images/products/fashion-4.svg",
+  //     title: "Ribbed Tank Top",
+  //     price: 16.95,
+  //     colors: [
+  //       {
+  //         name: "Orange",
+  //         colorClass: "bg_orange-3",
+  //         img: ["/images/products/fashion-1.svg","/images/products/fashion-1.svg","/images/products/fashion-1.svg"],
+  //         width :713 ,
+  //         height : 1152,
+  //         price: 11,
+  //         oldPrice: 10,
+  //       },
+  //       {
+  //         name: "Black",
+  //         colorClass: "bg_dark",
+  //         img: ["/images/products/fashion-2.svg","/images/products/fashion-2.svg","/images/products/fashion-2.svg"],
+  //         price: 12,
+  //         oldPrice: 10,
+  //       },
+  //       {
+  //         name: "White",
+  //         colorClass: "bg_white",
+  //         img: ["/images/products/fashion-3.svg","/images/products/fashion-3.svg","/images/products/fashion-3.svg"],
+  //         price: 18,
+  //         oldPrice: 10,
+  //       },
+  //     ],
+  //     sizes: [
+  //       { id: "values-s", value: "SS", defaultChecked: true },
+  //       { id: "values-m", value: "MM", defaultChecked: false },
+  //       { id: "values-l", value: "LL", defaultChecked: false },
+  //       { id: "values-xl", value: "L", defaultChecked: false },
+  //     ],
+  //     filterCategories: ["Best seller", "On Sale"],
+  //     brand: "Ecomus",
+  //     isAvailable: true,
+  //   },
+  // ];
+  const product = fashionProducts.filter((elm) => elm.id == params.id);
   return (
     <>
       <Header2 />

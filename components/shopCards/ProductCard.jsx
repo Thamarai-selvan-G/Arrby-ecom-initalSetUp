@@ -100,7 +100,7 @@ export const ProductCard = ({ product }) => {
         {product.sizes && (
           <div className="size-list">
             {product.sizes.map((size) => (
-              <span key={size}>{size}</span>
+              <span key={size.id}>{size.value}</span>
             ))}
           </div>
         )}
