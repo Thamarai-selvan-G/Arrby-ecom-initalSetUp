@@ -121,13 +121,15 @@ export default function DetailsOuterZoom({ product }) {
                               {currentSize.value}
                             </span>
                           </div>
-                          <a
+                          {
+                            currentSize.value == 'S' && <a
                             href="#find_size"
                             data-bs-toggle="modal"
                             className="find-size fw-6"
                           >
                             Find your size
                           </a>
+                          }
                         </div>
                         <form className="variant-picker-values">
                           {product[0].sizes.map((size) => (

@@ -35,20 +35,7 @@ export default function page({ params }) {
                 {product ? product.title : "product name"}
               </span>
             </div>
-            <div className="tf-breadcrumb-prev-next">
-              <a href="#" className="tf-breadcrumb-prev hover-tooltip center">
-                <i className="icon icon-arrow-left" />
-                {/* <span className="tooltip">Cotton jersey top</span> */}
-              </a>
-              <a href="#" className="tf-breadcrumb-back hover-tooltip center">
-                <i className="icon icon-shop" />
-                {/* <span className="tooltip">Back to Women</span> */}
-              </a>
-              <a href="#" className="tf-breadcrumb-next hover-tooltip center">
-                <i className="icon icon-arrow-right" />
-                {/* <span className="tooltip">Cotton jersey top</span> */}
-              </a>
-            </div>
+            
           </div>
         </div>
       </div>
