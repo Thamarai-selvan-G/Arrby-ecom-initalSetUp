@@ -1,17 +1,17 @@
 "use client";
-import { products1 } from "@/data/products";
+import { fashionProducts } from "@/data/products";
 import React, { useState } from "react";
 import { ProductCard } from "../../shopCards/ProductCard";
 
 export default function Products() {
   const [loading, setLoading] = useState(false);
   const [loaded, setLoaded] = useState(false);
-  const [allproducts, setAllproducts] = useState([...products1]);
+  const [allproducts, setAllproducts] = useState([...fashionProducts]);
   const handleLoad = () => {
     setLoading(true);
 
     setTimeout(() => {
-      setAllproducts((pre) => [...pre, ...products1.slice(0, 12)]);
+      setAllproducts((pre) => [...pre, ...fashionProducts.slice(0, 12)]);
       setLoading(false);
       setLoaded(true);
     }, 1000);
@@ -36,7 +36,7 @@ export default function Products() {
         >
           {allproducts.map((product, i) => (
             <ProductCard product={product} key={i} />
-          ))}x
+          ))}
         </div>
         {!loaded && (
           <div className="tf-pagination-wrap view-more-button text-center">
