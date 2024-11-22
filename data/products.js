@@ -459,7 +459,7 @@ export const fashionProducts = [
       },
       {
         name: "Black",
-        colorClass: "bg_black",
+        colorClass: "bg_dark",
         img: [
           "/images/products/fashion-4.svg",
           "/images/products/fashion-3.svg",
@@ -498,7 +498,7 @@ export const fashionProducts = [
       },
       {
         name: "Black",
-        colorClass: "bg_black",
+        colorClass: "bg_dark",
         img: [
           "/images/products/fashion-1.svg",
           "/images/products/fashion-2.svg",
@@ -536,7 +536,7 @@ export const fashionProducts = [
       },
       {
         name: "Black",
-        colorClass: "bg_black",
+        colorClass: "bg_dark",
         img: [
           "/images/products/fashion-2.svg",
           "/images/products/fashion-1.svg",
@@ -575,7 +575,7 @@ export const fashionProducts = [
       },
       {
         name: "Black",
-        colorClass: "bg_black",
+        colorClass: "bg_dark",
         img: [
           "/images/products/fashion-3.svg",
           "/images/products/fashion-2.svg",
@@ -653,7 +653,7 @@ export const fashionProducts = [
       },
       {
         name: "Black",
-        colorClass: "bg_black",
+        colorClass: "bg_dark",
         img: [
           "/images/products/fashion-2.svg",
           "/images/products/fashion-1.svg",
@@ -692,7 +692,7 @@ export const fashionProducts = [
       },
       {
         name: "Black",
-        colorClass: "bg_black",
+        colorClass: "bg_dark",
         img: [
           "/images/products/fashion-3.svg",
           "/images/products/fashion-1.svg",
@@ -731,7 +731,7 @@ export const fashionProducts = [
       },
       {
         name: "Black",
-        colorClass: "bg_black",
+        colorClass: "bg_dark",
         img: [
           "/images/products/fashion-2.svg",
           "/images/products/fashion-1.svg",
@@ -873,7 +873,7 @@ export const footwearProducts = [
       },
       {
         "name": "Black",
-        "colorClass": "bg_black",
+        "colorClass": "bg_dark",
         "img": ["/images/products/foot-3.svg", "/images/products/foot-4.svg"]
       }
     ],
