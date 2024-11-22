@@ -1,6 +1,6 @@
 "use client";
 
-import { products1 } from "@/data/products";
+import { fragranceProducts, products1 } from "@/data/products";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { ProductCard } from "../shopCards/ProductCard";
 import { Navigation, Pagination } from "swiper/modules";
@@ -36,7 +36,7 @@ export default function RecentProducts() {
             }}
             pagination={{ clickable: true, el: ".spd308" }}
           >
-            {products1.slice(4, 12).map((product, i) => (
+            {fragranceProducts.slice(4, 12).map((product, i) => (
               <SwiperSlide key={i} className="swiper-slide">
                 <ProductCard product={product} />
               </SwiperSlide>
