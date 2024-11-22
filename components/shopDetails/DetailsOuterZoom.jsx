@@ -171,13 +171,12 @@ export default function DetailsOuterZoom({ product }) {
                         <span>
                           {isAddedToCartProducts(product.id)
                             ? "Already Added"
-                            : "Add to cart"}{" "}
-                          -{" "}
+                            : "Add to cart"}
                         </span>
                         <span className="tf-qty-price">
                           ₹
                           {(currentColor.price
-                            ? currentColor.price
+                            ? currentColor.price * quantity
                             : product[0].price * quantity
                           ).toFixed(2)}
                         </span>
