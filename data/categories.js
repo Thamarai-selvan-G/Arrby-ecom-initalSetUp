@@ -24,12 +24,6 @@ export const collections = [
     title: "Footwear",
     href : "footwear"
   },
-  {
-    imgSrc: "/images/collections/cat-4.svg",
-    altText: "footwear-img",
-    title: "Footwear",
-    href : "footwear"
-  },
 ];
 
 export const slidesData = [
@@ -1301,14 +1295,7 @@ export const collectionItems3 = [
     alt: "Footer-img",
     title: "Footer",
     href : "footwear"
-  },
-  {
-    imgSrc: "/images/collections/cat-4.svg",
-    alt: "Footer-img",
-    title: "Footer",
-    href : "footwear"
-  },
- 
+  }, 
 ];
 
 export const collectionItems5 = [
