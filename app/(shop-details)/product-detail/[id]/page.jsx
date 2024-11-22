@@ -26,10 +26,10 @@ export default function page({ params }) {
               <Link href={`/`} className="text">
                 Home
               </Link>
-              <i className="icon icon-arrow-right" />
+              {/* <i className="icon icon-arrow-right" />
               <Link href={`/fashion`} className="text">
                 Fashion
-              </Link>
+              </Link> */}
               <i className="icon icon-arrow-right" />
               <span className="text">
                 {product ? product.title : "product name"}
