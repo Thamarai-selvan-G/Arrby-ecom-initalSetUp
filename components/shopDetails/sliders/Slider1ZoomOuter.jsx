@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 export default function Slider1ZoomOuter({ images = [] }) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const swiperRef = useRef(null);
+  const driftInstances = useRef([]); // To store Drift instances
 
   useEffect(() => {
     if (swiperRef.current) {
@@ -17,11 +18,15 @@ export default function Slider1ZoomOuter({ images = [] }) {
 
   useEffect(() => {
     const initializeZoom = () => {
+      // Destroy previous zoom instances before initializing new ones
+      driftInstances.current.forEach((driftInstance) => driftInstance.destroy());
+      driftInstances.current = [];
+
       const driftElements = document.querySelectorAll(".tf-image-zoom");
       const zoomPane = document.querySelector(".tf-zoom-main");
 
       driftElements.forEach((el) => {
-        new Drift(el, {
+        const driftInstance = new Drift(el, {
           zoomFactor: 2,
           paneContainer: zoomPane,
           inlinePane: false,
@@ -29,6 +34,7 @@ export default function Slider1ZoomOuter({ images = [] }) {
           hoverBoundingBox: true,
           containInline: true,
         });
+        driftInstances.current.push(driftInstance); // Store the instance
       });
     };
 
@@ -50,10 +56,13 @@ export default function Slider1ZoomOuter({ images = [] }) {
     });
 
     return () => {
+      // Cleanup event listeners and Drift instances
       zoomElements.forEach((element) => {
         element.removeEventListener("mouseover", handleMouseOver);
         element.removeEventListener("mouseleave", handleMouseLeave);
       });
+
+      driftInstances.current.forEach((driftInstance) => driftInstance.destroy());
     };
   }, [images]);
 
