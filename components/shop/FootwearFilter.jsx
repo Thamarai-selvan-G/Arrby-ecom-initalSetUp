@@ -26,7 +26,13 @@ const availabilities = [
   { id: 1, isAvailable: true, text: "Available", count: 10 },
   { id: 2, isAvailable: false, text: "Out of Stock", count: 2 },
 ];
-const sizes = [6, 7, 8, 9, 10, 11, 12, 13];
+const sizes = [
+      { id: "values-6", value: "6", defaultChecked: false },
+      { id: "values-7", value: "7", defaultChecked: true },
+      { id: "values-8", value: "8", defaultChecked: false },
+      { id: "values-9", value: "9", defaultChecked: false },
+      { id: "values-10", value: "10", defaultChecked: false },
+    ];
 import Slider from "rc-slider";
 import Link from "next/link";
 
@@ -67,11 +73,11 @@ export default function FooterFilter({ setProducts, products, category }) {
   };
 
   const [selectedSizes, setSelectedSizes] = useState([]);
-  const handleSelectSizes = (size) => {
-    if (selectedSizes.includes(size)) {
-      setSelectedSizes((pre) => [...pre.filter((el) => el != size)]);
+  const handleSelectSizes = (sizeValue) => {
+    if (selectedSizes.includes(sizeValue)) {
+      setSelectedSizes((pre) => [...pre.filter((el) => el != sizeValue)]);
     } else {
-      setSelectedSizes((pre) => [...pre, size]);
+      setSelectedSizes((pre) => [...pre, sizeValue]);
     }
   };
 
@@ -114,7 +120,7 @@ export default function FooterFilter({ setProducts, products, category }) {
         ...filteredArrays,
         [
           ...products.filter((elm) =>
-            elm.sizes?.some((elm2) => selectedSizes.includes(elm2))
+            elm.sizes?.some((size) => selectedSizes.includes(size.value))
           ),
         ],
       ];
@@ -351,25 +357,26 @@ export default function FooterFilter({ setProducts, products, category }) {
               </div>
               <div id="size" className="collapse show">
                 <ul className="tf-filter-group current-scrollbar">
-                  {sizes.map((elm, i) => (
+                  {sizes.map((size) => (
                     <li
-                      key={i}
-                      onClick={() => handleSelectSizes(elm)}
+                      key={size.id}
+                      onClick={() => handleSelectSizes(size.value)}
                       className="list-item d-flex gap-12 align-items-center"
                     >
                       <input
-                        type="radio"
+                        type="checkbox"
                         className="tf-check tf-check-size"
                         readOnly
-                        checked={selectedSizes.includes(elm)}
+                        checked={selectedSizes.includes(size.value)}
                       />
                       <label className="label">
-                        <span>{elm}</span>&nbsp;
+                        <span>{size.value}</span>&nbsp;
                         <span>
-                          (
+                        (
                           {
-                            products.filter((el) => el.sizes?.includes(elm))
-                              .length
+                            products.filter((el) =>
+                              el.sizes?.some((s) => s.value === size.value)
+                            ).length
                           }
                           )
                         </span>

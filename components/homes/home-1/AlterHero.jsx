@@ -46,7 +46,7 @@ export default function AlterHero() {
                     ))}
                   </h1>
                   <Link
-                    href={`/shop-default`}
+                    href={`/shop-collection-list`}
                     className="fade-item fade-item-3 rounded-full tf-btn btn-fill animate-hover-btn btn-xl radius-3"
                   >
                     <span>Shop collection</span>

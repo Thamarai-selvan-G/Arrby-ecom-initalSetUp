@@ -7,15 +7,17 @@ import { useContextElement } from "@/context/Context";
 import { openCartModal } from "@/utlis/openCartModal";
 
 export default function DetailsOuterZoom({ product }) {
+
   const [currentColor, setCurrentColor] = useState(product[0].colors[0]);
   const [currentSize, setCurrentSize] = useState(product[0].sizes[0]);
   const [quantity, setQuantity] = useState(1);
+  console.log("product :", product[0].price);
+  console.log("currentcolor :", currentColor);
+  console.log("currentSize :", currentSize);
 
   const {
     addProductToCart,
     isAddedToCartProducts,
-    addToCompareItem,
-    isAddedtoCompareItem,
     addToWishlist,
     isAddedtoWishlist,
   } = useContextElement();
@@ -54,12 +56,20 @@ export default function DetailsOuterZoom({ product }) {
 
                   <div className="tf-product-info-price">
                     <div className="price-on-sale">
-                      ₹{currentColor.price.toFixed(2)}
+                      ₹
+                      {currentColor.price
+                        ? currentColor.price
+                        : product[0].price}
                     </div>
 
-                    <div className="compare-at-price">
-                      ₹{currentColor.oldPrice.toFixed(2)}
-                    </div>
+                    {currentColor.oldPrice ? (
+                      <div className="compare-at-price">
+                        ₹
+                        {currentColor?.oldPrice
+                          ? currentColor.oldPrice
+                          : product.price}
+                      </div>
+                    ) : null}
 
                     <div className="badges-on-sale">
                       <span>20</span>% OFF
@@ -67,76 +77,81 @@ export default function DetailsOuterZoom({ product }) {
                   </div>
 
                   <div className="tf-product-info-variant-picker">
-                    <div className="variant-picker-item">
-                      <div className="variant-picker-label">
-                        Color:
-                        <span className="fw-6 variant-picker-label-value">
-                          {currentColor.name}
-                        </span>
-                      </div>
-                      <form className="variant-picker-values">
-                        {product[0].colors.map((color) => (
-                          <React.Fragment key={color.name}>
-                            <input
-                              id={color.name}
-                              type="radio"
-                              name="color1"
-                              readOnly
-                              checked={currentColor == color}
-                            />
-                            <label
-                              onClick={() => setCurrentColor(color)}
-                              className="hover-tooltip radius-60"
-                              htmlFor={color.name}
-                              data-value={color.name}
-                            >
-                              <span
-                                className={`btn-checkbox ${color.colorClass}`}
-                              />
-                              <span className="tooltip">{color.name}</span>
-                            </label>
-                          </React.Fragment>
-                        ))}
-                      </form>
-                    </div>
-                    <div className="variant-picker-item">
-                      <div className="d-flex justify-content-between align-items-center">
+                    {currentColor.name ? (
+                      <div className="variant-picker-item">
                         <div className="variant-picker-label">
-                          Size:
+                          Color:
                           <span className="fw-6 variant-picker-label-value">
-                            {currentSize.value}
+                            {currentColor.name}
                           </span>
                         </div>
-                        <a
-                          href="#find_size"
-                          data-bs-toggle="modal"
-                          className="find-size fw-6"
-                        >
-                          Find your size
-                        </a>
+                        <form className="variant-picker-values">
+                          {product[0].colors.map((color) => (
+                            <React.Fragment key={color.name}>
+                              <input
+                                id={color.name}
+                                type="radio"
+                                name="color1"
+                                readOnly
+                                checked={currentColor == color}
+                              />
+                              <label
+                                onClick={() => setCurrentColor(color)}
+                                className="hover-tooltip radius-60"
+                                htmlFor={color.name}
+                                data-value={color.name}
+                              >
+                                <span
+                                  className={`btn-checkbox ${color.colorClass}`}
+                                />
+                                <span className="tooltip">{color.name}</span>
+                              </label>
+                            </React.Fragment>
+                          ))}
+                        </form>
                       </div>
-                      <form className="variant-picker-values">
-                        {product[0].sizes.map((size) => (
-                          <React.Fragment key={size.id}>
-                            <input
-                              type="radio"
-                              name="size1"
-                              id={size.id}
-                              readOnly
-                              checked={currentSize == size}
-                            />
-                            <label
-                              onClick={() => setCurrentSize(size)}
-                              className="style-text"
-                              htmlFor={size.id}
-                              data-value={size.value}
-                            >
-                              <p>{size.value}</p>
-                            </label>
-                          </React.Fragment>
-                        ))}
-                      </form>
-                    </div>
+                    ) : null}
+
+                    {currentSize &&  (
+                      <div className="variant-picker-item">
+                        <div className="d-flex justify-content-between align-items-center">
+                          <div className="variant-picker-label">
+                            Size:
+                            <span className="fw-6 variant-picker-label-value">
+                              {currentSize.value}
+                            </span>
+                          </div>
+                          <a
+                            href="#find_size"
+                            data-bs-toggle="modal"
+                            className="find-size fw-6"
+                          >
+                            Find your size
+                          </a>
+                        </div>
+                        <form className="variant-picker-values">
+                          {product[0].sizes.map((size) => (
+                            <React.Fragment key={size.id}>
+                              <input
+                                type="radio"
+                                name="size1"
+                                id={size.id}
+                                readOnly
+                                checked={currentSize == size}
+                              />
+                              <label
+                                onClick={() => setCurrentSize(size)}
+                                className="style-text"
+                                htmlFor={size.id}
+                                data-value={size.value}
+                              >
+                                <p>{size.value}</p>
+                              </label>
+                            </React.Fragment>
+                          ))}
+                        </form>
+                      </div>
+                    )}
                   </div>
                   <div className="tf-product-info-quantity">
                     <div className="quantity-title fw-6">Quantity</div>
@@ -158,7 +173,11 @@ export default function DetailsOuterZoom({ product }) {
                           -{" "}
                         </span>
                         <span className="tf-qty-price">
-                          ₹{(currentColor.price * quantity).toFixed(2)}
+                          ₹
+                          {(currentColor.price
+                            ? currentColor.price
+                            : product[0].price * quantity
+                          ).toFixed(2)}
                         </span>
                       </a>
                       <a
@@ -178,7 +197,7 @@ export default function DetailsOuterZoom({ product }) {
                         </span>
                         <span className="icon icon-delete" />
                       </a>
-        
+
                       <div className="w-100">
                         <a href="#" className="btns-full">
                           Buy with

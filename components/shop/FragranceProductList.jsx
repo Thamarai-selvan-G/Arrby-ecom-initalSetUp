@@ -3,7 +3,6 @@ import { layouts } from "@/data/shop";
 import ProductGrid from "./ProductGrid";
 import { useState } from "react";
 import Pagination from "../common/Pagination";
-import ShopFilter from "./ShopFilter";
 import Sorting from "./Sorting";
 import { fragranceProducts } from "@/data/products";
 import { useEffect } from "react";
@@ -80,7 +79,6 @@ export default function FragranceList() {
       <FragranceFilter
         setProducts={setProducts}
         products={fragranceProducts}
-        category={"FRAGRANCE"}
       />
     </>
   );

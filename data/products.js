@@ -298,409 +298,6 @@ export const products1 = [
 
 // FASHION PRODUCTS DATA LIST HERE ....
 
-// export const fashionProducts = [
-//   {
-//     id: 1,
-//     imgSrc: "/images/products/fashion-1.svg",
-//     imgHoverSrc: "/images/products/fashion-4.svg",
-//     title: "Ribbed Tank Top",
-//     price: 10, // Outside price key
-//     colors: [
-//       {
-//         name: "Orange",
-//         colorClass: "bg_orange-3",
-//         img:[ "/images/products/fashion-1.svg","/images/products/fashion-2.svg","/images/products/fashion-3.svg",],
-//         price: 7,
-//         oldPrice: 10,
-//       },
-//       {
-//         name: "Black",
-//         colorClass: "bg_dark",
-//         img:[ "/images/products/fashion-2.svg","/images/products/fashion-1.svg","/images/products/fashion-1.svg",],
-//         price: 10,
-//         oldPrice: 10,
-//       },
-//       {
-//         name: "White",
-//         colorClass: "bg_white",
-//         img:[ "/images/products/fashion-3.svg","/images/products/fashion-1.svg","/images/products/fashion-1.svg",],
-//         price: 15,
-//         oldPrice: 10,
-//       },
-//     ],
-//     sizes: [
-//       { id: "values-s", value: "S", defaultChecked: true },
-//       { id: "values-m", value: "M", defaultChecked: false },
-//       { id: "values-l", value: "L", defaultChecked: false },
-//     ],
-//     filterCategories: ["Best seller", "On Sale"],
-//     brand: "Ecomus",
-//     isAvailable: true,
-//   },
-//   {
-//     id: 2,
-//     imgSrc: "/images/products/fashion-3.svg",
-//     imgHoverSrc: "/images/products/fashion-4.svg",
-//     title: "Ribbed Modal T-shirt",
-//     price: 20.95, // Outside price key
-//     colors: [
-//       {
-//         name: "Brown",
-//         colorClass: "bg_brown",
-//         img: "/images/products/fashion-4.svg",
-//         price: 18.95,
-//         oldPrice: 20.95,
-//       },
-//       {
-//         name: "Light Purple",
-//         colorClass: "bg_purple",
-//         img: "/images/products/fashion-1.svg",
-//         price: 18.95,
-//         oldPrice: 20.95,
-//       },
-//       {
-//         name: "Light Green",
-//         colorClass: "bg_light-green",
-//         img: "/images/products/fashion-2.svg",
-//         price: 18.95,
-//         oldPrice: 20.95,
-//       },
-//     ],
-//     sizes: [
-//       { id: "values-m", value: "M", defaultChecked: false },
-//       { id: "values-l", value: "L", defaultChecked: false },
-//       { id: "values-xl", value: "XL", defaultChecked: false },
-//     ],
-//     filterCategories: ["Best seller", "New arrivals"],
-//     brand: "M&H",
-//     isAvailable: false,
-//   },
-//   {
-//     id: 3,
-//     imgSrc: "/images/products/fashion-2.svg",
-//     imgHoverSrc: "/images/products/fashion-1.svg",
-//     title: "Oversized Printed T-shirt",
-//     price: 12.0, // Outside price key
-//     colors: [
-//       {
-//         name: "Black",
-//         colorClass: "bg_dark",
-//         img: "/images/products/fashion-4.svg",
-//         price: 10.0,
-//         oldPrice: 12.0,
-//       },
-//       {
-//         name: "Light Blue",
-//         colorClass: "bg_light-blue",
-//         img: "/images/products/fashion-4.svg",
-//         price: 10.0,
-//         oldPrice: 12.0,
-//       },
-//       {
-//         name: "White",
-//         colorClass: "bg_white",
-//         img: "/images/products/fashion-4.svg",
-//         price: 10.0,
-//         oldPrice: 12.0,
-//       },
-//     ],
-//     sizes: [
-//       { id: "values-s", value: "S", defaultChecked: true },
-//       { id: "values-m", value: "M", defaultChecked: false },
-//       { id: "values-l", value: "L", defaultChecked: false },
-//       { id: "values-xl", value: "XL", defaultChecked: false },
-//     ],
-//     filterCategories: ["Best seller", "On Sale"],
-//     brand: "M&H",
-//     isAvailable: true,
-//   },
-//   {
-//     id: 4,
-//     imgSrc: "/images/products/fashion-4.svg",
-//     imgHoverSrc: "/images/products/fashion-3.svg",
-//     title: "V-neck Linen T-shirt",
-//     price: 16.95, // Outside price key
-//     colors: [
-//       {
-//         name: "Brown",
-//         colorClass: "bg_brown",
-//         img: "/images/products/fashion-4.svg",
-//         price: 14.95,
-//         oldPrice: 16.95,
-//       },
-//       {
-//         name: "White",
-//         colorClass: "bg_white",
-//         img: "/images/products/fashion-4.svg",
-//         price: 14.95,
-//         oldPrice: 16.95,
-//       },
-//     ],
-//     sizes: [
-//       { id: "values-m", value: "M", defaultChecked: false },
-//       { id: "values-l", value: "L", defaultChecked: false },
-//       { id: "values-xl", value: "XL", defaultChecked: false },
-//     ],
-//     filterCategories: ["Best seller", "New arrivals"],
-//     brand: "Ecomus",
-//     isAvailable: true,
-//   },
-//   {
-//     id: 5,
-//     imgSrc: "/images/products/fashion-1.svg",
-//     imgHoverSrc: "/images/products/fashion-2.svg",
-//     title: "Loose Fit Sweatshirt",
-//     price: 12.0, // Outside price key
-//     colors: [
-//       {
-//         name: "Light Green",
-//         colorClass: "bg_light-green",
-//         img: "/images/products/fashion-4.svg",
-//         price: 10.0,
-//         oldPrice: 12.0,
-//       },
-//       {
-//         name: "White",
-//         colorClass: "bg_white",
-//         img: "/images/products/fashion-4.svg",
-//         price: 15.0,
-//         oldPrice: 20.0,
-//       },
-//       {
-//         name: "Light Grey",
-//         colorClass: "bg_light-grey",
-//         img: "/images/products/fashion-4.svg",
-//         price: 8.0,
-//         oldPrice: 12.0,
-//       },
-//     ],
-//     sizes: [
-//       { id: "values-s", value: "S", defaultChecked: true },
-//       { id: "values-xl", value: "XL", defaultChecked: false },
-//     ],
-//     filterCategories: ["Best seller", "New arrivals"],
-//     brand: "Ecomus",
-//     isAvailable: true,
-//   },
-//   {
-//     id: 6,
-//     imgSrc: "/images/products/fashion-5.svg",
-//     imgHoverSrc: "/images/products/fashion-6.svg",
-//     title: "Striped Casual Shirt",
-//     price: 15.0, // Outside price key
-//     colors: [
-//       {
-//         name: "Navy Blue",
-//         colorClass: "bg_navy-blue",
-//         img: "/images/products/fashion-4.svg",
-//         price: 13.0,
-//         oldPrice: 15.0,
-//       },
-//       {
-//         name: "Red",
-//         colorClass: "bg_red",
-//         img: "/images/products/fashion-4.svg",
-//         price: 13.0,
-//         oldPrice: 15.0,
-//       },
-//     ],
-//     sizes: [
-//       { id: "values-s", value: "S", defaultChecked: false },
-//       { id: "values-m", value: "M", defaultChecked: true },
-//       { id: "values-l", value: "L", defaultChecked: false },
-//     ],
-//     filterCategories: ["Best seller"],
-//     brand: "Stripes",
-//     isAvailable: true,
-//   },
-//   {
-//     id: 7,
-//     imgSrc: "/images/products/fashion-6.svg",
-//     imgHoverSrc: "/images/products/fashion-5.svg",
-//     title: "Linen Blazer",
-//     price: 45.0, // Outside price key
-//     colors: [
-//       {
-//         name: "Black",
-//         colorClass: "bg_black",
-//         img: "/images/products/fashion-4.svg",
-//         price: 42.0,
-//         oldPrice: 45.0,
-//       },
-//       {
-//         name: "Grey",
-//         colorClass: "bg_grey",
-//         img: "/images/products/fashion-4.svg",
-//         price: 42.0,
-//         oldPrice: 45.0,
-//       },
-//     ],
-//     sizes: [
-//       { id: "values-s", value: "S", defaultChecked: true },
-//       { id: "values-m", value: "M", defaultChecked: false },
-//       { id: "values-l", value: "L", defaultChecked: false },
-//     ],
-//     filterCategories: ["On Sale"],
-//     brand: "Trendy",
-//     isAvailable: true,
-//   },
-//   {
-//     id: 8,
-//     imgSrc: "/images/products/fashion-7.svg",
-//     imgHoverSrc: "/images/products/fashion-8.svg",
-//     title: "Slim Fit Chinos",
-//     price: 25.0, // Outside price key
-//     colors: [
-//       {
-//         name: "Beige",
-//         colorClass: "bg_beige",
-//         img: "/images/products/fashion-4.svg",
-//         price: 22.0,
-//         oldPrice: 25.0,
-//       },
-//       {
-//         name: "Navy Blue",
-//         colorClass: "bg_navy-blue",
-//         img: "/images/products/fashion-4.svg",
-//         price: 22.0,
-//         oldPrice: 25.0,
-//       },
-//     ],
-//     sizes: [
-//       { id: "values-s", value: "S", defaultChecked: false },
-//       { id: "values-m", value: "M", defaultChecked: true },
-//       { id: "values-l", value: "L", defaultChecked: false },
-//     ],
-//     filterCategories: ["Best seller"],
-//     brand: "Slimfit",
-//     isAvailable: true,
-//   },
-//   {
-//     id: 9,
-//     imgSrc: "/images/products/fashion-9.svg",
-//     imgHoverSrc: "/images/products/fashion-10.svg",
-//     title: "Denim Jacket",
-//     price: 60.0, // Outside price key
-//     colors: [
-//       {
-//         name: "Blue",
-//         colorClass: "bg_blue",
-//         img: "/images/products/fashion-4.svg",
-//         price: 58.0,
-//         oldPrice: 60.0,
-//       },
-//       {
-//         name: "Black",
-//         colorClass: "bg_black",
-//         img: "/images/products/fashion-4.svg",
-//         price: 58.0,
-//         oldPrice: 60.0,
-//       },
-//     ],
-//     sizes: [
-//       { id: "values-m", value: "M", defaultChecked: false },
-//       { id: "values-l", value: "L", defaultChecked: true },
-//       { id: "values-xl", value: "XL", defaultChecked: false },
-//     ],
-//     filterCategories: ["New arrivals"],
-//     brand: "DenimWorld",
-//     isAvailable: true,
-//   },
-//   {
-//     id: 10,
-//     imgSrc: "/images/products/fashion-11.svg",
-//     imgHoverSrc: "/images/products/fashion-12.svg",
-//     title: "Hoodie with Pocket",
-//     price: 30.0, // Outside price key
-//     colors: [
-//       {
-//         name: "Red",
-//         colorClass: "bg_red",
-//         img: "/images/products/fashion-4.svg",
-//         price: 27.0,
-//         oldPrice: 30.0,
-//       },
-//       {
-//         name: "Grey",
-//         colorClass: "bg_grey",
-//         img: "/images/products/fashion-4.svg",
-//         price: 27.0,
-//         oldPrice: 30.0,
-//       },
-//     ],
-//     sizes: [
-//       { id: "values-s", value: "S", defaultChecked: true },
-//       { id: "values-m", value: "M", defaultChecked: false },
-//       { id: "values-l", value: "L", defaultChecked: false },
-//     ],
-//     filterCategories: ["On Sale"],
-//     brand: "ComfyWear",
-//     isAvailable: true,
-//   },
-//   {
-//     id: 11,
-//     imgSrc: "/images/products/fashion-13.svg",
-//     imgHoverSrc: "/images/products/fashion-14.svg",
-//     title: "Cargo Pants",
-//     price: 40.0, // Outside price key
-//     colors: [
-//       {
-//         name: "Khaki",
-//         colorClass: "bg_khaki",
-//         img: "/images/products/fashion-4.svg",
-//         price: 38.0,
-//         oldPrice: 40.0,
-//       },
-//       {
-//         name: "Black",
-//         colorClass: "bg_black",
-//         img: "/images/products/fashion-4.svg",
-//         price: 38.0,
-//         oldPrice: 40.0,
-//       },
-//     ],
-//     sizes: [
-//       { id: "values-m", value: "M", defaultChecked: false },
-//       { id: "values-l", value: "L", defaultChecked: true },
-//       { id: "values-xl", value: "XL", defaultChecked: false },
-//     ],
-//     filterCategories: ["Best seller"],
-//     brand: "CargoFit",
-//     isAvailable: true,
-//   },
-//   {
-//     id: 12,
-//     imgSrc: "/images/products/fashion-15.svg",
-//     imgHoverSrc: "/images/products/fashion-16.svg",
-//     title: "Bomber Jacket",
-//     price: 55.0, // Outside price key
-//     colors: [
-//       {
-//         name: "Black",
-//         colorClass: "bg_black",
-//         img: "/images/products/fashion-4.svg",
-//         price: 52.0,
-//         oldPrice: 55.0,
-//       },
-//       {
-//         name: "Green",
-//         colorClass: "bg_green",
-//         img: "/images/products/fashion-4.svg",
-//         price: 52.0,
-//         oldPrice: 55.0,
-//       },
-//     ],
-//     sizes: [
-//       { id: "values-m", value: "M", defaultChecked: true },
-//       { id: "values-l", value: "L", defaultChecked: false },
-//       { id: "values-xl", value: "XL", defaultChecked: false },
-//     ],
-//     filterCategories: ["New arrivals"],
-//     brand: "Outerwear",
-//     isAvailable: true,
-//   },
-// ];
-
 export const fashionProducts = [
   {
     id: 1,
@@ -751,6 +348,7 @@ export const fashionProducts = [
     filterCategories: ["Best seller", "On Sale"],
     brand: "Ecomus",
     isAvailable: true,
+    categoryName : "FASHION"
   },
   {
     id: 2,
@@ -800,7 +398,7 @@ export const fashionProducts = [
     ],
     filterCategories: ["On Sale"],
     brand: "Fashionista",
-    isAvailable: true,
+    isAvailable: false,
   },
   {
     id: 3,
@@ -878,7 +476,7 @@ export const fashionProducts = [
     ],
     filterCategories: ["On Sale"],
     brand: "Sportify",
-    isAvailable: true,
+    isAvailable: false,
   },
   {
     id: 5,
@@ -911,7 +509,6 @@ export const fashionProducts = [
       },
     ],
     sizes: [
-      { id: "values-s", value: "S", defaultChecked: true },
       { id: "values-m", value: "M", defaultChecked: false },
       { id: "values-l", value: "L", defaultChecked: false },
     ],
@@ -956,7 +553,7 @@ export const fashionProducts = [
     ],
     filterCategories: ["On Sale"],
     brand: "FootwearCo",
-    isAvailable: true,
+    isAvailable: false,
   },
   {
     id: 7,
@@ -1146,7 +743,6 @@ export const fashionProducts = [
     ],
     sizes: [
       { id: "values-s", value: "S", defaultChecked: true },
-      { id: "values-m", value: "M", defaultChecked: false },
       { id: "values-l", value: "L", defaultChecked: false },
     ],
     filterCategories: ["Best seller"],
@@ -1185,7 +781,7 @@ export const fashionProducts = [
     ],
     sizes: [
       { id: "values-s", value: "S", defaultChecked: false },
-      { id: "values-m", value: "M", defaultChecked: true },
+      { id: "values-xl", value: "XL", defaultChecked: true },
       { id: "values-l", value: "L", defaultChecked: false },
     ],
     filterCategories: ["On Sale"],
@@ -1194,537 +790,783 @@ export const fashionProducts = [
   },
 ];
 
+export const footwearProducts = [
+  {
+    id: 13,
+    imgSrc: "/images/products/foot-1.svg",
+    imgHoverSrc: "/images/products/foot-2.svg",
+    title: "Nike Air Max 270",
+    price: 120.0,
+    sizes: [
+      { "id": "values-6", "value": "6", "defaultChecked": false },
+      { "id": "values-7", "value": "7", "defaultChecked": true },
+      { "id": "values-8", "value": "8", "defaultChecked": false },
+      { "id": "values-9", "value": "9", "defaultChecked": false },
+      { "id": "values-10", "value": "10", "defaultChecked": false }
+    ],
+    filterCategories: ["Best seller", "New arrivals"],
+    brand: "Nike",
+    colors: [
+      {
+        "name": "Black",
+        "colorClass": "bg_dark",
+        "img": ["/images/products/foot-1.svg", "/images/products/foot-2.svg"]
+      },
+      {
+        "name": "White",
+        "colorClass": "bg_white",
+        "img": ["/images/products/foot-3.svg", "/images/products/foot-4.svg"]
+      }
+    ],
+    isAvailable: true,
+    categoryName : "FOOTWEAR"
+  },
+  {
+    "id": 14,
+    "imgSrc": "/images/products/foot-2.svg",
+    "imgHoverSrc": "/images/products/foot-3.svg",
+    "title": "Adidas UltraBoost 22",
+    "price": 150.0,
+    "sizes": [
+      { "id": "values-6", "value": "6", "defaultChecked": false },
+      { "id": "values-7", "value": "7", "defaultChecked": true },
+      { "id": "values-8", "value": "8", "defaultChecked": false },
+      { "id": "values-9", "value": "9", "defaultChecked": false },
+      { "id": "values-10", "value": "10", "defaultChecked": false }
+    ],
+    "filterCategories": ["New arrivals", "On Sale"],
+    "brand": "Adidas",
+    "colors": [
+      {
+        "name": "Grey",
+        "colorClass": "bg_grey",
+        "img": ["/images/products/foot-1.svg", "/images/products/foot-2.svg"]
+      },
+      {
+        "name": "Blue",
+        "colorClass": "bg_blue",
+        "img": ["/images/products/foot-3.svg", "/images/products/foot-4.svg"]
+      }
+    ],
+    "isAvailable": true
+  },
+  {
+    "id": 15,
+    "imgSrc": "/images/products/foot-3.svg",
+    "imgHoverSrc": "/images/products/foot-4.svg",
+    "title": "Puma Suede Classic",
+    "price": 75.0,
+    "sizes": [
+      { "id": "values-6", "value": "6", "defaultChecked": false },
+      { "id": "values-7", "value": "7", "defaultChecked": true },
+      { "id": "values-8", "value": "8", "defaultChecked": false },
+      { "id": "values-9", "value": "9", "defaultChecked": false },
+      { "id": "values-10", "value": "10", "defaultChecked": false }
+    ],
+    "filterCategories": ["Best seller", "On Sale"],
+    "brand": "Puma",
+    "colors": [
+      {
+        "name": "Red",
+        "colorClass": "bg_red",
+        "img": ["/images/products/foot-1.svg", "/images/products/foot-2.svg"]
+      },
+      {
+        "name": "Black",
+        "colorClass": "bg_black",
+        "img": ["/images/products/foot-3.svg", "/images/products/foot-4.svg"]
+      }
+    ],
+    "isAvailable": false
+  },
+  {
+    "id": 16,
+    "imgSrc": "/images/products/foot-4.svg",
+    "imgHoverSrc": "/images/products/foot-5.svg",
+    "title": "Reebok Classic Leather",
+    "price": 85.0,
+    "sizes": [
+      { "id": "values-6", "value": "6", "defaultChecked": false },
+      { "id": "values-7", "value": "7", "defaultChecked": true },
+      { "id": "values-8", "value": "8", "defaultChecked": false },
+      { "id": "values-9", "value": "9", "defaultChecked": false }
+    ],
+    "filterCategories": ["On Sale", "Popular"],
+    "brand": "Reebok",
+    "colors": [
+      {
+        "name": "White",
+        "colorClass": "bg_white",
+        "img": ["/images/products/foot-1.svg", "/images/products/foot-2.svg"]
+      },
+      {
+        "name": "Brown",
+        "colorClass": "bg_brown",
+        "img": ["/images/products/foot-3.svg", "/images/products/foot-4.svg"]
+      }
+    ],
+    "isAvailable": true
+  },
+  {
+    "id": 17,
+    "imgSrc": "/images/products/foot-1.svg",
+    "imgHoverSrc": "/images/products/foot-2.svg",
+    "title": "Converse Chuck Taylor All Star",
+    "price": 60.0,
+    "sizes": [
+      { "id": "values-6", "value": "6", "defaultChecked": false },
+      { "id": "values-7", "value": "7", "defaultChecked": true },
+      { "id": "values-8", "value": "8", "defaultChecked": false },
+      { "id": "values-9", "value": "9", "defaultChecked": false },
+      { "id": "values-10", "value": "10", "defaultChecked": false }
+    ],
+    "filterCategories": ["Best seller", "Classic"],
+    "brand": "Converse",
+    "colors": [
+      {
+        "name": "Blue",
+        "colorClass": "bg_blue",
+        "img": ["/images/products/foot-3.svg", "/images/products/foot-4.svg"]
+      },
+      {
+        "name": "White",
+        "colorClass": "bg_white",
+        "img": ["/images/products/foot-1.svg", "/images/products/foot-2.svg"]
+      }
+    ],
+    "isAvailable": true
+  },
+  {
+    "id": 18,
+    "imgSrc": "/images/products/foot-1.svg",
+    "imgHoverSrc": "/images/products/foot-2.svg",
+    "title": "Converse Chuck Taylor All Star",
+    "price": 60.0,
+    "sizes": [
+      { "id": "values-6", "value": "6", "defaultChecked": false },
+      { "id": "values-7", "value": "7", "defaultChecked": true },
+      { "id": "values-8", "value": "8", "defaultChecked": false },
+      { "id": "values-9", "value": "9", "defaultChecked": false },
+      { "id": "values-10", "value": "10", "defaultChecked": false }
+    ],
+    "filterCategories": ["Best seller", "Classic"],
+    "brand": "Converse",
+    "colors": [
+      {
+        "name": "Blue",
+        "colorClass": "bg_blue",
+        "img": ["/images/products/foot-3.svg", "/images/products/foot-4.svg"]
+      },
+      {
+        "name": "White",
+        "colorClass": "bg_white",
+        "img": ["/images/products/foot-1.svg", "/images/products/foot-2.svg"]
+      }
+    ],
+    "isAvailable": true
+  },
+  {
+    "id": 19,
+    "imgSrc": "/images/products/foot-1.svg",
+    "imgHoverSrc": "/images/products/foot-2.svg",
+    "title": "Converse Chuck Taylor All Star",
+    "price": 60.0,
+    "sizes": [
+      { "id": "values-6", "value": "6", "defaultChecked": false },
+      { "id": "values-7", "value": "7", "defaultChecked": true },
+      { "id": "values-8", "value": "8", "defaultChecked": false },
+      { "id": "values-9", "value": "9", "defaultChecked": false },
+      { "id": "values-10", "value": "10", "defaultChecked": false }
+    ],
+    "filterCategories": ["Best seller", "Classic"],
+    "brand": "Converse",
+    "colors": [
+      {
+        "name": "Blue",
+        "colorClass": "bg_blue",
+        "img": ["/images/products/foot-3.svg", "/images/products/foot-4.svg"]
+      },
+      {
+        "name": "White",
+        "colorClass": "bg_white",
+        "img": ["/images/products/foot-1.svg", "/images/products/foot-2.svg"]
+      }
+    ],
+    "isAvailable": true
+  },
+  {
+    "id": 20,
+    "imgSrc": "/images/products/foot-1.svg",
+    "imgHoverSrc": "/images/products/foot-2.svg",
+    "title": "Converse Chuck Taylor All Star",
+    "price": 60.0,
+    "sizes": [
+      { "id": "values-6", "value": "6", "defaultChecked": false },
+      { "id": "values-7", "value": "7", "defaultChecked": true },
+      { "id": "values-8", "value": "8", "defaultChecked": false },
+      { "id": "values-9", "value": "9", "defaultChecked": false },
+      { "id": "values-10", "value": "10", "defaultChecked": false }
+    ],
+    "filterCategories": ["Best seller", "Classic"],
+    "brand": "Converse",
+    "colors": [
+      {
+        "name": "Blue",
+        "colorClass": "bg_blue",
+        "img": ["/images/products/foot-3.svg", "/images/products/foot-4.svg"]
+      },
+      {
+        "name": "White",
+        "colorClass": "bg_white",
+        "img": ["/images/products/foot-1.svg", "/images/products/foot-2.svg"]
+      }
+    ],
+    "isAvailable": true
+  },
+  {
+    "id": 21,
+    "imgSrc": "/images/products/foot-1.svg",
+    "imgHoverSrc": "/images/products/foot-2.svg",
+    "title": "Converse Chuck Taylor All Star",
+    "price": 60.0,
+    "sizes": [
+      { "id": "values-6", "value": "6", "defaultChecked": false },
+      { "id": "values-7", "value": "7", "defaultChecked": true },
+      { "id": "values-8", "value": "8", "defaultChecked": false },
+      { "id": "values-9", "value": "9", "defaultChecked": false },
+      { "id": "values-10", "value": "10", "defaultChecked": false }
+    ],
+    "filterCategories": ["Best seller", "Classic"],
+    "brand": "Converse",
+    "colors": [
+      {
+        "name": "Blue",
+        "colorClass": "bg_blue",
+        "img": ["/images/products/foot-3.svg", "/images/products/foot-4.svg"]
+      },
+      {
+        "name": "White",
+        "colorClass": "bg_white",
+        "img": ["/images/products/foot-1.svg", "/images/products/foot-2.svg"]
+      }
+    ],
+    "isAvailable": true
+  },
+  {
+    "id": 22,
+    "imgSrc": "/images/products/foot-1.svg",
+    "imgHoverSrc": "/images/products/foot-2.svg",
+    "title": "Converse Chuck Taylor All Star",
+    "price": 60.0,
+    "sizes": [
+      { "id": "values-6", "value": "6", "defaultChecked": false },
+      { "id": "values-7", "value": "7", "defaultChecked": true },
+      { "id": "values-8", "value": "8", "defaultChecked": false },
+      { "id": "values-9", "value": "9", "defaultChecked": false },
+      { "id": "values-10", "value": "10", "defaultChecked": false }
+    ],
+    "filterCategories": ["Best seller", "Classic"],
+    "brand": "Converse",
+    "colors": [
+      {
+        "name": "Blue",
+        "colorClass": "bg_blue",
+        "img": ["/images/products/foot-3.svg", "/images/products/foot-4.svg"]
+      },
+      {
+        "name": "White",
+        "colorClass": "bg_white",
+        "img": ["/images/products/foot-1.svg", "/images/products/foot-2.svg"]
+      }
+    ],
+    "isAvailable": true
+  },
+  {
+    "id": 23,
+    "imgSrc": "/images/products/foot-1.svg",
+    "imgHoverSrc": "/images/products/foot-2.svg",
+    "title": "Converse Chuck Taylor All Star",
+    "price": 60.0,
+    "sizes": [
+      { "id": "values-6", "value": "6", "defaultChecked": false },
+      { "id": "values-7", "value": "7", "defaultChecked": true },
+      { "id": "values-8", "value": "8", "defaultChecked": false },
+      { "id": "values-9", "value": "9", "defaultChecked": false },
+      { "id": "values-10", "value": "10", "defaultChecked": false }
+    ],
+    "filterCategories": ["Best seller", "Classic"],
+    "brand": "Converse",
+    "colors": [
+      {
+        "name": "Blue",
+        "colorClass": "bg_blue",
+        "img": ["/images/products/foot-3.svg", "/images/products/foot-4.svg"]
+      },
+      {
+        "name": "White",
+        "colorClass": "bg_white",
+        "img": ["/images/products/foot-1.svg", "/images/products/foot-2.svg"]
+      }
+    ],
+    "isAvailable": true
+  },
+  {
+    "id": 24,
+    "imgSrc": "/images/products/foot-1.svg",
+    "imgHoverSrc": "/images/products/foot-2.svg",
+    "title": "Converse Chuck Taylor All Star",
+    "price": 60.0,
+    "sizes": [
+      { "id": "values-6", "value": "6", "defaultChecked": false },
+      { "id": "values-7", "value": "7", "defaultChecked": true },
+      { "id": "values-8", "value": "8", "defaultChecked": false },
+      { "id": "values-9", "value": "9", "defaultChecked": false },
+      { "id": "values-10", "value": "10", "defaultChecked": false }
+    ],
+    "filterCategories": ["Best seller", "Classic"],
+    "brand": "Converse",
+    "colors": [
+      {
+        "name": "Blue",
+        "colorClass": "bg_blue",
+        "img": ["/images/products/foot-3.svg", "/images/products/foot-4.svg"]
+      },
+      {
+        "name": "White",
+        "colorClass": "bg_white",
+        "img": ["/images/products/foot-1.svg", "/images/products/foot-2.svg"]
+      }
+    ],
+    "isAvailable": true
+  },
+];
 export const fragranceProducts = [
   {
-    id: 1,
+    id: 25,
     imgSrc: "/images/products/parfume-1.svg",
     imgHoverSrc: "/images/products/parfume-2.svg",
     title: "Chanel No. 5 Eau de Parfum",
-    price: 16.95,
+    price: 50,
     colors: [
       {
-        name: "Orange",
-        colorClass: "bg_orange-3",
-        imgSrc: "/images/products/parfume-3.svg",
-      },
-      {
-        name: "Black",
-        colorClass: "bg_dark",
-        imgSrc: "/images/products/parfume-4.svg",
-      },
-      {
-        name: "White",
-        colorClass: "bg_white",
-        imgSrc: "/images/products/parfume-5.svg",
+        img: ["/images/products/parfume-1.svg"],
       },
     ],
-    sizes: ["10ML", "20ML", "50ML"],
+    sizes: [
+      { id: "values-10ml", value: "10ML", defaultChecked: false },
+      { id: "values-20ml", value: "20ML", defaultChecked: true },
+      { id: "values-50ml", value: "50ML", defaultChecked: false },
+    ],
     filterCategories: ["Best seller", "On Sale"],
     brand: "Chanel",
     isAvailable: true,
+    categoryName : 'FRAGRANCE'
   },
   {
-    id: 2,
+    id: 26,
     imgSrc: "/images/products/parfume-2.svg",
     imgHoverSrc: "/images/products/parfume-3.svg",
     title: "Dior Sauvage Eau de Toilette",
     price: 18.95,
     colors: [
       {
-        name: "Brown",
-        colorClass: "bg_brown",
-        imgSrc: "/images/products/parfume-4.svg",
-      },
-      {
-        name: "Light Purple",
-        colorClass: "bg_purple",
-        imgSrc: "/images/products/parfume-5.svg",
-      },
-      {
-        name: "Light Green",
-        colorClass: "bg_light-green",
-        imgSrc: "/images/products/parfume-1.svg",
+        img: ["/images/products/parfume-2.svg"],
       },
     ],
-    sizes: ["15ML", "25ML", "100ML"],
-    countdown: { time: 1007500, labels: "d :,h :,m :,s" },
+    sizes: [
+      { id: "values-15ml", value: "15ML", defaultChecked: false },
+      { id: "values-25ml", value: "25ML", defaultChecked: true },
+      { id: "values-100ml", value: "100ML", defaultChecked: false },
+    ],
     filterCategories: ["Best seller", "New arrivals"],
     brand: "Dior",
     isAvailable: false,
   },
   {
-    id: 3,
+    id: 27,
     imgSrc: "/images/products/parfume-3.svg",
     imgHoverSrc: "/images/products/parfume-4.svg",
     title: "Yves Saint Laurent Black Opium",
     price: 22.0,
-    sizes: ["30ML", "50ML", "90ML"],
+    colors: [
+      {
+        img: ["/images/products/parfume-3.svg"],
+      },
+    ],
+    sizes: [
+      { id: "values-30ml", value: "30ML", defaultChecked: true },
+      { id: "values-50ml", value: "50ML", defaultChecked: false },
+      { id: "values-90ml", value: "90ML", defaultChecked: false },
+    ],
     filterCategories: ["Best seller", "On Sale"],
     brand: "Yves Saint Laurent",
     isAvailable: true,
   },
   {
-    id: 4,
+    id: 28,
     imgSrc: "/images/products/parfume-4.svg",
     imgHoverSrc: "/images/products/parfume-5.svg",
     title: "Tom Ford Oud Wood",
     price: 40.95,
     colors: [
       {
-        name: "Brown",
-        colorClass: "bg_brown",
-        imgSrc: "/images/products/parfume-1.svg",
-      },
-      {
-        name: "White",
-        colorClass: "bg_white",
-        imgSrc: "/images/products/parfume-2.svg",
+        img: ["/images/products/parfume-4.svg"],
       },
     ],
-    sizes: ["25ML", "50ML", "100ML"],
+    sizes: [
+      { id: "values-25ml", value: "25ML", defaultChecked: false },
+      { id: "values-50ml", value: "50ML", defaultChecked: true },
+      { id: "values-100ml", value: "100ML", defaultChecked: false },
+    ],
     filterCategories: ["New arrivals", "Luxury"],
     brand: "Tom Ford",
     isAvailable: true,
   },
   {
-    id: 5,
+    id: 29,
     imgSrc: "/images/products/parfume-1.svg",
     imgHoverSrc: "/images/products/parfume-2.svg",
     title: "Acqua di Gio Giorgio Armani",
     price: 50.0,
     colors: [
       {
-        name: "Light Green",
-        colorClass: "bg_light-green",
-        imgSrc: "/images/products/parfume-3.svg",
-      },
-      {
-        name: "Black",
-        colorClass: "bg_dark",
-        imgSrc: "/images/products/parfume-4.svg",
-      },
-      {
-        name: "Blue",
-        colorClass: "bg_blue-2",
-        imgSrc: "/images/products/parfume-5.svg",
+        img: ["/images/products/parfume-1.svg"],
       },
     ],
-    sizes: ["10ML", "20ML", "30ML"],
+    sizes: [
+      { id: "values-10ml", value: "10ML", defaultChecked: true },
+      { id: "values-20ml", value: "20ML", defaultChecked: false },
+      { id: "values-30ml", value: "30ML", defaultChecked: false },
+    ],
     filterCategories: ["Best seller", "Popular"],
     brand: "Giorgio Armani",
     isAvailable: true,
   },
   {
-    id: 6,
+    id: 30,
     imgSrc: "/images/products/parfume-2.svg",
     imgHoverSrc: "/images/products/parfume-3.svg",
     title: "Creed Aventus",
     price: 150.0,
     colors: [
       {
-        name: "Black",
-        colorClass: "bg_dark",
-        imgSrc: "/images/products/parfume-4.svg",
-      },
-      {
-        name: "Dark Blue",
-        colorClass: "bg_dark-blue",
-        imgSrc: "/images/products/parfume-5.svg",
-      },
-      {
-        name: "Beige",
-        colorClass: "bg_beige",
-        imgSrc: "/images/products/parfume-1.svg",
+        img: ["/images/products/parfume-2.svg"],
       },
     ],
-    sizes: ["30ML", "50ML", "100ML"],
+    sizes: [
+      { id: "values-30ml", value: "30ML", defaultChecked: false },
+      { id: "values-50ml", value: "50ML", defaultChecked: true },
+      { id: "values-100ml", value: "100ML", defaultChecked: false },
+    ],
     filterCategories: ["Luxury", "Best seller"],
     brand: "Creed",
     isAvailable: true,
   },
   {
-    id: 7,
+    id: 31,
     imgSrc: "/images/products/parfume-3.svg",
     imgHoverSrc: "/images/products/parfume-4.svg",
     title: "Bleu de Chanel",
     price: 75.0,
-    sizes: ["50ML", "100ML"],
+    colors: [
+      {
+        img: ["/images/products/parfume-3.svg"],
+      },
+    ],
+    sizes: [
+      { id: "values-50ml", value: "50ML", defaultChecked: true },
+      { id: "values-100ml", value: "100ML", defaultChecked: false },
+    ],
     filterCategories: ["Best seller", "Luxury"],
     brand: "Chanel",
     isAvailable: true,
   },
   {
-    id: 8,
+    id: 32,
     imgSrc: "/images/products/parfume-4.svg",
     imgHoverSrc: "/images/products/parfume-5.svg",
     title: "Jean Paul Gaultier Le Male",
     price: 60.0,
     colors: [
       {
-        name: "White",
-        colorClass: "bg_white",
-        imgSrc: "/images/products/parfume-1.svg",
-      },
-      {
-        name: "Light Blue",
-        colorClass: "bg_light-blue",
-        imgSrc: "/images/products/parfume-2.svg",
+        img: ["/images/products/parfume-4.svg"],
       },
     ],
-    sizes: ["25ML", "50ML", "75ML"],
+    sizes: [
+      { id: "values-25ml", value: "25ML", defaultChecked: false },
+      { id: "values-50ml", value: "50ML", defaultChecked: true },
+      { id: "values-75ml", value: "75ML", defaultChecked: false },
+    ],
     filterCategories: ["On Sale", "New arrivals"],
     brand: "Jean Paul Gaultier",
     isAvailable: false,
   },
   {
-    id: 9,
+    id: 33,
     imgSrc: "/images/products/parfume-1.svg",
     imgHoverSrc: "/images/products/parfume-2.svg",
     title: "Viktor & Rolf Flowerbomb",
     price: 95.0,
-    sizes: ["10ML", "30ML", "50ML"],
+    colors: [
+      {
+        img: ["/images/products/parfume-1.svg"],
+      },
+    ],
+    sizes: [
+      { id: "values-10ml", value: "10ML", defaultChecked: false },
+      { id: "values-30ml", value: "30ML", defaultChecked: true },
+      { id: "values-50ml", value: "50ML", defaultChecked: false },
+    ],
     filterCategories: ["Best seller", "Luxury"],
     brand: "Viktor & Rolf",
     isAvailable: true,
   },
   {
-    id: 10,
+    id: 34,
     imgSrc: "/images/products/parfume-2.svg",
     imgHoverSrc: "/images/products/parfume-3.svg",
-    title: "Marc Jacobs Daisy",
-    price: 70.0,
-    sizes: ["30ML", "50ML", "100ML"],
-    filterCategories: ["Best seller", "On Sale"],
-    brand: "Marc Jacobs",
+    title: "Calvin Klein CK One",
+    price: 18.0,
+    colors: [
+      {
+        img: ["/images/products/parfume-2.svg"],
+      },
+    ],
+    sizes: [
+      { id: "values-10ml", value: "10ML", defaultChecked: true },
+      { id: "values-20ml", value: "20ML", defaultChecked: false },
+    ],
+    filterCategories: ["Popular", "On Sale"],
+    brand: "Calvin Klein",
     isAvailable: true,
   },
   {
-    id: 11,
+    id: 35,
     imgSrc: "/images/products/parfume-3.svg",
-    imgHoverSrc: "/images/products/parfume-4.svg",
-    title: "Hermès Terre d’Hermès",
-    price: 120.0,
-    sizes: ["50ML", "75ML", "100ML"],
-    filterCategories: ["Luxury", "New arrivals"],
-    brand: "Hermès",
+    imgHoverSrc: "/images/products/parfume-2.svg",
+    title: "Calvin Klein CK One",
+    price: 18.0,
+    colors: [
+      {
+        img: ["/images/products/parfume-3.svg"],
+      },
+    ],
+    sizes: [{ id: "values-20ml", value: "20ML", defaultChecked: false }],
+    filterCategories: ["Popular", "On Sale"],
+    brand: "Calvin Klein",
     isAvailable: true,
   },
   {
-    id: 12,
-    imgSrc: "/images/products/parfume-4.svg",
-    imgHoverSrc: "/images/products/parfume-5.svg",
-    title: "Gucci Bloom",
-    price: 80.0,
-    sizes: ["30ML", "50ML", "100ML"],
-    filterCategories: ["Best seller", "On Sale"],
-    brand: "Gucci",
-    isAvailable: false,
-  },
-];
-
-export const footwearProducts = [
-  {
-    id: 1,
-    imgSrc: "/images/products/foot-1.svg",
-    imgHoverSrc: "/images/products/foot-2.svg",
-    title: "Nike Air Max 270",
-    price: 120.0,
-    sizes: [6, 7, 8, 9, 10, 11],
-    filterCategories: ["Best seller", "New arrivals"],
-    brand: "Nike",
+    id: 36,
+    imgSrc: "/images/products/parfume-1.svg",
+    imgHoverSrc: "/images/products/parfume-3.svg",
+    title: "Calvin Klein CK One",
+    price: 18.0,
     colors: [
-      { name: "Black", colorClass: "bg_black" },
-      { name: "White", colorClass: "bg_white" },
+      {
+        img: ["/images/products/parfume-1.svg"],
+      },
     ],
-    isAvailable: true,
-  },
-  {
-    id: 2,
-    imgSrc: "/images/products/foot-2.svg",
-    imgHoverSrc: "/images/products/foot-3.svg",
-    title: "Adidas UltraBoost 22",
-    price: 150.0,
-    sizes: [7, 8, 9, 10, 11, 12],
-    filterCategories: ["New arrivals", "On Sale"],
-    brand: "Adidas",
-    colors: [
-      { name: "Grey", colorClass: "bg_grey" },
-      { name: "Blue", colorClass: "bg_blue" },
-    ],
-    isAvailable: true,
-  },
-  {
-    id: 3,
-    imgSrc: "/images/products/foot-3.svg",
-    imgHoverSrc: "/images/products/foot-4.svg",
-    title: "Puma Suede Classic",
-    price: 75.0,
-    sizes: [6, 7, 8, 9, 10, 11, 12],
-    filterCategories: ["Best seller", "On Sale"],
-    brand: "Puma",
-    colors: [
-      { name: "Red", colorClass: "bg_red" },
-      { name: "Black", colorClass: "bg_black" },
-    ],
-    isAvailable: false,
-  },
-  {
-    id: 4,
-    imgSrc: "/images/products/foot-4.svg",
-    imgHoverSrc: "/images/products/foot-5.svg",
-    title: "Reebok Classic Leather",
-    price: 85.0,
-    sizes: [6, 7, 8, 9, 10, 11, 12],
-    filterCategories: ["On Sale", "Popular"],
-    brand: "Reebok",
-    colors: [
-      { name: "White", colorClass: "bg_white" },
-      { name: "Brown", colorClass: "bg_brown" },
-    ],
-    isAvailable: true,
-  },
-  {
-    id: 5,
-    imgSrc: "/images/products/foot-1.svg",
-    imgHoverSrc: "/images/products/foot-2.svg",
-    title: "Converse Chuck Taylor All Star",
-    price: 60.0,
-    sizes: [6, 7, 8, 9, 10, 11, 12, 13],
-    filterCategories: ["Best seller", "Classic"],
-    brand: "Converse",
-    colors: [
-      { name: "Blue", colorClass: "bg_blue" },
-      { name: "White", colorClass: "bg_white" },
-    ],
-    isAvailable: true,
-  },
-  {
-    id: 6,
-    imgSrc: "/images/products/foot-2.svg",
-    imgHoverSrc: "/images/products/foot-3.svg",
-    title: "New Balance 990v5",
-    price: 175.0,
-    sizes: [7, 8, 9, 10, 11, 12],
-    filterCategories: ["Best seller", "Premium"],
-    brand: "New Balance",
-    colors: [
-      { name: "Grey", colorClass: "bg_grey" },
-      { name: "Black", colorClass: "bg_black" },
-    ],
-    isAvailable: false,
-  },
-  {
-    id: 7,
-    imgSrc: "/images/products/foot-3.svg",
-    imgHoverSrc: "/images/products/foot-4.svg",
-    title: "Vans Old Skool",
-    price: 55.0,
-    sizes: [6, 7, 8, 9, 10, 11, 12],
-    filterCategories: ["On Sale", "Casual"],
-    brand: "Vans",
-    colors: [
-      { name: "Black", colorClass: "bg_black" },
-      { name: "White", colorClass: "bg_white" },
-    ],
-    isAvailable: true,
-  },
-  {
-    id: 8,
-    imgSrc: "/images/products/foot-4.svg",
-    imgHoverSrc: "/images/products/foot-5.svg",
-    title: "Under Armour Curry 9",
-    price: 130.0,
-    sizes: [7, 8, 9, 10, 11, 12, 13],
-    filterCategories: ["New arrivals", "Sporty"],
-    brand: "Under Armour",
-    colors: [
-      { name: "Blue", colorClass: "bg_blue" },
-      { name: "Red", colorClass: "bg_red" },
-    ],
-    isAvailable: true,
-  },
-  {
-    id: 9,
-    imgSrc: "/images/products/foot-1.svg",
-    imgHoverSrc: "/images/products/foot-2.svg",
-    title: "Asics Gel-Kayano 28",
-    price: 145.0,
-    sizes: [6, 7, 8, 9, 10, 11, 12],
-    filterCategories: ["Best seller", "Performance"],
-    brand: "Asics",
-    colors: [
-      { name: "Grey", colorClass: "bg_grey" },
-      { name: "Blue", colorClass: "bg_blue" },
-    ],
-    isAvailable: false,
-  },
-  {
-    id: 10,
-    imgSrc: "/images/products/foot-2.svg",
-    imgHoverSrc: "/images/products/foot-3.svg",
-    title: "Skechers Go Walk 5",
-    price: 65.0,
-    sizes: [6, 7, 8, 9, 10, 11, 12],
-    filterCategories: ["Comfort", "Best seller"],
-    brand: "Skechers",
-    colors: [
-      { name: "Black", colorClass: "bg_black" },
-      { name: "Grey", colorClass: "bg_grey" },
-    ],
-    isAvailable: true,
-  },
-  {
-    id: 11,
-    imgSrc: "/images/products/foot-5.svg",
-    imgHoverSrc: "/images/products/foot-6.svg",
-    title: "Fila Disruptor 2",
-    price: 70.0,
-    sizes: [6, 7, 8, 9, 10, 11, 12],
-    filterCategories: ["Retro", "Popular"],
-    brand: "Fila",
-    colors: [
-      { name: "White", colorClass: "bg_white" },
-      { name: "Pink", colorClass: "bg_pink" },
-    ],
-    isAvailable: true,
-  },
-  {
-    id: 12,
-    imgSrc: "/images/products/foot-6.svg",
-    imgHoverSrc: "/images/products/foot-7.svg",
-    title: "Timberland Premium 6-Inch Boot",
-    price: 200.0,
-    sizes: [7, 8, 9, 10, 11, 12, 13],
-    filterCategories: ["Outdoor", "Premium"],
-    brand: "Timberland",
-    colors: [
-      { name: "Brown", colorClass: "bg_brown" },
-      { name: "Black", colorClass: "bg_black" },
-    ],
+    sizes: [{ id: "values-10ml", value: "10ML", defaultChecked: true }],
+    filterCategories: ["Popular", "On Sale"],
+    brand: "Calvin Klein",
     isAvailable: true,
   },
 ];
 
 export const cosmeticsProducts = [
   {
-    id: 1,
+    id: 37,
     imgSrc: "/images/products/cos-1.svg",
     imgHoverSrc: "/images/products/cos-2.svg",
     title: "L'Oréal Paris Revitalift Serum",
     price: 30.0,
     categories: ["Skincare", "Anti-aging"],
+    colors: [
+      {
+        img: ["/images/products/cos-1.svg"],
+      },
+    ],
     brand: "L'Oréal",
     isAvailable: true,
+    categoryName : "COSMETICS",
+    sizes: []
   },
   {
-    id: 2,
+    id: 38,
     imgSrc: "/images/products/cos-2.svg",
     imgHoverSrc: "/images/products/cos-3.svg",
     title: "Maybelline Fit Me Foundation",
     price: 10.0,
     categories: ["Makeup", "Foundation"],
+    colors: [
+      {
+        img: ["/images/products/cos-2.svg"],
+      },
+    ],
     brand: "Maybelline",
     isAvailable: true,
+    sizes: []
   },
   {
-    id: 3,
+    id: 39,
     imgSrc: "/images/products/cos-3.svg",
     imgHoverSrc: "/images/products/cos-4.svg",
     title: "Estée Lauder Double Wear Foundation",
     price: 42.0,
     categories: ["Makeup", "Foundation"],
+    colors: [
+      {
+        img: ["/images/products/cos-3.svg"],
+      },
+    ],
     brand: "Estée Lauder",
     isAvailable: true,
+    sizes: []
   },
   {
-    id: 4,
+    id: 40,
     imgSrc: "/images/products/cos-4.svg",
     imgHoverSrc: "/images/products/cos-5.svg",
     title: "Clinique Dramatically Different Moisturizing Lotion",
     price: 28.0,
     categories: ["Skincare", "Moisturizer"],
+    colors: [
+      {
+        img: ["/images/products/cos-4.svg"],
+      },
+    ],
     brand: "Clinique",
     isAvailable: true,
+    sizes: []
   },
   {
-    id: 5,
+    id: 41,
     imgSrc: "/images/products/cos-1.svg",
     imgHoverSrc: "/images/products/cos-2.svg",
     title: "Fenty Beauty Pro Filt'r Soft Matte Foundation",
     price: 36.0,
     categories: ["Makeup", "Foundation"],
+    colors: [
+      {
+        img: ["/images/products/cos-1.svg"],
+      },
+    ],
     brand: "Fenty Beauty",
     isAvailable: true,
+    sizes: []
   },
   {
-    id: 6,
+    id: 42,
     imgSrc: "/images/products/cos-2.svg",
     imgHoverSrc: "/images/products/cos-3.svg",
     title: "Charlotte Tilbury Pillow Talk Lipstick",
     price: 35.0,
     categories: ["Makeup", "Lipstick"],
+    colors: [
+      {
+        img: ["/images/products/cos-2.svg"],
+      },
+    ],
     brand: "Charlotte Tilbury",
     isAvailable: true,
+    sizes: []
   },
   {
-    id: 7,
+    id: 43,
     imgSrc: "/images/products/cos-3.svg",
     imgHoverSrc: "/images/products/cos-4.svg",
     title: "Urban Decay Naked Palette",
     price: 54.0,
     categories: ["Makeup", "Eyeshadow"],
+    colors: [
+      {
+        img: ["/images/products/cos-3.svg"],
+      },
+    ],
     brand: "Urban Decay",
     isAvailable: true,
+    sizes: []
   },
   {
-    id: 8,
+    id: 44,
     imgSrc: "/images/products/cos-4.svg",
     imgHoverSrc: "/images/products/cos-5.svg",
     title: "Tarte Shape Tape Concealer",
     price: 27.0,
     categories: ["Makeup", "Concealer"],
+    colors: [
+      {
+        img: ["/images/products/cos-4.svg"],
+      },
+    ],
     brand: "Tarte",
     isAvailable: true,
+    sizes: []
   },
   {
-    id: 9,
+    id: 45,
     imgSrc: "/images/products/cos-1.svg",
     imgHoverSrc: "/images/products/cos-2.svg",
     title: "NARS Orgasm Blush",
     price: 32.0,
     categories: ["Makeup", "Blush"],
+    colors: [
+      {
+        img: ["/images/products/cos-5.svg"],
+      },
+    ],
     brand: "NARS",
     isAvailable: true,
+    sizes: []
   },
   {
-    id: 10,
+    id: 46,
     imgSrc: "/images/products/cos-2.svg",
     imgHoverSrc: "/images/products/cos-3.svg",
     title: "Benefit Hoola Bronzer",
     price: 30.0,
     categories: ["Makeup", "Bronzer"],
+    colors: [
+      {
+        img: ["/images/products/cos-1.svg"],
+      },
+    ],
     brand: "Benefit",
     isAvailable: true,
+    sizes: []
   },
   {
-    id: 11,
+    id: 47,
     imgSrc: "/images/products/cos-3.svg",
     imgHoverSrc: "/images/products/cos-4.svg",
     title: "Too Faced Better Than Sex Mascara",
     price: 25.0,
     categories: ["Makeup", "Mascara"],
+    colors: [
+      {
+        img: ["/images/products/cos-3.svg"],
+      },
+    ],
     brand: "Too Faced",
     isAvailable: true,
+    sizes: []
   },
   {
-    id: 12,
+    id:48,
     imgSrc: "/images/products/cos-4.svg",
     imgHoverSrc: "/images/products/cos-5.svg",
     title: "Shiseido Ultimune Power Infusing Concentrate",
     price: 70.0,
     categories: ["Skincare", "Serum"],
+    colors: [
+      {
+        img: ["/images/products/cos-5.svg"],
+      },
+    ],
     brand: "Shiseido",
     isAvailable: true,
+    sizes: []
   },
 ];
 

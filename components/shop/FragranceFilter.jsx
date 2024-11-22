@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Slider from "rc-slider";
+
 const brands = [
-  "Chanel",
+ "Chanel",
   "Dior",
   "Yves Saint Laurent",
   "Tom Ford",
@@ -10,41 +12,38 @@ const brands = [
   "Creed",
   "Jean Paul Gaultier",
   "Viktor & Rolf",
-  "Marc Jacobs",
-  "Hermès",
-  "Gucci",
+  "Calvin Klein",
 ];
 const availabilities = [
   { id: 1, isAvailable: true, text: "Available", count: 10 },
   { id: 2, isAvailable: false, text: "Out of Stock", count: 2 },
 ];
 const sizes = [
-  "10ML",
-  "15ML",
-  "20ML",
-  "25ML",
-  "30ML",
-  "50ML",
-  "75ML",
-  "90ML",
-  "100ML",
+  { id: "values-10ml", value: "10ML", defaultChecked: false },
+  { id: "values-15ml", value: "15ML", defaultChecked: false },
+  { id: "values-20ml", value: "20ML", defaultChecked: true },
+  { id: "values-30ml", value: "30ML", defaultChecked: false },
+  { id: "values-50ml", value: "50ML", defaultChecked: false },
+  { id: "values-75ml", value: "75ML", defaultChecked: false },
+  { id: "values-90ml", value: "90ML", defaultChecked: false },
+  { id: "values-100ml", value: "100ML", defaultChecked: false },
 ];
-import Slider from "rc-slider";
-import Link from "next/link";
 
-export default function FragranceFilter({ setProducts, products, category }) {
+export default function FragranceFilter({ setProducts, products }) {
   const [price, setPrice] = useState([0, 160]);
   const handlePrice = (value) => {
     setPrice(value);
   };
+
   const [selectedBrands, setSelectedBrands] = useState([]);
   const handleSelectBrand = (brand) => {
     if (selectedBrands.includes(brand)) {
-      setSelectedBrands((pre) => [...pre.filter((el) => el != brand)]);
+      setSelectedBrands((prev) => prev.filter((el) => el !== brand));
     } else {
-      setSelectedBrands((pre) => [...pre, brand]);
+      setSelectedBrands((prev) => [...prev, brand]);
     }
   };
+
   const [selectedAvailabilities, setSelectedAvailabilities] = useState([]);
   const handleSelectAvailabilities = (availability) => {
     if (
@@ -61,76 +60,68 @@ export default function FragranceFilter({ setProducts, products, category }) {
   };
 
   const [selectedSizes, setSelectedSizes] = useState([]);
-  const handleSelectSizes = (size) => {
-    if (selectedSizes.includes(size)) {
-      setSelectedSizes((pre) => [...pre.filter((el) => el != size)]);
+  const handleSelectSizes = (sizeValue) => {
+    if (selectedSizes.includes(sizeValue)) {
+      setSelectedSizes((prev) => prev.filter((el) => el !== sizeValue));
     } else {
-      setSelectedSizes((pre) => [...pre, size]);
+      setSelectedSizes((prev) => [...prev, sizeValue]);
     }
   };
 
   useEffect(() => {
     let filteredArrays = [];
 
+    // Filter by Price
     filteredArrays = [
       ...filteredArrays,
-      [
-        ...products.filter(
-          (elm) => elm.price >= price[0] && elm.price <= price[1]
-        ),
-      ],
+      products.filter((elm) => elm.price >= price[0] && elm.price <= price[1]),
     ];
-    // console.log(filteredByPrice, "filteredByPrice");
+
+    // Filter by Brands
     if (selectedBrands.length) {
       filteredArrays = [
         ...filteredArrays,
-        [...products.filter((elm) => selectedBrands.includes(elm.brand))],
+        products.filter((elm) => selectedBrands.includes(elm.brand)),
       ];
     }
 
-    // console.log(filteredByselectedBrands, "filteredByselectedBrands");
+    // Filter by Sizes
     if (selectedSizes.length) {
       filteredArrays = [
         ...filteredArrays,
-        [
-          ...products.filter((elm) =>
-            elm.sizes?.some((elm2) => selectedSizes.includes(elm2))
-          ),
-        ],
+        products.filter((elm) =>
+          elm.sizes?.some((size) => selectedSizes.includes(size.value))
+        ),
       ];
     }
 
-    // console.log(filteredByselectedSizes);
+    // Filter by Availability
     if (selectedAvailabilities.length) {
       filteredArrays = [
         ...filteredArrays,
-        [
-          ...products.filter((elm) =>
-            selectedAvailabilities
-              .map((availability) => availability.isAvailable)
-              .includes(elm.isAvailable)
-          ),
-        ],
+        products.filter((elm) =>
+          selectedAvailabilities
+            .map((availability) => availability.isAvailable)
+            .includes(elm.isAvailable)
+        ),
       ];
     }
 
+    // Find common items across all filters
     const commonItems = products.filter((item) =>
       filteredArrays.every((array) => array.includes(item))
     );
+
     setProducts(commonItems);
-  }, [
-    price,
-    selectedBrands,
-    selectedAvailabilities,
-    selectedSizes,
-    products,
-  ]);
+  }, [price, selectedBrands, selectedAvailabilities, selectedSizes, products]);
+
   const clearFilter = () => {
     setSelectedBrands([]);
     setSelectedAvailabilities([]);
     setSelectedSizes([]);
     setPrice([15, 180]);
   };
+
   return (
     <div className="offcanvas offcanvas-start canvas-filter" id="filterShop">
       <div className="canvas-wrapper">
@@ -152,6 +143,7 @@ export default function FragranceFilter({ setProducts, products, category }) {
             id="facet-filter-form"
             className="facet-filter-form"
           >
+            {/* Availability */}
             <div className="widget-facet">
               <div
                 className="facet-title"
@@ -184,7 +176,7 @@ export default function FragranceFilter({ setProducts, products, category }) {
                           {
                             products.filter(
                               (elm) =>
-                                elm.isAvailable == availability.isAvailable
+                                elm.isAvailable === availability.isAvailable
                             ).length
                           }
                           )
@@ -195,6 +187,8 @@ export default function FragranceFilter({ setProducts, products, category }) {
                 </ul>
               </div>
             </div>
+
+            {/* Price */}
             <div className="widget-facet wrap-price">
               <div
                 className="facet-title"
@@ -209,7 +203,6 @@ export default function FragranceFilter({ setProducts, products, category }) {
               <div id="price" className="collapse show">
                 <div className="widget-price filter-price">
                   <Slider
-                    formatLabel={() => ``}
                     range
                     max={180}
                     min={15}
@@ -221,12 +214,12 @@ export default function FragranceFilter({ setProducts, products, category }) {
                     <span className="title-price">Price :</span>
                     <div className="caption-price">
                       <div>
-                        <span>$</span>
+                        <span>₹</span>
                         <span className="min-price">{price[0]}</span>
                       </div>
                       <span>-</span>
                       <div>
-                        <span>$</span>
+                        <span>₹</span>
                         <span className="max-price">{price[1]}</span>
                       </div>
                     </div>
@@ -234,6 +227,8 @@ export default function FragranceFilter({ setProducts, products, category }) {
                 </div>
               </div>
             </div>
+
+            {/* Brand */}
             <div className="widget-facet">
               <div
                 className="facet-title"
@@ -262,7 +257,8 @@ export default function FragranceFilter({ setProducts, products, category }) {
                       <label className="label">
                         <span>{brand}</span>&nbsp;
                         <span>
-                          ({products.filter((elm) => elm.brand == brand).length}
+                          (
+                          {products.filter((elm) => elm.brand === brand).length}
                           )
                         </span>
                       </label>
@@ -271,6 +267,8 @@ export default function FragranceFilter({ setProducts, products, category }) {
                 </ul>
               </div>
             </div>
+
+            {/* Size */}
             <div className="widget-facet">
               <div
                 className="facet-title"
@@ -284,25 +282,26 @@ export default function FragranceFilter({ setProducts, products, category }) {
               </div>
               <div id="size" className="collapse show">
                 <ul className="tf-filter-group current-scrollbar">
-                  {sizes.map((elm, i) => (
+                  {sizes.map((size) => (
                     <li
-                      key={i}
-                      onClick={() => handleSelectSizes(elm)}
+                      key={size.id}
+                      onClick={() => handleSelectSizes(size.value)}
                       className="list-item d-flex gap-12 align-items-center"
                     >
                       <input
                         type="radio"
                         className="tf-check tf-check-size"
                         readOnly
-                        checked={selectedSizes.includes(elm)}
+                        checked={selectedSizes.includes(size.value)}
                       />
                       <label className="label">
-                        <span>{elm}</span>&nbsp;
+                        <span>{size.value}</span>
                         <span>
                           (
                           {
-                            products.filter((el) => el.sizes?.includes(elm))
-                              .length
+                            products.filter((el) =>
+                              el.sizes?.some((s) => s.value === size.value)
+                            ).length
                           }
                           )
                         </span>
@@ -312,14 +311,16 @@ export default function FragranceFilter({ setProducts, products, category }) {
                 </ul>
               </div>
             </div>
+
+            {/* Clear Filter */}
+            <div className="mt-5"></div>
+            <a
+              className="tf-btn style-2 btn-fill rounded animate-hover-btn"
+              onClick={clearFilter}
+            >
+              Clear Filter
+            </a>
           </form>
-          <div className="mt-5"></div>
-          <a
-            className="tf-btn style-2 btn-fill rounded animate-hover-btn"
-            onClick={clearFilter}
-          >
-            Clear Filter
-          </a>
         </div>
       </div>
     </div>

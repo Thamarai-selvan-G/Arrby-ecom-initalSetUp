@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useContextElement } from "@/context/Context";
-import CountdownComponent from "../common/Countdown";
 export const ProductCard = ({ product }) => {
   const [currentImage, setCurrentImage] = useState(product.imgSrc);
   const { setQuickViewItem } = useContextElement();
@@ -11,13 +10,14 @@ export const ProductCard = ({ product }) => {
     setQuickAddItem,
     addToWishlist,
     isAddedtoWishlist,
-    addToCompareItem,
-    isAddedtoCompareItem,
   } = useContextElement();
   useEffect(() => {
     setCurrentImage(product.imgSrc);
   }, [product]);
 
+  console.log('product.colors:',product.colors);
+
+  
   return (
     <div className="card-product fl-item" key={product.id}>
       <div className="card-product-wrapper">
@@ -67,27 +67,7 @@ export const ProductCard = ({ product }) => {
             </span>
             <span className="icon icon-delete" />
           </a>
-          <a
-            href="#compare"
-            data-bs-toggle="offcanvas"
-            aria-controls="offcanvasLeft"
-            onClick={() => addToCompareItem(product.id)}
-            className="box-icon bg_white compare btn-icon-action"
-          >
-            <span
-              className={`icon icon-compare ${
-                isAddedtoCompareItem(product.id) ? "added" : ""
-              }`}
-            />
-            <span className="tooltip">
-              {" "}
-              {isAddedtoCompareItem(product.id)
-                ? "Already Compared"
-                : "Add to Compare"}
-            </span>
-            <span className="icon icon-check" />
-          </a>
-          <a
+          {/* <a
             href="#quick_view"
             onClick={() => setQuickViewItem(product)}
             data-bs-toggle="modal"
@@ -95,7 +75,7 @@ export const ProductCard = ({ product }) => {
           >
             <span className="icon icon-view" />
             <span className="tooltip">Quick View</span>
-          </a>
+          </a> */}
         </div>
         {product.sizes && (
           <div className="size-list">
@@ -110,7 +90,7 @@ export const ProductCard = ({ product }) => {
           {product.title}
         </Link>
         <span className="price">₹{product.price.toFixed(2)}</span>
-        {product.colors && (
+        {product.colors[0].name ? (
           <ul className="list-color-product">
             {product.colors.map((color) => (
               <li
@@ -133,7 +113,7 @@ export const ProductCard = ({ product }) => {
               </li>
             ))}
           </ul>
-        )}
+        ) : null}
       </div>
     </div>
   );
